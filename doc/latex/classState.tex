@@ -1,0 +1,152 @@
+\hypertarget{classState}{}\doxysection{State Class Reference}
+\label{classState}\index{State@{State}}
+
+
+\mbox{\hyperlink{classState}{State}} header.  
+
+
+
+
+{\ttfamily \#include $<$state.\+hpp$>$}
+
+
+
+Inheritance diagram for State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classState__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a4a282ea97af2be4a81b5fd5e67ffe2a8}\label{classState_a4a282ea97af2be4a81b5fd5e67ffe2a8}} 
+{\bfseries State} (sf\+::\+Render\+Window $\ast$window, std\+::map$<$ std\+::string, int $>$ $\ast$supported\+Keys, std\+::string root\+\_\+filepath, std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$\mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}})
+\begin{DoxyCompactList}\small\item\em Constructor and destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae7ffd43d9da38fcdb420db95e297bfe6}\label{classState_ae7ffd43d9da38fcdb420db95e297bfe6}} 
+virtual void {\bfseries check\+For\+Quit} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a18c3b970753bab2937141803644aaf24}\label{classState_a18c3b970753bab2937141803644aaf24}} 
+const bool \& {\bfseries get\+Quit} () const
+\item 
+virtual void \mbox{\hyperlink{classState_a5f04f332b750c953508116d6571b137d}{end\+State}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classState_a00168e8529643611cb98497e9f0b48c2}{update\+Input}} (const float \&dt)=0
+\item 
+virtual void \mbox{\hyperlink{classState_a2c2021d448defc57111202b74ed0aaa0}{update}} (const float \&dt)=0
+\item 
+virtual void \mbox{\hyperlink{classState_aa1f36587befc2c03c4033366e5000d2c}{render}} (sf\+::\+Render\+Target $\ast$target=nullptr)=0
+\item 
+\mbox{\Hypertarget{classState_a6a5bc29c3bcc7b51d2beca0e83457203}\label{classState_a6a5bc29c3bcc7b51d2beca0e83457203}} 
+virtual void {\bfseries update\+Mouse\+Position} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_aefb9f5e6f768f587894545fa88d1d63d}\label{classState_aefb9f5e6f768f587894545fa88d1d63d}} 
+bool {\bfseries quit\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classState_a7913fb79a9e90d93953e9844fd114186}{init\+Key\+Binds}} ()=0
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}\label{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}} 
+std\+::vector$<$ sf\+::\+Texture $>$ {\bfseries textures}
+\begin{DoxyCompactList}\small\item\em Container for textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_af4f86a4bd3b369693d17b4c21a5be044}\label{classState_af4f86a4bd3b369693d17b4c21a5be044}} 
+sf\+::\+Render\+Window $\ast$ {\bfseries window\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_aba797f16cff3648fedc7aba1fefd25ab}\label{classState_aba797f16cff3648fedc7aba1fefd25ab}} 
+std\+::map$<$ std\+::string, int $>$ $\ast$ {\bfseries supported\+Keys\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to supported keys. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a5692fac721147048fe1d2656f8a7a687}\label{classState_a5692fac721147048fe1d2656f8a7a687}} 
+std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$ {\bfseries states}
+\begin{DoxyCompactList}\small\item\em Pointer to a stack filled with state pointers (check \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}} private) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a21879afd59a7cd5aeede2a080fcd1d34}\label{classState_a21879afd59a7cd5aeede2a080fcd1d34}} 
+std\+::map$<$ std\+::string, int $>$ {\bfseries keybinds\+\_\+}
+\item 
+\mbox{\Hypertarget{classState_aa6f8db01e7246b45f7bfdec4b80722e2}\label{classState_aa6f8db01e7246b45f7bfdec4b80722e2}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\item 
+\mbox{\Hypertarget{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}\label{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Screen}
+\begin{DoxyCompactList}\small\item\em Mouse position variavles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae19be9c58de5545c8cd162f11969d6ee}\label{classState_ae19be9c58de5545c8cd162f11969d6ee}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Window}
+\item 
+\mbox{\Hypertarget{classState_a9f930912be370fcd0ecae58e17e0c35e}\label{classState_a9f930912be370fcd0ecae58e17e0c35e}} 
+sf\+::\+Vector2f {\bfseries mouse\+Pos\+View}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classState}{State}} header. 
+
+Include headers 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classState_a5f04f332b750c953508116d6571b137d}\label{classState_a5f04f332b750c953508116d6571b137d}} 
+\index{State@{State}!endState@{endState}}
+\index{endState@{endState}!State@{State}}
+\doxysubsubsection{\texorpdfstring{endState()}{endState()}}
+{\footnotesize\ttfamily virtual void State\+::end\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classCreatemap_a00c75c6ed48d0f16eacbf3b130de88f9}{Createmap}}, \mbox{\hyperlink{classGameState_a5b6ccfff3ca74df5a7e67fdeb4ed5bce}{Game\+State}}, \mbox{\hyperlink{classHighscorestate_aacbc11904b77764f2f09873792a26d79}{Highscorestate}}, and \mbox{\hyperlink{classMapselector_a6107a2ca1948e4e926b676820a1edaa5}{Mapselector}}.
+
+\mbox{\Hypertarget{classState_a7913fb79a9e90d93953e9844fd114186}\label{classState_a7913fb79a9e90d93953e9844fd114186}} 
+\index{State@{State}!initKeyBinds@{initKeyBinds}}
+\index{initKeyBinds@{initKeyBinds}!State@{State}}
+\doxysubsubsection{\texorpdfstring{initKeyBinds()}{initKeyBinds()}}
+{\footnotesize\ttfamily virtual void State\+::init\+Key\+Binds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Functions. 
+
+
+
+Implemented in \mbox{\hyperlink{classCreatemap_a0ba30d35ef39325a4543d143ec42565f}{Createmap}}, \mbox{\hyperlink{classGameState_a89f1c8236814ca76e052b60a94c654a6}{Game\+State}}, \mbox{\hyperlink{classHighscorestate_a57ac12055c761f25090cde11e823dde4}{Highscorestate}}, \mbox{\hyperlink{classMainMenuState_a56d1fd14d809c146b6c27ec77d06b1ea}{Main\+Menu\+State}}, and \mbox{\hyperlink{classMapselector_a02369ae58e7986cfafbf9c9252814151}{Mapselector}}.
+
+\mbox{\Hypertarget{classState_aa1f36587befc2c03c4033366e5000d2c}\label{classState_aa1f36587befc2c03c4033366e5000d2c}} 
+\index{State@{State}!render@{render}}
+\index{render@{render}!State@{State}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classCreatemap_add3a8dba62e9e7306fc01cb04dcb2d97}{Createmap}}, \mbox{\hyperlink{classGameState_a805aea59388b8a5f302752333a86cf22}{Game\+State}}, \mbox{\hyperlink{classHighscorestate_a05e33314efc2e6cd681aa73dd1157bd7}{Highscorestate}}, and \mbox{\hyperlink{classMapselector_a5526fad5bbaceae456d546a19928d788}{Mapselector}}.
+
+\mbox{\Hypertarget{classState_a2c2021d448defc57111202b74ed0aaa0}\label{classState_a2c2021d448defc57111202b74ed0aaa0}} 
+\index{State@{State}!update@{update}}
+\index{update@{update}!State@{State}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void State\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classCreatemap_aac3eac47b90869999c18a69d6c64f341}{Createmap}}, \mbox{\hyperlink{classGameState_ac135e64a5c269ecc94d806ed5255ca4b}{Game\+State}}, \mbox{\hyperlink{classHighscorestate_aff6f2dd4e3f00ea6ca2ef4a48ece16b2}{Highscorestate}}, and \mbox{\hyperlink{classMapselector_aed7157a55df5ab133fca1854a10b18b9}{Mapselector}}.
+
+\mbox{\Hypertarget{classState_a00168e8529643611cb98497e9f0b48c2}\label{classState_a00168e8529643611cb98497e9f0b48c2}} 
+\index{State@{State}!updateInput@{updateInput}}
+\index{updateInput@{updateInput}!State@{State}}
+\doxysubsubsection{\texorpdfstring{updateInput()}{updateInput()}}
+{\footnotesize\ttfamily virtual void State\+::update\+Input (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classCreatemap_a1bc1dc0fd5d084356c97446de6a284ba}{Createmap}}, \mbox{\hyperlink{classGameState_a5dc4ac4f28b9487c9e35b8c452c7c58f}{Game\+State}}, \mbox{\hyperlink{classHighscorestate_acd1c251a44f95fed11a66b12e011fb16}{Highscorestate}}, and \mbox{\hyperlink{classMapselector_a09a97ed1f1eabe108a631514715cd5db}{Mapselector}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/state.\+hpp\item 
+src/state.\+cpp\end{DoxyCompactItemize}

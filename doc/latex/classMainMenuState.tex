@@ -1,0 +1,274 @@
+\hypertarget{classMainMenuState}{}\doxysection{Main\+Menu\+State Class Reference}
+\label{classMainMenuState}\index{MainMenuState@{MainMenuState}}
+
+
+Inheritance diagram for Main\+Menu\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classMainMenuState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+Menu\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classMainMenuState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a532dc4b4eeda0e97dc2feb84b4d20c3a}\label{classMainMenuState_a532dc4b4eeda0e97dc2feb84b4d20c3a}} 
+{\bfseries Main\+Menu\+State} (sf\+::\+Render\+Window $\ast$window, std\+::map$<$ std\+::string, int $>$ $\ast$supported\+Keys, std\+::string root\+\_\+filepath, std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$\mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf\+::\+Event $\ast$Event)
+\begin{DoxyCompactList}\small\item\em Constructor and destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_af3e9e0b5222a05920d3c871da08cac4d}\label{classMainMenuState_af3e9e0b5222a05920d3c871da08cac4d}} 
+int {\bfseries get\+SFXVolume} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMainMenuState_ac5b27a5cc3bc385984564444b31c09b6}{update\+Input}} (const float \&dt)
+\item 
+virtual void \mbox{\hyperlink{classMainMenuState_a15be57f5e3774bc9aabb8ae0e0386af8}{end\+State}} ()
+\item 
+virtual void \mbox{\hyperlink{classMainMenuState_a2cb233d69d9e30f8c4ac24f256d6a3d1}{update}} (const float \&dt)
+\item 
+virtual void \mbox{\hyperlink{classMainMenuState_ad75a3cc4bac3045d2fb167542bafb7c5}{render}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\item 
+\mbox{\Hypertarget{classMainMenuState_a814fcf755b02804447b0460a57e25833}\label{classMainMenuState_a814fcf755b02804447b0460a57e25833}} 
+void {\bfseries update\+Buttons} ()
+\item 
+\mbox{\Hypertarget{classMainMenuState_ad2a3ad7cb783d19b2b865a3695441c4f}\label{classMainMenuState_ad2a3ad7cb783d19b2b865a3695441c4f}} 
+void {\bfseries render\+Buttons} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\item 
+\mbox{\Hypertarget{classMainMenuState_a54cd50943f0e1751cb28414b8afe21eb}\label{classMainMenuState_a54cd50943f0e1751cb28414b8afe21eb}} 
+void {\bfseries update\+Animation} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Main menu animation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae7ffd43d9da38fcdb420db95e297bfe6}\label{classState_ae7ffd43d9da38fcdb420db95e297bfe6}} 
+virtual void {\bfseries check\+For\+Quit} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a18c3b970753bab2937141803644aaf24}\label{classState_a18c3b970753bab2937141803644aaf24}} 
+const bool \& {\bfseries get\+Quit} () const
+\item 
+\mbox{\Hypertarget{classState_a6a5bc29c3bcc7b51d2beca0e83457203}\label{classState_a6a5bc29c3bcc7b51d2beca0e83457203}} 
+virtual void {\bfseries update\+Mouse\+Position} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_aefb9f5e6f768f587894545fa88d1d63d}\label{classState_aefb9f5e6f768f587894545fa88d1d63d}} 
+bool {\bfseries quit\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}\label{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}} 
+std\+::vector$<$ sf\+::\+Texture $>$ {\bfseries textures}
+\begin{DoxyCompactList}\small\item\em Container for textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_aba797f16cff3648fedc7aba1fefd25ab}\label{classState_aba797f16cff3648fedc7aba1fefd25ab}} 
+std\+::map$<$ std\+::string, int $>$ $\ast$ {\bfseries supported\+Keys\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to supported keys. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a5692fac721147048fe1d2656f8a7a687}\label{classState_a5692fac721147048fe1d2656f8a7a687}} 
+std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$ {\bfseries states}
+\begin{DoxyCompactList}\small\item\em Pointer to a stack filled with state pointers (check \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}} private) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a21879afd59a7cd5aeede2a080fcd1d34}\label{classState_a21879afd59a7cd5aeede2a080fcd1d34}} 
+std\+::map$<$ std\+::string, int $>$ {\bfseries keybinds\+\_\+}
+\item 
+\mbox{\Hypertarget{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}\label{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Screen}
+\begin{DoxyCompactList}\small\item\em Mouse position variavles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae19be9c58de5545c8cd162f11969d6ee}\label{classState_ae19be9c58de5545c8cd162f11969d6ee}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Window}
+\item 
+\mbox{\Hypertarget{classState_a9f930912be370fcd0ecae58e17e0c35e}\label{classState_a9f930912be370fcd0ecae58e17e0c35e}} 
+sf\+::\+Vector2f {\bfseries mouse\+Pos\+View}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a02b29575bd5d10d73f1c311090cce97e}\label{classMainMenuState_a02b29575bd5d10d73f1c311090cce97e}} 
+void {\bfseries init\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_a53438118c9943ace9a772e0b8ee8acf3}\label{classMainMenuState_a53438118c9943ace9a772e0b8ee8acf3}} 
+void {\bfseries init\+Background} ()
+\item 
+void \mbox{\hyperlink{classMainMenuState_a56d1fd14d809c146b6c27ec77d06b1ea}{init\+Key\+Binds}} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_a6a72ebf025483b548c98e248dd18d313}\label{classMainMenuState_a6a72ebf025483b548c98e248dd18d313}} 
+void {\bfseries init\+Fonts} ()
+\item 
+\mbox{\Hypertarget{classMainMenuState_a53028c6fad883dc3514fe23edcb8c8aa}\label{classMainMenuState_a53028c6fad883dc3514fe23edcb8c8aa}} 
+void {\bfseries init\+Buttons} ()
+\item 
+\mbox{\Hypertarget{classMainMenuState_af6e82b33ddea77c4d63110baa157c1da}\label{classMainMenuState_af6e82b33ddea77c4d63110baa157c1da}} 
+void {\bfseries init\+Music} ()
+\item 
+\mbox{\Hypertarget{classMainMenuState_a09ab72a1819abc0805c1898fb5158989}\label{classMainMenuState_a09ab72a1819abc0805c1898fb5158989}} 
+void {\bfseries init\+BGAnimation} ()
+\item 
+\mbox{\Hypertarget{classMainMenuState_afd3e091538e5cf94ab9867e74c951a19}\label{classMainMenuState_afd3e091538e5cf94ab9867e74c951a19}} 
+const bool {\bfseries get\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Timer function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_a0eefdfc701bd6ad2d5e55a1edc15fe61}\label{classMainMenuState_a0eefdfc701bd6ad2d5e55a1edc15fe61}} 
+const bool {\bfseries get\+Press\+Timer} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} press timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainMenuState_ab2b3ef9f581a25c9934bb08d81fd3023}\label{classMainMenuState_ab2b3ef9f581a25c9934bb08d81fd3023}} 
+sf\+::\+Render\+Window $\ast$ {\bfseries window\+\_\+}
+\begin{DoxyCompactList}\small\item\em Variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_ac112df5f7899ee7d5fe14b4e1389a8d9}\label{classMainMenuState_ac112df5f7899ee7d5fe14b4e1389a8d9}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_aa9cf81985e8bf17388d0c56d278ba714}\label{classMainMenuState_aa9cf81985e8bf17388d0c56d278ba714}} 
+sf\+::\+Texture {\bfseries background\+Texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Background variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_a8a402723a2cc3e385c0e9460eeebd40d}\label{classMainMenuState_a8a402723a2cc3e385c0e9460eeebd40d}} 
+sf\+::\+Rectangle\+Shape {\bfseries background\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a2b8d4abe402057bc357fdc4e733643df}\label{classMainMenuState_a2b8d4abe402057bc357fdc4e733643df}} 
+sf\+::\+Rectangle\+Shape {\bfseries background\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a9be8c06f14c6709c4bb77fae17367778}\label{classMainMenuState_a9be8c06f14c6709c4bb77fae17367778}} 
+sf\+::\+Rectangle\+Shape {\bfseries background\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_aed15aeae52146edbeb0bbc18d6263654}\label{classMainMenuState_aed15aeae52146edbeb0bbc18d6263654}} 
+sf\+::\+Text {\bfseries background\+Text\+Using\+Font\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a296d7e2f40d0d9b3b6070b735c2ee26d}\label{classMainMenuState_a296d7e2f40d0d9b3b6070b735c2ee26d}} 
+sf\+::\+Font {\bfseries font\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_afc834207b1ffb7820d83fce2891ebb8e}\label{classMainMenuState_afc834207b1ffb7820d83fce2891ebb8e}} 
+sf\+::\+Music {\bfseries background\+Music\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a05b4fef138880a033e587aea3051cae0}\label{classMainMenuState_a05b4fef138880a033e587aea3051cae0}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classButton}{Button}} $\ast$ $>$ {\bfseries buttons\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_acff051d29fdb0e2d068afe48735fca6a}\label{classMainMenuState_acff051d29fdb0e2d068afe48735fca6a}} 
+float {\bfseries window\+X\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_ab12cbdfd1caf1a2a8afe22c268077093}\label{classMainMenuState_ab12cbdfd1caf1a2a8afe22c268077093}} 
+float {\bfseries window\+Y\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_ab7e2cd7d4ae4f3bfa9a070ab9bc2275a}\label{classMainMenuState_ab7e2cd7d4ae4f3bfa9a070ab9bc2275a}} 
+sf\+::\+Event $\ast$ {\bfseries Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_af2ea87eeb222541ecae694f5edb60f43}\label{classMainMenuState_af2ea87eeb222541ecae694f5edb60f43}} 
+sf\+::\+Texture {\bfseries rocket\+Texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Rocket animation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_af6fb6857731fe8954c55a798bef45185}\label{classMainMenuState_af6fb6857731fe8954c55a798bef45185}} 
+sf\+::\+Texture {\bfseries rocket\+Exhaust\+TX\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a70953d911f8d1eba173c61a2c801885d}\label{classMainMenuState_a70953d911f8d1eba173c61a2c801885d}} 
+sf\+::\+Sprite {\bfseries rocket\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a27d69aa2544ad9504729a54eae0b1cb1}\label{classMainMenuState_a27d69aa2544ad9504729a54eae0b1cb1}} 
+sf\+::\+Sprite {\bfseries rocket\+Exhaust\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_acf7d387d276e3d161e4a7db1637bfa2c}\label{classMainMenuState_acf7d387d276e3d161e4a7db1637bfa2c}} 
+bool {\bfseries pass\+State\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a5a3e86856005f1b442865d23f0bef789}\label{classMainMenuState_a5a3e86856005f1b442865d23f0bef789}} 
+float {\bfseries rocket\+Move\+Speed\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a560e86a9bc2a11aad2c69c48dc0a2197}\label{classMainMenuState_a560e86a9bc2a11aad2c69c48dc0a2197}} 
+sf\+::\+Clock {\bfseries timer\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a190f652adca02243038eacc59aa9cba6}\label{classMainMenuState_a190f652adca02243038eacc59aa9cba6}} 
+sf\+::\+Int32 {\bfseries timer\+Max\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_ac5352488aaf1aae7dd3173d831f4a6c5}\label{classMainMenuState_ac5352488aaf1aae7dd3173d831f4a6c5}} 
+sf\+::\+Clock {\bfseries press\+Timer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Press timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_a08072f7c88e8e996e8226ee85db76715}\label{classMainMenuState_a08072f7c88e8e996e8226ee85db76715}} 
+sf\+::\+Int32 {\bfseries press\+Timer\+Max\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_aca29741e1d46cad405a788e7a59bc0cc}\label{classMainMenuState_aca29741e1d46cad405a788e7a59bc0cc}} 
+int {\bfseries volume\+Level\+\_\+}
+\begin{DoxyCompactList}\small\item\em Volume settings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMainMenuState_a458175f15ede77f4f6fa1abc19a57c1a}\label{classMainMenuState_a458175f15ede77f4f6fa1abc19a57c1a}} 
+int {\bfseries sound\+Effect\+Volume\+Level\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a7bd07fbecae4c725993ab635f26dca57}\label{classMainMenuState_a7bd07fbecae4c725993ab635f26dca57}} 
+sf\+::\+Text {\bfseries volume\+Level\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a9a92736fae8dff056821c316bec4d216}\label{classMainMenuState_a9a92736fae8dff056821c316bec4d216}} 
+sf\+::\+Text {\bfseries sound\+Effectvolume\+Level\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classMainMenuState_a6a0779f68e06c49786b49f986bccb185}\label{classMainMenuState_a6a0779f68e06c49786b49f986bccb185}} 
+sf\+::\+Sound\+Buffer {\bfseries buffer}
+\item 
+\mbox{\Hypertarget{classMainMenuState_aa7abf9657195931d6a91697644694268}\label{classMainMenuState_aa7abf9657195931d6a91697644694268}} 
+sf\+::\+Sound {\bfseries click\+Sound\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMainMenuState_a15be57f5e3774bc9aabb8ae0e0386af8}\label{classMainMenuState_a15be57f5e3774bc9aabb8ae0e0386af8}} 
+\index{MainMenuState@{MainMenuState}!endState@{endState}}
+\index{endState@{endState}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{endState()}{endState()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::end\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMainMenuState_a56d1fd14d809c146b6c27ec77d06b1ea}\label{classMainMenuState_a56d1fd14d809c146b6c27ec77d06b1ea}} 
+\index{MainMenuState@{MainMenuState}!initKeyBinds@{initKeyBinds}}
+\index{initKeyBinds@{initKeyBinds}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{initKeyBinds()}{initKeyBinds()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::init\+Key\+Binds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Functions. 
+
+
+
+Implements \mbox{\hyperlink{classState_a7913fb79a9e90d93953e9844fd114186}{State}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMainMenuState_a56d1fd14d809c146b6c27ec77d06b1ea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMainMenuState_ad75a3cc4bac3045d2fb167542bafb7c5}\label{classMainMenuState_ad75a3cc4bac3045d2fb167542bafb7c5}} 
+\index{MainMenuState@{MainMenuState}!render@{render}}
+\index{render@{render}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMainMenuState_a2cb233d69d9e30f8c4ac24f256d6a3d1}\label{classMainMenuState_a2cb233d69d9e30f8c4ac24f256d6a3d1}} 
+\index{MainMenuState@{MainMenuState}!update@{update}}
+\index{update@{update}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMainMenuState_ac5b27a5cc3bc385984564444b31c09b6}\label{classMainMenuState_ac5b27a5cc3bc385984564444b31c09b6}} 
+\index{MainMenuState@{MainMenuState}!updateInput@{updateInput}}
+\index{updateInput@{updateInput}!MainMenuState@{MainMenuState}}
+\doxysubsubsection{\texorpdfstring{updateInput()}{updateInput()}}
+{\footnotesize\ttfamily void Main\+Menu\+State\+::update\+Input (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/main\+\_\+menu\+\_\+state.\+hpp\item 
+src/main\+\_\+menu\+\_\+state.\+cpp\end{DoxyCompactItemize}

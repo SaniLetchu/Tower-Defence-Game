@@ -1,0 +1,85 @@
+\hypertarget{soldier_8hpp_source}{}\doxysection{soldier.\+hpp}
+\label{soldier_8hpp_source}\index{src/soldier.hpp@{src/soldier.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SOLDIER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SOLDIER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}gametile.hpp"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}npc.hpp"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classSoldier}{Soldier}} : \textcolor{keyword}{public} \mbox{\hyperlink{classNpc}{Npc}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \mbox{\hyperlink{classSoldier_a70b8ce0c4a14d1c06a77f3277df1741d}{Soldier}}(std::string root\_filepath,sf::Vector2f sLocation,sf::Vector2f eLocation,std::vector<GameTile*>* rTiles, \textcolor{keywordtype}{int} newTileCount = 0);}
+\DoxyCodeLine{32         }
+\DoxyCodeLine{34     \mbox{\hyperlink{classSoldier_a9e23372da5b3bd1b3346d8cce5df03b3}{\string~Soldier}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoldier_abd4002ce1b10c8db0ace437a910fb70c}{Update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoldier_a13aab644f9699ab5a40346f0dfba03b9}{Render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{45     }
+\DoxyCodeLine{49     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoldier_a890c2da9bc9be5c34c38c036a100a5a2}{MoveTo}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoldier_a8f4ea4a324f235ce970991e18b82563b}{initNpc}}();}
+\DoxyCodeLine{53     }
+\DoxyCodeLine{57     std::pair<int,int> \mbox{\hyperlink{classSoldier_ab52b59c6ecb36eac003d147138948b0c}{FindDirection}}(sf::Vector2f \mbox{\hyperlink{classSoldier_aba83b437d627e0455c5811950b1ed117}{nextLocation}});}
+\DoxyCodeLine{58     }
+\DoxyCodeLine{63     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoldier_aececf082e604e5205de41b99cea5867d}{Rotate}}(\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{64     }
+\DoxyCodeLine{66     sf::Vector2f \mbox{\hyperlink{classSoldier_aedf87ee5dd0c435aa930184e0f5da015}{getPosition}}();}
+\DoxyCodeLine{67     }
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSoldier_a14d5511c9d9f8d3673659515057b98ff}{getHitpoints}}();}
+\DoxyCodeLine{70     }
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSoldier_a3ed93784583baa9e3ac1ae97a225427b}{hasReachedEnd}}();}
+\DoxyCodeLine{73     }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoldier_a4d514363468720e978901cb7adff4431}{dealDamage}}(\textcolor{keywordtype}{float} damage);}
+\DoxyCodeLine{78     }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoldier_a72bbc6aaeda2eee59c39caa7cb97b42a}{slowMovement}}(\textcolor{keywordtype}{float} slow);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{86     \textcolor{keywordtype}{float} \mbox{\hyperlink{classSoldier_a8acaad1c62f49d4feb733f9274bad85a}{movementSpeed}};}
+\DoxyCodeLine{87         }
+\DoxyCodeLine{89     \textcolor{keywordtype}{float} \mbox{\hyperlink{classSoldier_a2bc50b815c0a855d1e664a9327ecacc9}{movementspeedmemory\_}};}
+\DoxyCodeLine{90         }
+\DoxyCodeLine{92     \textcolor{keywordtype}{float} \mbox{\hyperlink{classSoldier_a25aa311159fe6eaeccedfd25dd8f560b}{hitpoints}} = 1;}
+\DoxyCodeLine{93         }
+\DoxyCodeLine{95     sf::Vector2f \mbox{\hyperlink{classSoldier_aa7ceb7a28870c499c254a6910e0fc689}{spawnLocation}};}
+\DoxyCodeLine{96         }
+\DoxyCodeLine{98     sf::Vector2f \mbox{\hyperlink{classSoldier_a9f7fd4effe7b6fd5c89e07b4c9968140}{exitLocation}};}
+\DoxyCodeLine{99         }
+\DoxyCodeLine{101     sf::Vector2f \mbox{\hyperlink{classSoldier_aba83b437d627e0455c5811950b1ed117}{nextLocation}};}
+\DoxyCodeLine{102         }
+\DoxyCodeLine{104     std::vector<GameTile*>* \mbox{\hyperlink{classSoldier_a03b7f11c488b79d449e7e77a93c3c1f1}{roadTiles}};}
+\DoxyCodeLine{105         }
+\DoxyCodeLine{107     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSoldier_a8449b264fff563674fd7168c8d9a0042}{tileCount}} = 0;}
+\DoxyCodeLine{108         }
+\DoxyCodeLine{110     sf::Sprite \mbox{\hyperlink{classSoldier_a9a12e9124fcb67b6566c25b494168160}{soldierTexture}};}
+\DoxyCodeLine{111         }
+\DoxyCodeLine{113     sf::Texture \mbox{\hyperlink{classSoldier_a62a36a97230d5d0c71128c6d6896c33d}{texture\_}};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116     sf::Clock \mbox{\hyperlink{classSoldier_a21425a315e9e457ef4ffd353d96d3284}{slowcooldown\_}};}
+\DoxyCodeLine{117     }
+\DoxyCodeLine{119     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSoldier_a720afea7cc4d1d9802d81772c5bbde55}{end\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{122     std::string \mbox{\hyperlink{classSoldier_a4c4445475a98cfce666ff8f0081325a9}{root\_filepath\_}};}
+\DoxyCodeLine{123 \textcolor{keyword}{private}:}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

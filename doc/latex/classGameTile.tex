@@ -1,0 +1,132 @@
+\hypertarget{classGameTile}{}\doxysection{Game\+Tile Class Reference}
+\label{classGameTile}\index{GameTile@{GameTile}}
+
+
+\mbox{\hyperlink{classGameTile}{Game\+Tile}} object that is used for a construction of a map.  
+
+
+
+
+{\ttfamily \#include $<$gametile.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameTile_a2457013a8d5e5b798175d634b8355e91}{Game\+Tile}} (std\+::string root\+\_\+filepath, std\+::string texturename, sf\+::\+Vector2f pos, bool buildable, int squaresize)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a7b1fa027aaab51087f2f1b96c9ba17ab}\label{classGameTile_a7b1fa027aaab51087f2f1b96c9ba17ab}} 
+{\bfseries $\sim$\+Game\+Tile} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_aa3fe93eda4603005bc96d3ec2bcac2c2}\label{classGameTile_aa3fe93eda4603005bc96d3ec2bcac2c2}} 
+void {\bfseries set\+Up\+Sprite} ()
+\begin{DoxyCompactList}\small\item\em Sets up the sprite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a9f81a6ecbc747e5a3eb1e8d503cb6ca2}\label{classGameTile_a9f81a6ecbc747e5a3eb1e8d503cb6ca2}} 
+std\+::string {\bfseries Current\+Texture} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a169750a746dff1aca9c434469e522953}\label{classGameTile_a169750a746dff1aca9c434469e522953}} 
+sf\+::\+Vector2f {\bfseries get\+Center\+Position} ()
+\begin{DoxyCompactList}\small\item\em Returns the center position of the tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a71379c21a8c019988262eaf0bd51ad12}\label{classGameTile_a71379c21a8c019988262eaf0bd51ad12}} 
+sf\+::\+Vector2f {\bfseries get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Returns the top left corner position of this tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_afd876ca2113446badd1e785a73599c14}\label{classGameTile_afd876ca2113446badd1e785a73599c14}} 
+int {\bfseries get\+Square\+Size} ()
+\begin{DoxyCompactList}\small\item\em Returns the squaresize of the tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a50d14415a8796884addc40ca75398499}\label{classGameTile_a50d14415a8796884addc40ca75398499}} 
+bool {\bfseries is\+Exit} ()
+\begin{DoxyCompactList}\small\item\em Checks if the tile is exit tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a3277406c07248336406e1fa524613c5b}\label{classGameTile_a3277406c07248336406e1fa524613c5b}} 
+bool {\bfseries is\+Spawn} ()
+\begin{DoxyCompactList}\small\item\em Checks if the tile is spawn tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a41811b75a60d0c5976200a9251b9a745}\label{classGameTile_a41811b75a60d0c5976200a9251b9a745}} 
+bool {\bfseries is\+Road} ()
+\begin{DoxyCompactList}\small\item\em Checks if the tile is a road tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a871d3a5e9cb1a70569f1476b41ec6bf3}\label{classGameTile_a871d3a5e9cb1a70569f1476b41ec6bf3}} 
+bool {\bfseries is\+Buildable} ()
+\begin{DoxyCompactList}\small\item\em Checks if the tile is a buildable tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameTile_ae01fcd100d9aee7fba47a0a97cbdac5d}{render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders the tile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGameTile_a69e93754b002bc6f420d6a743ade3ede}\label{classGameTile_a69e93754b002bc6f420d6a743ade3ede}} 
+sf\+::\+Vector2f {\bfseries pos\+\_\+}
+\begin{DoxyCompactList}\small\item\em Top left corner position of the tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a4a67c592b9f56311cac66a41d5773c42}\label{classGameTile_a4a67c592b9f56311cac66a41d5773c42}} 
+sf\+::\+Texture {\bfseries texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a271b8a661c701834289508e2cf974129}\label{classGameTile_a271b8a661c701834289508e2cf974129}} 
+sf\+::\+Sprite {\bfseries sprite\+\_\+}
+\begin{DoxyCompactList}\small\item\em Sprite of this tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a3dcadc0a57f3ef00a390f887c3b49869}\label{classGameTile_a3dcadc0a57f3ef00a390f887c3b49869}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a6b3670079d42946f10fe1c6cccbc1cac}\label{classGameTile_a6b3670079d42946f10fe1c6cccbc1cac}} 
+std\+::string {\bfseries texturename\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a42a1bec66e29292fc925b37483154001}\label{classGameTile_a42a1bec66e29292fc925b37483154001}} 
+bool {\bfseries buildable\+\_\+}
+\begin{DoxyCompactList}\small\item\em Value telling if the tile is buildable or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameTile_a9cd4fb1dd9691014fca25e6a44b90701}\label{classGameTile_a9cd4fb1dd9691014fca25e6a44b90701}} 
+int {\bfseries squaresize\+\_\+}
+\begin{DoxyCompactList}\small\item\em Squaresize of the tile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classGameTile}{Game\+Tile}} object that is used for a construction of a map. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameTile_a2457013a8d5e5b798175d634b8355e91}\label{classGameTile_a2457013a8d5e5b798175d634b8355e91}} 
+\index{GameTile@{GameTile}!GameTile@{GameTile}}
+\index{GameTile@{GameTile}!GameTile@{GameTile}}
+\doxysubsubsection{\texorpdfstring{GameTile()}{GameTile()}}
+{\footnotesize\ttfamily Game\+Tile\+::\+Game\+Tile (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{std\+::string}]{texturename,  }\item[{sf\+::\+Vector2f}]{pos,  }\item[{bool}]{buildable,  }\item[{int}]{squaresize }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em texturename} & Name of the texture used for the tile \\
+\hline
+{\em pos} & Position of the tile \\
+\hline
+{\em buildable} & Value telling if the tile is buildable \\
+\hline
+{\em squaresize} & Size of the tile \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameTile_a2457013a8d5e5b798175d634b8355e91_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGameTile_ae01fcd100d9aee7fba47a0a97cbdac5d}\label{classGameTile_ae01fcd100d9aee7fba47a0a97cbdac5d}} 
+\index{GameTile@{GameTile}!render@{render}}
+\index{render@{render}!GameTile@{GameTile}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Game\+Tile\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Renders the tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gametile.\+hpp\item 
+src/gametile.\+cpp\end{DoxyCompactItemize}

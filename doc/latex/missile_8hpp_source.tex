@@ -1,0 +1,83 @@
+\hypertarget{missile_8hpp_source}{}\doxysection{missile.\+hpp}
+\label{missile_8hpp_source}\index{src/missile.hpp@{src/missile.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MISSILE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MISSILE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classMissile}{Missile}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{22     \mbox{\hyperlink{classMissile_aa1e6e225869bf0201101d6a8b35ba870}{Missile}}(std::string root\_filepath, sf::Vector2f spawn, sf::Vector2f target, \textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} speed, \textcolor{keywordtype}{int} soundEffectVolumeLevel);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \mbox{\hyperlink{classMissile_ad42379e48a46ec3556056f98ce8bd912}{\string~Missile}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMissile_acc591b910fa24185a737eb8d719f6d90}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMissile_aba3b405c2dff017ec6cdbc1812d9f741}{setUpSprites}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMissile_abb4290952b5451efd011995e784be583}{render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMissile_a21bfe6e8c97374a39821ce3e84c9553d}{hasExploded}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMissile_a74f51212483f4de4469299dc7871124c}{dealDamage}}(std::list<Npc*> enemies);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMissile_a53cbc0eae028985f5df1689d97e8c970}{update}}(std::list<Npc*> enemies);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMissile_a805a59a58c349102a879ebf2c12ac761}{initSoundEffect}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58     sf::Clock \mbox{\hyperlink{classMissile_a7dd4c87339fbcc352d49e8588ad32d2d}{clock\_}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{keyword}{private}:}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65     std::string \mbox{\hyperlink{classMissile_afa374df4300849e990ef07da1d5f0ca5}{missile\_texture\_name\_}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68     std::string \mbox{\hyperlink{classMissile_a62f69b91dd7892afaa99cbfd34df193b}{explosion\_texture\_name\_}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71     sf::Texture \mbox{\hyperlink{classMissile_ac10457007565c54abba6627a0f225c22}{missile\_texture\_}};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74     sf::Texture \mbox{\hyperlink{classMissile_a21d7236fa03dc9f0ec5b51e99680e542}{explosion\_texture\_}};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77     sf::Sprite \mbox{\hyperlink{classMissile_a7c42266298298fed3627747faa105f13}{missile\_sprite\_}};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{80     sf::Sprite \mbox{\hyperlink{classMissile_a7af598b1c0a98a4ec80b4ee4dd098314}{explosion\_sprite\_}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83     sf::Vector2f \mbox{\hyperlink{classMissile_acf39ae2962b58baeb3837adcabdbf947}{spawn\_}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{86     sf::Vector2f \mbox{\hyperlink{classMissile_ac3104ab647030184030b8e73ebd9a486}{target\_}};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{89     std::list<Npc*> \mbox{\hyperlink{classMissile_a8b7cb6a93aa7eb3f166b0c3287487133}{enemies\_}};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMissile_ae73f6113c85e0a1cf2586965db0d0cc0}{damage\_}};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMissile_ab34170895fcad26aad7f5c14c825fa8c}{blast\_radius\_}};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMissile_a273f4b0e632ccb7692ba85622826c7b0}{speed\_}};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{101     sf::Vector2f \mbox{\hyperlink{classMissile_a361a41848fdcbf565cd9de897a284faa}{direction\_}};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMissile_a67a2e56f7b42e6d3f190ac9c6096581f}{explosion\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{107     std::string \mbox{\hyperlink{classMissile_ac40681ccf654f5cf402e5844c4e7a592}{root\_filepath\_}};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110     sf::SoundBuffer \mbox{\hyperlink{classMissile_a8a8739fee4594395231966d8357360bc}{buffer}};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{113     sf::Sound \mbox{\hyperlink{classMissile_a9aaaf424e6a8a48e70158011ccc1e5b7}{sound}};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMissile_a64798964ae5e82c011c6e40507072483}{soundEffectVolumeLevel\_}};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

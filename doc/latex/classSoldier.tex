@@ -1,0 +1,407 @@
+\hypertarget{classSoldier}{}\doxysection{Soldier Class Reference}
+\label{classSoldier}\index{Soldier@{Soldier}}
+
+
+\mbox{\hyperlink{classSoldier}{Soldier}} class to be used as one hit enemy.  
+
+
+
+
+{\ttfamily \#include $<$soldier.\+hpp$>$}
+
+
+
+Inheritance diagram for Soldier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classSoldier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Soldier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classSoldier__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSoldier_a70b8ce0c4a14d1c06a77f3277df1741d}{Soldier}} (std\+::string root\+\_\+filepath, sf\+::\+Vector2f s\+Location, sf\+::\+Vector2f e\+Location, std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$r\+Tiles, int new\+Tile\+Count=0)
+\begin{DoxyCompactList}\small\item\em Constructor for NPC sub-\/class \mbox{\hyperlink{classSoldier}{Soldier}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a9e23372da5b3bd1b3346d8cce5df03b3}\label{classSoldier_a9e23372da5b3bd1b3346d8cce5df03b3}} 
+{\bfseries $\sim$\+Soldier} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSoldier_abd4002ce1b10c8db0ace437a910fb70c}{Update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSoldier_a13aab644f9699ab5a40346f0dfba03b9}{Render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders \mbox{\hyperlink{classSoldier}{Soldier}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSoldier_a890c2da9bc9be5c34c38c036a100a5a2}{Move\+To}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Handles the logic for \mbox{\hyperlink{classSoldier}{Soldier}} to move along road tiles. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSoldier_a8f4ea4a324f235ce970991e18b82563b}{init\+Npc}} ()
+\begin{DoxyCompactList}\small\item\em Initializes \mbox{\hyperlink{classSoldier}{Soldier}} setting movespeed, textures, spawnpoint and hitpoints. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classSoldier_ab52b59c6ecb36eac003d147138948b0c}{Find\+Direction}} (sf\+::\+Vector2f \mbox{\hyperlink{classSoldier_aba83b437d627e0455c5811950b1ed117}{next\+Location}})
+\begin{DoxyCompactList}\small\item\em Finds the direction \mbox{\hyperlink{classSoldier}{Soldier}} has to go. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSoldier_aececf082e604e5205de41b99cea5867d}{Rotate}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Rotates \mbox{\hyperlink{classSoldier}{Soldier}} object while it changes direction. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classSoldier_aedf87ee5dd0c435aa930184e0f5da015}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets current position coordinates of \mbox{\hyperlink{classSoldier}{Soldier}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSoldier_a14d5511c9d9f8d3673659515057b98ff}{get\+Hitpoints}} ()
+\begin{DoxyCompactList}\small\item\em Gets \mbox{\hyperlink{classSoldier}{Soldier}}\textquotesingle{}s current hitpoints. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSoldier_a3ed93784583baa9e3ac1ae97a225427b}{has\+Reached\+End}} ()
+\begin{DoxyCompactList}\small\item\em Checks if \mbox{\hyperlink{classSoldier}{Soldier}} has reached to exit tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSoldier_a4d514363468720e978901cb7adff4431}{deal\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em Calculates the difference of current \mbox{\hyperlink{classSoldier}{Soldier}} hitpoints and damage of tower. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSoldier_a72bbc6aaeda2eee59c39caa7cb97b42a}{slow\+Movement}} (float slow)
+\begin{DoxyCompactList}\small\item\em Slows \mbox{\hyperlink{classSoldier}{Soldier}}\textquotesingle{}s movement speed with the product of movement speed and slowing parameter. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classNpc_a97879f68d40197370f11f6ecd4341091}{get\+Tile\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs tile count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}\label{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}} 
+virtual int {\bfseries get\+Worth} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs worth to give player money. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSoldier_a8acaad1c62f49d4feb733f9274bad85a}\label{classSoldier_a8acaad1c62f49d4feb733f9274bad85a}} 
+float {\bfseries movement\+Speed}
+\begin{DoxyCompactList}\small\item\em Movement speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a2bc50b815c0a855d1e664a9327ecacc9}\label{classSoldier_a2bc50b815c0a855d1e664a9327ecacc9}} 
+float {\bfseries movementspeedmemory\+\_\+}
+\begin{DoxyCompactList}\small\item\em Temporary movement speed to use in slowing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a25aa311159fe6eaeccedfd25dd8f560b}\label{classSoldier_a25aa311159fe6eaeccedfd25dd8f560b}} 
+float {\bfseries hitpoints} = 1
+\begin{DoxyCompactList}\small\item\em Hitpoints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_aa7ceb7a28870c499c254a6910e0fc689}\label{classSoldier_aa7ceb7a28870c499c254a6910e0fc689}} 
+sf\+::\+Vector2f {\bfseries spawn\+Location}
+\begin{DoxyCompactList}\small\item\em Spawn location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a9f7fd4effe7b6fd5c89e07b4c9968140}\label{classSoldier_a9f7fd4effe7b6fd5c89e07b4c9968140}} 
+sf\+::\+Vector2f {\bfseries exit\+Location}
+\begin{DoxyCompactList}\small\item\em Exit location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_aba83b437d627e0455c5811950b1ed117}\label{classSoldier_aba83b437d627e0455c5811950b1ed117}} 
+sf\+::\+Vector2f {\bfseries next\+Location}
+\begin{DoxyCompactList}\small\item\em Next location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a03b7f11c488b79d449e7e77a93c3c1f1}\label{classSoldier_a03b7f11c488b79d449e7e77a93c3c1f1}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$ {\bfseries road\+Tiles}
+\begin{DoxyCompactList}\small\item\em Vector to save road tile coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a8449b264fff563674fd7168c8d9a0042}\label{classSoldier_a8449b264fff563674fd7168c8d9a0042}} 
+int {\bfseries tile\+Count} = 0
+\begin{DoxyCompactList}\small\item\em Counter to keep count on what tile \mbox{\hyperlink{classSoldier}{Soldier}} is on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a9a12e9124fcb67b6566c25b494168160}\label{classSoldier_a9a12e9124fcb67b6566c25b494168160}} 
+sf\+::\+Sprite {\bfseries soldier\+Texture}
+\begin{DoxyCompactList}\small\item\em Sprite for \mbox{\hyperlink{classSoldier}{Soldier}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a62a36a97230d5d0c71128c6d6896c33d}\label{classSoldier_a62a36a97230d5d0c71128c6d6896c33d}} 
+sf\+::\+Texture {\bfseries texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a21425a315e9e457ef4ffd353d96d3284}\label{classSoldier_a21425a315e9e457ef4ffd353d96d3284}} 
+sf\+::\+Clock {\bfseries slowcooldown\+\_\+}
+\begin{DoxyCompactList}\small\item\em Clock to slow the \mbox{\hyperlink{classSoldier}{Soldier}} for certain amount of time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a720afea7cc4d1d9802d81772c5bbde55}\label{classSoldier_a720afea7cc4d1d9802d81772c5bbde55}} 
+bool {\bfseries end\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Boolean for \mbox{\hyperlink{classSoldier}{Soldier}} to be on exit tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSoldier_a4c4445475a98cfce666ff8f0081325a9}\label{classSoldier_a4c4445475a98cfce666ff8f0081325a9}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}\label{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}} 
+sf\+::\+Sprite {\bfseries sotilastektuuri}
+\begin{DoxyCompactList}\small\item\em Sprite for NPC class (debugging class) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}\label{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}} 
+sf\+::\+Texture {\bfseries stexture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a9b3331bad14442a3fe125779cce7490e}\label{classNpc_a9b3331bad14442a3fe125779cce7490e}} 
+int {\bfseries worth\+\_\+} = 1
+\begin{DoxyCompactList}\small\item\em Amount of money NPC is worth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classSoldier}{Soldier}} class to be used as one hit enemy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSoldier_a70b8ce0c4a14d1c06a77f3277df1741d}\label{classSoldier_a70b8ce0c4a14d1c06a77f3277df1741d}} 
+\index{Soldier@{Soldier}!Soldier@{Soldier}}
+\index{Soldier@{Soldier}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{Soldier()}{Soldier()}}
+{\footnotesize\ttfamily Soldier\+::\+Soldier (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{sf\+::\+Vector2f}]{s\+Location,  }\item[{sf\+::\+Vector2f}]{e\+Location,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$}]{r\+Tiles,  }\item[{int}]{new\+Tile\+Count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for NPC sub-\/class \mbox{\hyperlink{classSoldier}{Soldier}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em s\+Location} & Spawning location for \mbox{\hyperlink{classSoldier}{Soldier}} \\
+\hline
+{\em e\+Location} & Exit location to delete \mbox{\hyperlink{classSoldier}{Soldier}} \\
+\hline
+{\em r\+Tiles} & Vector of tile coordinates for \mbox{\hyperlink{classSoldier}{Soldier}} to follow \\
+\hline
+{\em new\+Tile\+Count} & Used to overwrite tile\+Counter while spawning \mbox{\hyperlink{classSoldier}{Soldier}} from dying \mbox{\hyperlink{classTank}{Tank}} \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classSoldier_a70b8ce0c4a14d1c06a77f3277df1741d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSoldier_a4d514363468720e978901cb7adff4431}\label{classSoldier_a4d514363468720e978901cb7adff4431}} 
+\index{Soldier@{Soldier}!dealDamage@{dealDamage}}
+\index{dealDamage@{dealDamage}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{dealDamage()}{dealDamage()}}
+{\footnotesize\ttfamily void Soldier\+::deal\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the difference of current \mbox{\hyperlink{classSoldier}{Soldier}} hitpoints and damage of tower. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage parameter of projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a6a369b595667cb0a058630faa717ab7c}{Npc}}.
+
+\mbox{\Hypertarget{classSoldier_ab52b59c6ecb36eac003d147138948b0c}\label{classSoldier_ab52b59c6ecb36eac003d147138948b0c}} 
+\index{Soldier@{Soldier}!FindDirection@{FindDirection}}
+\index{FindDirection@{FindDirection}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{FindDirection()}{FindDirection()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Soldier\+::\+Find\+Direction (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{next\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finds the direction \mbox{\hyperlink{classSoldier}{Soldier}} has to go. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Location} & Next tile coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_ae8779c3e879ab383f093b60ce445f753}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSoldier_ab52b59c6ecb36eac003d147138948b0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSoldier_a14d5511c9d9f8d3673659515057b98ff}\label{classSoldier_a14d5511c9d9f8d3673659515057b98ff}} 
+\index{Soldier@{Soldier}!getHitpoints@{getHitpoints}}
+\index{getHitpoints@{getHitpoints}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{getHitpoints()}{getHitpoints()}}
+{\footnotesize\ttfamily int Soldier\+::get\+Hitpoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets \mbox{\hyperlink{classSoldier}{Soldier}}\textquotesingle{}s current hitpoints. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_aa737d1ed48edc211df6e7648f4f61069}{Npc}}.
+
+\mbox{\Hypertarget{classSoldier_aedf87ee5dd0c435aa930184e0f5da015}\label{classSoldier_aedf87ee5dd0c435aa930184e0f5da015}} 
+\index{Soldier@{Soldier}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Soldier\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets current position coordinates of \mbox{\hyperlink{classSoldier}{Soldier}} object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62}{Npc}}.
+
+\mbox{\Hypertarget{classNpc_a97879f68d40197370f11f6ecd4341091}\label{classNpc_a97879f68d40197370f11f6ecd4341091}} 
+\index{Soldier@{Soldier}!getTileCount@{getTileCount}}
+\index{getTileCount@{getTileCount}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{getTileCount()}{getTileCount()}}
+{\footnotesize\ttfamily int Npc\+::get\+Tile\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Gets NPCs tile count. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classSuperPlane_a50eb05090f915f712e6c899764273e9b}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a1a6a086f396d7b7a6842754a5450fca8}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a7ca1c99521a4a40b459f00b505678860}{Tank}}.
+
+\mbox{\Hypertarget{classSoldier_a3ed93784583baa9e3ac1ae97a225427b}\label{classSoldier_a3ed93784583baa9e3ac1ae97a225427b}} 
+\index{Soldier@{Soldier}!hasReachedEnd@{hasReachedEnd}}
+\index{hasReachedEnd@{hasReachedEnd}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{hasReachedEnd()}{hasReachedEnd()}}
+{\footnotesize\ttfamily bool Soldier\+::has\+Reached\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if \mbox{\hyperlink{classSoldier}{Soldier}} has reached to exit tile. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a4181be8190f1b81ababc23f6492afd88}{Npc}}.
+
+\mbox{\Hypertarget{classSoldier_a8f4ea4a324f235ce970991e18b82563b}\label{classSoldier_a8f4ea4a324f235ce970991e18b82563b}} 
+\index{Soldier@{Soldier}!initNpc@{initNpc}}
+\index{initNpc@{initNpc}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{initNpc()}{initNpc()}}
+{\footnotesize\ttfamily void Soldier\+::init\+Npc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes \mbox{\hyperlink{classSoldier}{Soldier}} setting movespeed, textures, spawnpoint and hitpoints. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_aa49117d3c5d41f7f306e08d6a28f582e}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classSoldier_a8f4ea4a324f235ce970991e18b82563b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSoldier_a890c2da9bc9be5c34c38c036a100a5a2}\label{classSoldier_a890c2da9bc9be5c34c38c036a100a5a2}} 
+\index{Soldier@{Soldier}!MoveTo@{MoveTo}}
+\index{MoveTo@{MoveTo}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{MoveTo()}{MoveTo()}}
+{\footnotesize\ttfamily void Soldier\+::\+Move\+To (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the logic for \mbox{\hyperlink{classSoldier}{Soldier}} to move along road tiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25}{Npc}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classSoldier_a890c2da9bc9be5c34c38c036a100a5a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classSoldier_a890c2da9bc9be5c34c38c036a100a5a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSoldier_a13aab644f9699ab5a40346f0dfba03b9}\label{classSoldier_a13aab644f9699ab5a40346f0dfba03b9}} 
+\index{Soldier@{Soldier}!Render@{Render}}
+\index{Render@{Render}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Soldier\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders \mbox{\hyperlink{classSoldier}{Soldier}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Reference to target parameter for Gaming state to handle \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a7a34f6a6322c56cf74683a78c75cfe15}{Npc}}.
+
+\mbox{\Hypertarget{classSoldier_aececf082e604e5205de41b99cea5867d}\label{classSoldier_aececf082e604e5205de41b99cea5867d}} 
+\index{Soldier@{Soldier}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Soldier\+::\+Rotate (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates \mbox{\hyperlink{classSoldier}{Soldier}} object while it changes direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Gives x direction movement \\
+\hline
+{\em y} & Gives y direction movement \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a0801ec5847a696ecf281384bc8eb5c8d}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSoldier_aececf082e604e5205de41b99cea5867d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSoldier_a72bbc6aaeda2eee59c39caa7cb97b42a}\label{classSoldier_a72bbc6aaeda2eee59c39caa7cb97b42a}} 
+\index{Soldier@{Soldier}!slowMovement@{slowMovement}}
+\index{slowMovement@{slowMovement}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{slowMovement()}{slowMovement()}}
+{\footnotesize\ttfamily void Soldier\+::slow\+Movement (\begin{DoxyParamCaption}\item[{float}]{slow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Slows \mbox{\hyperlink{classSoldier}{Soldier}}\textquotesingle{}s movement speed with the product of movement speed and slowing parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slow} & Slowing parameter from slimeball projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a8ec65489be62e6c69a5e9f512fbad748}{Npc}}.
+
+\mbox{\Hypertarget{classSoldier_abd4002ce1b10c8db0ace437a910fb70c}\label{classSoldier_abd4002ce1b10c8db0ace437a910fb70c}} 
+\index{Soldier@{Soldier}!Update@{Update}}
+\index{Update@{Update}!Soldier@{Soldier}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Soldier\+::\+Update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e}{Npc}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSoldier_abd4002ce1b10c8db0ace437a910fb70c_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/soldier.\+hpp\item 
+src/soldier.\+cpp\end{DoxyCompactItemize}

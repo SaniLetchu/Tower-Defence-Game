@@ -1,0 +1,84 @@
+\hypertarget{highscore__state_8hpp_source}{}\doxysection{highscore\+\_\+state.\+hpp}
+\label{highscore__state_8hpp_source}\index{src/highscore\_state.hpp@{src/highscore\_state.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef HIGHSCORE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define HIGHSCORE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}state.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}button.hpp"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classHighscorestate}{Highscorestate}} : \textcolor{keyword}{public} \mbox{\hyperlink{classState}{State}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{classHighscorestate_a15ed71d7efe8c39c28ca474841eb1fc0}{Highscorestate}}(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::string root\_filepath, std::stack<State*>* \mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf::Font* font);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \mbox{\hyperlink{classHighscorestate_ab4df12dc6da161c82414c8438f386dac}{\string~Highscorestate}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_a15a8d694a1f750b87ed7904ef8c4fde0}{initSoundEffect}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_acd1c251a44f95fed11a66b12e011fb16}{updateInput}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_aacbc11904b77764f2f09873792a26d79}{endState}}();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_aff6f2dd4e3f00ea6ca2ef4a48ece16b2}{update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_a05e33314efc2e6cd681aa73dd1157bd7}{render}}(sf::RenderTarget* target = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_a0f4a0d6680cd1df5e09f3c2cd367d289}{updateButtons}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_abc96331740cf68cbf2d511f0d927911d}{renderButtons}}(sf::RenderTarget* target = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{62     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_a38a60af6fb1d616d6f9e0a0ff8460b9d}{Addhighscore}}(\textcolor{keyword}{const} std::string name, \textcolor{keywordtype}{int} highscore);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_a10628db21322c07007b617273608a3ee}{Readhighscores}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keyword}{private}:}
+\DoxyCodeLine{69     std::string \mbox{\hyperlink{classHighscorestate_ac1d2d4563dba6bfea92a402a72b6b843}{root\_filepath\_}};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{72     std::map<std::string, std::list<std::pair<int, std::string>>> \mbox{\hyperlink{classHighscorestate_ad972ab6b77067903b697fb14ec3b29e5}{highscores\_}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{75     sf::RectangleShape \mbox{\hyperlink{classHighscorestate_a1ba55204397fdb0a744cefd97848f5ba}{background\_}};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{78     sf::Font* \mbox{\hyperlink{classHighscorestate_a0f33a1991be83fa08e34f4bb51fc2d1e}{font\_}};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81     std::vector<sf::Text> \mbox{\hyperlink{classHighscorestate_a741e78abe2cec315f3fb7e050f5c54f0}{Texts\_}};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{84     std::map<std::string, Button*> \mbox{\hyperlink{classHighscorestate_af594afe7cee316dab7cc252867cf4651}{highscroeButtons\_}};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{87     sf::Clock \mbox{\hyperlink{classHighscorestate_a8f38cc29dd0ffa1854efcdbf7a6bd01c}{pressTimer\_}};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{90     sf::Int32 \mbox{\hyperlink{classHighscorestate_a050a66bbd326472b7a56ecf55b8a6636}{pressTimerMax\_}};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{93     sf::SoundBuffer \mbox{\hyperlink{classHighscorestate_af00f33a7b3d45d67592e80807fbc6371}{buffer}};}
+\DoxyCodeLine{94     sf::Sound clickSound\_;}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{float} \mbox{\hyperlink{classHighscorestate_a60c09ac32d4d19a9f1a7214526693190}{windowX\_}};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{100     \textcolor{keywordtype}{float} \mbox{\hyperlink{classHighscorestate_ac6db346138dc3d5d8c406739a68360b3}{windowY\_}};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_a421f3f5f596f9e674491466ae9c6c637}{initVariables}}();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_a57ac12055c761f25090cde11e823dde4}{initKeyBinds}}();}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_aae6b800197b487dc356beda9b1a0a0e5}{initHighscores}}();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHighscorestate_a23f5c7feb3e415ce8e755816dfc2c95a}{initButtons}}();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{115     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classHighscorestate_a2d0022eb8fc2cf73101714df354cbdbf}{getPressTimer}}();}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} scrollUpperBoundary\_;}
+\DoxyCodeLine{118     \textcolor{keywordtype}{int} scrollLowerBoundary\_;}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     }
+\DoxyCodeLine{121 \};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

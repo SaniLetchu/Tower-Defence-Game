@@ -1,0 +1,53 @@
+\hypertarget{bomb__tower_8hpp_source}{}\doxysection{bomb\+\_\+tower.\+hpp}
+\label{bomb__tower_8hpp_source}\index{src/bomb\_tower.hpp@{src/bomb\_tower.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef BOMB\_TOWER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define BOMB\_TOWER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}tower.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}missile.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}missile.cpp"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classBombTower}{BombTower}} : \textcolor{keyword}{public} \mbox{\hyperlink{classTower}{Tower}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{22     \mbox{\hyperlink{classBombTower_a98bd99e0265f0257d2971636c8cbdfe7}{BombTower}}(std::string root\_filepath, sf::Vector2f pos, \textcolor{keywordtype}{float} attack\_speed, \textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{float} radius, \textcolor{keywordtype}{int} soundEffectVolumeLevel);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \mbox{\hyperlink{classBombTower_ac1db3b745f0fab3e7a200b8f1e592275}{\string~BombTower}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBombTower_aab1cfdc42ace1c75c6eac3a1e68f45ed}{attack}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBombTower_af007e6b23be4e38a25820db03dfe24f5}{update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt, std::list<Npc*> enemies, \textcolor{keyword}{const} sf::Vector2f mousePos);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBombTower_a9574d7b8ddc04e44c707504c58e89c49}{render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBombTower_a07eed8e59075f536574bb012996dba85}{upgrade}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{private}:}
+\DoxyCodeLine{48     }
+\DoxyCodeLine{50     std::list<Missile*> \mbox{\hyperlink{classBombTower_a5473ea9333a7f3b6729ad762719c9f6c}{missiles\_}};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} \mbox{\hyperlink{classBombTower_a463c29db88a4c3cc6e54ae79a47d08f0}{soundEffectVolumeLevel\_}};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

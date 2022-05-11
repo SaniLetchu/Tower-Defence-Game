@@ -1,0 +1,80 @@
+\hypertarget{mapselector__state_8hpp_source}{}\doxysection{mapselector\+\_\+state.\+hpp}
+\label{mapselector__state_8hpp_source}\index{src/mapselector\_state.hpp@{src/mapselector\_state.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAPSELECTOR\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAPSELECTOR\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}state.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}button.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classMapselector}{Mapselector}} : \textcolor{keyword}{public} \mbox{\hyperlink{classState}{State}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{23     \mbox{\hyperlink{classMapselector_a37257150770ad4c19edb6ccdb13b7b4c}{Mapselector}}(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::string root\_filepath, std::stack<State*>* \mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf::Font *font, sf::Event* Event, \textcolor{keywordtype}{int} volumeLevel, \textcolor{keywordtype}{int} soundEffectVolumeLevel);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \mbox{\hyperlink{classMapselector_a6eaf79fd4cb1374f7c7ede49b6fee0f1}{\string~Mapselector}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapselector_a09a97ed1f1eabe108a631514715cd5db}{updateInput}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapselector_a6107a2ca1948e4e926b676820a1edaa5}{endState}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapselector_aed7157a55df5ab133fca1854a10b18b9}{update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapselector_a5526fad5bbaceae456d546a19928d788}{render}}(sf::RenderTarget* target = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapselector_a4c25647d31e41a0526a43d02eabafdfa}{openFolder}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapselector_adcf67aac3eac092ba3ac2e31fec6c409}{initVariables}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapselector_a184dd8f2084925ba18eeeaaf80fc9feb}{initSoundEffect}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{56     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMapselector_aa8e89cb3de1fb5e27c21e83a352efa24}{getPressTimer}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{private}:}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{61     std::string \mbox{\hyperlink{classMapselector_a28a0571c8988b5ec6ca8f7319edb2e21}{root\_filepath\_}};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64     sf::Font *\mbox{\hyperlink{classMapselector_aa674ee2e0d727b41019fb459355a91ee}{font\_}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{float} \mbox{\hyperlink{classMapselector_a8034b378b9c52bf78d7e0ec40d7c761a}{windowX\_}};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{float} \mbox{\hyperlink{classMapselector_ad836d35f2c9efccc2e184b527e246e25}{windowY\_}};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{73     sf::RectangleShape \mbox{\hyperlink{classMapselector_a36d2781d57b35e9071ddd8a2bf93e1ef}{backgroundColor\_}};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMapselector_a252c9745294f61271d273345c4c7aba4}{scrollUpperBoundary\_}};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMapselector_a42c351a9e9f9502c9b587a5e8e6dc420}{scrollLowerBoundary\_}};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMapselector_a7095ac677301ab0f514b590cb6e6e5ff}{volumeLevel\_}};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMapselector_aff087b278387c22812894335cae0910a}{soundEffectVolumeLevel\_}};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{comment}{// Click sound effect}}
+\DoxyCodeLine{88     sf::SoundBuffer buffer;}
+\DoxyCodeLine{89     sf::Sound clickSound\_;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{92     sf::Clock \mbox{\hyperlink{classMapselector_adae6a537fa8dd74c5ab025ebd34b631d}{pressTimer\_}};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{95     sf::Int32 \mbox{\hyperlink{classMapselector_a6b97b846a0ce33c163eb8b1192962176}{pressTimerMax\_}};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{98     sf::Clock \mbox{\hyperlink{classMapselector_aa306356e4c78038f9c908bc18ceb95f3}{timer\_}};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{101     sf::Int32 \mbox{\hyperlink{classMapselector_ab5bbc988d1567cb5a0cf9c58b6f862d6}{timerMax\_}};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{104     std::map<std::string, Button*> \mbox{\hyperlink{classMapselector_a7b705f654b0c9b532b36158a0d2d16e2}{buttons\_}};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{107     sf::Event *\mbox{\hyperlink{classMapselector_aa0b0d9898dd8135896fcb3a4b4b04914}{Event\_}};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110     sf::Clock \mbox{\hyperlink{classMapselector_a4d5768706cbe0c962b6d46c727e714b1}{clock\_}};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapselector_a02369ae58e7986cfafbf9c9252814151}{initKeyBinds}}();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

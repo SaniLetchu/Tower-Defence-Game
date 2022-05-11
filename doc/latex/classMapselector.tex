@@ -1,0 +1,325 @@
+\hypertarget{classMapselector}{}\doxysection{Mapselector Class Reference}
+\label{classMapselector}\index{Mapselector@{Mapselector}}
+
+
+\mbox{\hyperlink{classState}{State}} that shows all current maps in a Maps folder that can be selected.  
+
+
+
+
+{\ttfamily \#include $<$mapselector\+\_\+state.\+hpp$>$}
+
+
+
+Inheritance diagram for Mapselector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classMapselector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mapselector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classMapselector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMapselector_a37257150770ad4c19edb6ccdb13b7b4c}{Mapselector}} (sf\+::\+Render\+Window $\ast$window, std\+::map$<$ std\+::string, int $>$ $\ast$supported\+Keys, std\+::string root\+\_\+filepath, std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$\mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf\+::\+Font $\ast$font, sf\+::\+Event $\ast$Event, int volume\+Level, int sound\+Effect\+Volume\+Level)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a6eaf79fd4cb1374f7c7ede49b6fee0f1}\label{classMapselector_a6eaf79fd4cb1374f7c7ede49b6fee0f1}} 
+virtual {\bfseries $\sim$\+Mapselector} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMapselector_a09a97ed1f1eabe108a631514715cd5db}{update\+Input}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMapselector_a6107a2ca1948e4e926b676820a1edaa5}{end\+State}} ()
+\begin{DoxyCompactList}\small\item\em Called when ending this state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMapselector_aed7157a55df5ab133fca1854a10b18b9}{update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates objects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMapselector_a5526fad5bbaceae456d546a19928d788}{render}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\begin{DoxyCompactList}\small\item\em Renders objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a4c25647d31e41a0526a43d02eabafdfa}\label{classMapselector_a4c25647d31e41a0526a43d02eabafdfa}} 
+void {\bfseries open\+Folder} ()
+\begin{DoxyCompactList}\small\item\em Opens the Maps folder and reads all the files in there. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_adcf67aac3eac092ba3ac2e31fec6c409}\label{classMapselector_adcf67aac3eac092ba3ac2e31fec6c409}} 
+void {\bfseries init\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Initializes some of the needed variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a184dd8f2084925ba18eeeaaf80fc9feb}\label{classMapselector_a184dd8f2084925ba18eeeaaf80fc9feb}} 
+void {\bfseries init\+Sound\+Effect} ()
+\begin{DoxyCompactList}\small\item\em Initializes sound effects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_aa8e89cb3de1fb5e27c21e83a352efa24}\label{classMapselector_aa8e89cb3de1fb5e27c21e83a352efa24}} 
+const bool {\bfseries get\+Press\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Gets press timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae7ffd43d9da38fcdb420db95e297bfe6}\label{classState_ae7ffd43d9da38fcdb420db95e297bfe6}} 
+virtual void {\bfseries check\+For\+Quit} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a18c3b970753bab2937141803644aaf24}\label{classState_a18c3b970753bab2937141803644aaf24}} 
+const bool \& {\bfseries get\+Quit} () const
+\item 
+\mbox{\Hypertarget{classState_a6a5bc29c3bcc7b51d2beca0e83457203}\label{classState_a6a5bc29c3bcc7b51d2beca0e83457203}} 
+virtual void {\bfseries update\+Mouse\+Position} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_aefb9f5e6f768f587894545fa88d1d63d}\label{classState_aefb9f5e6f768f587894545fa88d1d63d}} 
+bool {\bfseries quit\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}\label{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}} 
+std\+::vector$<$ sf\+::\+Texture $>$ {\bfseries textures}
+\begin{DoxyCompactList}\small\item\em Container for textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_af4f86a4bd3b369693d17b4c21a5be044}\label{classState_af4f86a4bd3b369693d17b4c21a5be044}} 
+sf\+::\+Render\+Window $\ast$ {\bfseries window\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_aba797f16cff3648fedc7aba1fefd25ab}\label{classState_aba797f16cff3648fedc7aba1fefd25ab}} 
+std\+::map$<$ std\+::string, int $>$ $\ast$ {\bfseries supported\+Keys\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to supported keys. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a5692fac721147048fe1d2656f8a7a687}\label{classState_a5692fac721147048fe1d2656f8a7a687}} 
+std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$ {\bfseries states}
+\begin{DoxyCompactList}\small\item\em Pointer to a stack filled with state pointers (check \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}} private) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a21879afd59a7cd5aeede2a080fcd1d34}\label{classState_a21879afd59a7cd5aeede2a080fcd1d34}} 
+std\+::map$<$ std\+::string, int $>$ {\bfseries keybinds\+\_\+}
+\item 
+\mbox{\Hypertarget{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}\label{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Screen}
+\begin{DoxyCompactList}\small\item\em Mouse position variavles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae19be9c58de5545c8cd162f11969d6ee}\label{classState_ae19be9c58de5545c8cd162f11969d6ee}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Window}
+\item 
+\mbox{\Hypertarget{classState_a9f930912be370fcd0ecae58e17e0c35e}\label{classState_a9f930912be370fcd0ecae58e17e0c35e}} 
+sf\+::\+Vector2f {\bfseries mouse\+Pos\+View}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMapselector_a02369ae58e7986cfafbf9c9252814151}{init\+Key\+Binds}} ()
+\begin{DoxyCompactList}\small\item\em Initializes keybinds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMapselector_a28a0571c8988b5ec6ca8f7319edb2e21}\label{classMapselector_a28a0571c8988b5ec6ca8f7319edb2e21}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_aa674ee2e0d727b41019fb459355a91ee}\label{classMapselector_aa674ee2e0d727b41019fb459355a91ee}} 
+sf\+::\+Font $\ast$ {\bfseries font\+\_\+}
+\begin{DoxyCompactList}\small\item\em Font. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a8034b378b9c52bf78d7e0ec40d7c761a}\label{classMapselector_a8034b378b9c52bf78d7e0ec40d7c761a}} 
+float {\bfseries window\+X\+\_\+}
+\begin{DoxyCompactList}\small\item\em Window\textquotesingle{}s x length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_ad836d35f2c9efccc2e184b527e246e25}\label{classMapselector_ad836d35f2c9efccc2e184b527e246e25}} 
+float {\bfseries window\+Y\+\_\+}
+\begin{DoxyCompactList}\small\item\em Window\textquotesingle{}s y length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a36d2781d57b35e9071ddd8a2bf93e1ef}\label{classMapselector_a36d2781d57b35e9071ddd8a2bf93e1ef}} 
+sf\+::\+Rectangle\+Shape {\bfseries background\+Color\+\_\+}
+\begin{DoxyCompactList}\small\item\em Background color. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a252c9745294f61271d273345c4c7aba4}\label{classMapselector_a252c9745294f61271d273345c4c7aba4}} 
+int {\bfseries scroll\+Upper\+Boundary\+\_\+}
+\begin{DoxyCompactList}\small\item\em Limit to scrolling up. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a42c351a9e9f9502c9b587a5e8e6dc420}\label{classMapselector_a42c351a9e9f9502c9b587a5e8e6dc420}} 
+int {\bfseries scroll\+Lower\+Boundary\+\_\+}
+\begin{DoxyCompactList}\small\item\em Limit to scrolling down. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a7095ac677301ab0f514b590cb6e6e5ff}\label{classMapselector_a7095ac677301ab0f514b590cb6e6e5ff}} 
+int {\bfseries volume\+Level\+\_\+}
+\begin{DoxyCompactList}\small\item\em Volume level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_aff087b278387c22812894335cae0910a}\label{classMapselector_aff087b278387c22812894335cae0910a}} 
+int {\bfseries sound\+Effect\+Volume\+Level\+\_\+}
+\begin{DoxyCompactList}\small\item\em SFX volume level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a52a7e6404cb81f264f7b6e5adab41904}\label{classMapselector_a52a7e6404cb81f264f7b6e5adab41904}} 
+sf\+::\+Sound\+Buffer {\bfseries buffer}
+\item 
+\mbox{\Hypertarget{classMapselector_a9472c41a602437a64b846d7de80f5cef}\label{classMapselector_a9472c41a602437a64b846d7de80f5cef}} 
+sf\+::\+Sound {\bfseries click\+Sound\+\_\+}
+\item 
+\mbox{\Hypertarget{classMapselector_adae6a537fa8dd74c5ab025ebd34b631d}\label{classMapselector_adae6a537fa8dd74c5ab025ebd34b631d}} 
+sf\+::\+Clock {\bfseries press\+Timer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Press timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a6b97b846a0ce33c163eb8b1192962176}\label{classMapselector_a6b97b846a0ce33c163eb8b1192962176}} 
+sf\+::\+Int32 {\bfseries press\+Timer\+Max\+\_\+}
+\begin{DoxyCompactList}\small\item\em Press timer max. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_aa306356e4c78038f9c908bc18ceb95f3}\label{classMapselector_aa306356e4c78038f9c908bc18ceb95f3}} 
+sf\+::\+Clock {\bfseries timer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_ab5bbc988d1567cb5a0cf9c58b6f862d6}\label{classMapselector_ab5bbc988d1567cb5a0cf9c58b6f862d6}} 
+sf\+::\+Int32 {\bfseries timer\+Max\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer max. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a7b705f654b0c9b532b36158a0d2d16e2}\label{classMapselector_a7b705f654b0c9b532b36158a0d2d16e2}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classButton}{Button}} $\ast$ $>$ {\bfseries buttons\+\_\+}
+\begin{DoxyCompactList}\small\item\em All of the buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_aa0b0d9898dd8135896fcb3a4b4b04914}\label{classMapselector_aa0b0d9898dd8135896fcb3a4b4b04914}} 
+sf\+::\+Event $\ast$ {\bfseries Event\+\_\+}
+\begin{DoxyCompactList}\small\item\em Event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapselector_a4d5768706cbe0c962b6d46c727e714b1}\label{classMapselector_a4d5768706cbe0c962b6d46c727e714b1}} 
+sf\+::\+Clock {\bfseries clock\+\_\+}
+\begin{DoxyCompactList}\small\item\em Clock timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classState}{State}} that shows all current maps in a Maps folder that can be selected. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMapselector_a37257150770ad4c19edb6ccdb13b7b4c}\label{classMapselector_a37257150770ad4c19edb6ccdb13b7b4c}} 
+\index{Mapselector@{Mapselector}!Mapselector@{Mapselector}}
+\index{Mapselector@{Mapselector}!Mapselector@{Mapselector}}
+\doxysubsubsection{\texorpdfstring{Mapselector()}{Mapselector()}}
+{\footnotesize\ttfamily Mapselector\+::\+Mapselector (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::map$<$ std\+::string, int $>$ $\ast$}]{supported\+Keys,  }\item[{std\+::string}]{root\+\_\+filepath,  }\item[{std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$}]{states,  }\item[{sf\+::\+Font $\ast$}]{font,  }\item[{sf\+::\+Event $\ast$}]{Event,  }\item[{int}]{volume\+Level,  }\item[{int}]{sound\+Effect\+Volume\+Level }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window object where objects are drawn \\
+\hline
+{\em supported\+Keys} & Keys that are supported \\
+\hline
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em states} & Stack containing all of the current states \\
+\hline
+{\em font} & Font used for texts \\
+\hline
+{\em Event} & Event \\
+\hline
+{\em volume\+Level} & Volume level \\
+\hline
+{\em sound\+Effect\+Volume\+Level} & SFX volume level \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMapselector_a37257150770ad4c19edb6ccdb13b7b4c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMapselector_a6107a2ca1948e4e926b676820a1edaa5}\label{classMapselector_a6107a2ca1948e4e926b676820a1edaa5}} 
+\index{Mapselector@{Mapselector}!endState@{endState}}
+\index{endState@{endState}!Mapselector@{Mapselector}}
+\doxysubsubsection{\texorpdfstring{endState()}{endState()}}
+{\footnotesize\ttfamily void Mapselector\+::end\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when ending this state. 
+
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMapselector_a02369ae58e7986cfafbf9c9252814151}\label{classMapselector_a02369ae58e7986cfafbf9c9252814151}} 
+\index{Mapselector@{Mapselector}!initKeyBinds@{initKeyBinds}}
+\index{initKeyBinds@{initKeyBinds}!Mapselector@{Mapselector}}
+\doxysubsubsection{\texorpdfstring{initKeyBinds()}{initKeyBinds()}}
+{\footnotesize\ttfamily void Mapselector\+::init\+Key\+Binds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Initializes keybinds. 
+
+
+
+Implements \mbox{\hyperlink{classState_a7913fb79a9e90d93953e9844fd114186}{State}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMapselector_a02369ae58e7986cfafbf9c9252814151_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMapselector_a5526fad5bbaceae456d546a19928d788}\label{classMapselector_a5526fad5bbaceae456d546a19928d788}} 
+\index{Mapselector@{Mapselector}!render@{render}}
+\index{render@{render}!Mapselector@{Mapselector}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Mapselector\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMapselector_aed7157a55df5ab133fca1854a10b18b9}\label{classMapselector_aed7157a55df5ab133fca1854a10b18b9}} 
+\index{Mapselector@{Mapselector}!update@{update}}
+\index{update@{update}!Mapselector@{Mapselector}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Mapselector\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMapselector_aed7157a55df5ab133fca1854a10b18b9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMapselector_a09a97ed1f1eabe108a631514715cd5db}\label{classMapselector_a09a97ed1f1eabe108a631514715cd5db}} 
+\index{Mapselector@{Mapselector}!updateInput@{updateInput}}
+\index{updateInput@{updateInput}!Mapselector@{Mapselector}}
+\doxysubsubsection{\texorpdfstring{updateInput()}{updateInput()}}
+{\footnotesize\ttfamily void Mapselector\+::update\+Input (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMapselector_a09a97ed1f1eabe108a631514715cd5db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMapselector_a09a97ed1f1eabe108a631514715cd5db_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/mapselector\+\_\+state.\+hpp\item 
+src/mapselector\+\_\+state.\+cpp\end{DoxyCompactItemize}

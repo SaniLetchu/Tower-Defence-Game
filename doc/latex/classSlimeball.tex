@@ -1,0 +1,211 @@
+\hypertarget{classSlimeball}{}\doxysection{Slimeball Class Reference}
+\label{classSlimeball}\index{Slimeball@{Slimeball}}
+
+
+\mbox{\hyperlink{classSlimeball}{Slimeball}} object that is initialized from slowing tower.  
+
+
+
+
+{\ttfamily \#include $<$slimeball.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSlimeball_abf619bb075c1d20fed51b46dda993172}{Slimeball}} (std\+::string root\+\_\+filepath, sf\+::\+Vector2f spawn, sf\+::\+Vector2f target, int damage, int speed, float slowing\+\_\+parameter)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a2266c5871631df2bd32d41302d206fbb}\label{classSlimeball_a2266c5871631df2bd32d41302d206fbb}} 
+{\bfseries $\sim$\+Slimeball} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSlimeball_a65d20e45afeb1c42b84fd3596e857161}{move}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Moves the missile towards target location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a3119d955539b0ddbd6093027e54171ed}\label{classSlimeball_a3119d955539b0ddbd6093027e54171ed}} 
+void {\bfseries set\+Up\+Sprites} ()
+\begin{DoxyCompactList}\small\item\em Sets up all the sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSlimeball_aed654c55343828187c9b6abf2b9e86d3}{render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders the slimeball on target (window) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_ac0c9282525bb3ec023f5439bb63c1a60}\label{classSlimeball_ac0c9282525bb3ec023f5439bb63c1a60}} 
+bool {\bfseries has\+Exploded} ()
+\begin{DoxyCompactList}\small\item\em Checks if explosion has happened. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSlimeball_aa7c67b12b949570657555b0cf8344136}{deal\+Damage}} (std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ enemies)
+\begin{DoxyCompactList}\small\item\em Slows all enemies in slimeball radius. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSlimeball_a47cf00d6f8a052b06a0708770c08106c}{update}} (std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ enemies)
+\begin{DoxyCompactList}\small\item\em Updates this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSlimeball_abf58522639bfe990519031ccb003c622}\label{classSlimeball_abf58522639bfe990519031ccb003c622}} 
+sf\+::\+Clock {\bfseries clock\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSlimeball_ad2804ea0d8ea1b03e01403566f912cae}\label{classSlimeball_ad2804ea0d8ea1b03e01403566f912cae}} 
+std\+::string {\bfseries missile\+\_\+texture\+\_\+name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the missile texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a84b9635c4df5f9ca76c6d265a73ea39c}\label{classSlimeball_a84b9635c4df5f9ca76c6d265a73ea39c}} 
+std\+::string {\bfseries explosion\+\_\+texture\+\_\+name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the explosion texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a43940a929500f9fe5df2c4f5cfd2e9d5}\label{classSlimeball_a43940a929500f9fe5df2c4f5cfd2e9d5}} 
+sf\+::\+Texture {\bfseries missile\+\_\+texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMissile}{Missile}} texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_ad5e8707740a609542704e15d6bdd1fbc}\label{classSlimeball_ad5e8707740a609542704e15d6bdd1fbc}} 
+sf\+::\+Texture {\bfseries explosion\+\_\+texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Explosion texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a2a45c8c1d7c0b9a9cd1f2804cf5197e7}\label{classSlimeball_a2a45c8c1d7c0b9a9cd1f2804cf5197e7}} 
+sf\+::\+Sprite {\bfseries missile\+\_\+sprite\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMissile}{Missile}} sprite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a2a0b11874df45ece888d7871b9526c19}\label{classSlimeball_a2a0b11874df45ece888d7871b9526c19}} 
+sf\+::\+Sprite {\bfseries explosion\+\_\+sprite\+\_\+}
+\begin{DoxyCompactList}\small\item\em Explosion sprite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_ace197a45a7340042bcdf4e142a1b18e3}\label{classSlimeball_ace197a45a7340042bcdf4e142a1b18e3}} 
+sf\+::\+Vector2f {\bfseries spawn\+\_\+}
+\begin{DoxyCompactList}\small\item\em Spawn location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a6893d01e0f9337291eb5ab9334d4d34f}\label{classSlimeball_a6893d01e0f9337291eb5ab9334d4d34f}} 
+sf\+::\+Vector2f {\bfseries target\+\_\+}
+\begin{DoxyCompactList}\small\item\em Target location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_aeaef01bc96610266e189653ef66d52d0}\label{classSlimeball_aeaef01bc96610266e189653ef66d52d0}} 
+std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ {\bfseries enemies\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of current enemies. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a7a6d459294431e01036b50f725df8e72}\label{classSlimeball_a7a6d459294431e01036b50f725df8e72}} 
+int {\bfseries damage\+\_\+}
+\begin{DoxyCompactList}\small\item\em Damage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a84e017f92f4d41e4a21a996cc533b2f1}\label{classSlimeball_a84e017f92f4d41e4a21a996cc533b2f1}} 
+int {\bfseries blast\+\_\+radius\+\_\+}
+\begin{DoxyCompactList}\small\item\em Blast radius. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a5f3cd581e3baddb8a224a2f7cdf9e90a}\label{classSlimeball_a5f3cd581e3baddb8a224a2f7cdf9e90a}} 
+int {\bfseries speed\+\_\+}
+\begin{DoxyCompactList}\small\item\em Speed of the missile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a3cf27fb4cebf5760a6ec32d942234359}\label{classSlimeball_a3cf27fb4cebf5760a6ec32d942234359}} 
+float {\bfseries slowing\+\_\+parameter\+\_\+}
+\begin{DoxyCompactList}\small\item\em Slowing parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a6a29699c2c7c593ad926e148915adc1f}\label{classSlimeball_a6a29699c2c7c593ad926e148915adc1f}} 
+sf\+::\+Vector2f {\bfseries direction\+\_\+}
+\begin{DoxyCompactList}\small\item\em Direction for the missile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a3f559e2a3c8c9bcc2d106a2a4041b850}\label{classSlimeball_a3f559e2a3c8c9bcc2d106a2a4041b850}} 
+bool {\bfseries explosion\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Checks if explosion has happened. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlimeball_a307bb1a7559ccc097ae39f95e0ea91f2}\label{classSlimeball_a307bb1a7559ccc097ae39f95e0ea91f2}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classSlimeball}{Slimeball}} object that is initialized from slowing tower. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSlimeball_abf619bb075c1d20fed51b46dda993172}\label{classSlimeball_abf619bb075c1d20fed51b46dda993172}} 
+\index{Slimeball@{Slimeball}!Slimeball@{Slimeball}}
+\index{Slimeball@{Slimeball}!Slimeball@{Slimeball}}
+\doxysubsubsection{\texorpdfstring{Slimeball()}{Slimeball()}}
+{\footnotesize\ttfamily Slimeball\+::\+Slimeball (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{sf\+::\+Vector2f}]{spawn,  }\item[{sf\+::\+Vector2f}]{target,  }\item[{int}]{damage,  }\item[{int}]{speed,  }\item[{float}]{slowing\+\_\+parameter }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em spawn} & Coordinates for spawn location \\
+\hline
+{\em target} & Coordinates to target location \\
+\hline
+{\em damage} & Damage in integers \\
+\hline
+{\em speed} & Speed of the missile \\
+\hline
+{\em slowing\+\_\+parameter} & Slowing parameter \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSlimeball_abf619bb075c1d20fed51b46dda993172_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSlimeball_aa7c67b12b949570657555b0cf8344136}\label{classSlimeball_aa7c67b12b949570657555b0cf8344136}} 
+\index{Slimeball@{Slimeball}!dealDamage@{dealDamage}}
+\index{dealDamage@{dealDamage}!Slimeball@{Slimeball}}
+\doxysubsubsection{\texorpdfstring{dealDamage()}{dealDamage()}}
+{\footnotesize\ttfamily void Slimeball\+::deal\+Damage (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$}]{enemies }\end{DoxyParamCaption})}
+
+
+
+Slows all enemies in slimeball radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemies} & List of all the current enemies \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classSlimeball_aa7c67b12b949570657555b0cf8344136_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSlimeball_a65d20e45afeb1c42b84fd3596e857161}\label{classSlimeball_a65d20e45afeb1c42b84fd3596e857161}} 
+\index{Slimeball@{Slimeball}!move@{move}}
+\index{move@{move}!Slimeball@{Slimeball}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Slimeball\+::move (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})}
+
+
+
+Moves the missile towards target location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classSlimeball_a65d20e45afeb1c42b84fd3596e857161_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSlimeball_aed654c55343828187c9b6abf2b9e86d3}\label{classSlimeball_aed654c55343828187c9b6abf2b9e86d3}} 
+\index{Slimeball@{Slimeball}!render@{render}}
+\index{render@{render}!Slimeball@{Slimeball}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Slimeball\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Renders the slimeball on target (window) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSlimeball_a47cf00d6f8a052b06a0708770c08106c}\label{classSlimeball_a47cf00d6f8a052b06a0708770c08106c}} 
+\index{Slimeball@{Slimeball}!update@{update}}
+\index{update@{update}!Slimeball@{Slimeball}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Slimeball\+::update (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$}]{enemies }\end{DoxyParamCaption})}
+
+
+
+Updates this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemies} & List of all the current enemies \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/slimeball.\+hpp\item 
+src/slimeball.\+cpp\end{DoxyCompactItemize}

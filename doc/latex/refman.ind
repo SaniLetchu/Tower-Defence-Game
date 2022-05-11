@@ -1,0 +1,320 @@
+\begin{theindex}
+
+  \item {Addhighscore}
+    \subitem {Highscorestate}, \hyperpage{46}
+  \item {attack}
+    \subitem {BasicTower}, \hyperpage{9}
+    \subitem {BombTower}, \hyperpage{13}
+    \subitem {SlowingTower}, \hyperpage{65}
+    \subitem {Tower}, \hyperpage{83}
+
+  \indexspace
+
+  \item {BasicTower}, \hyperpage{7}
+    \subitem {attack}, \hyperpage{9}
+    \subitem {render}, \hyperpage{9}
+    \subitem {rotateGun}, \hyperpage{10}
+    \subitem {update}, \hyperpage{10}
+    \subitem {upgrade}, \hyperpage{11}
+  \item {BombTower}, \hyperpage{11}
+    \subitem {attack}, \hyperpage{13}
+    \subitem {render}, \hyperpage{14}
+    \subitem {rotateGun}, \hyperpage{14}
+    \subitem {update}, \hyperpage{15}
+    \subitem {upgrade}, \hyperpage{15}
+  \item {Button}, \hyperpage{16}
+    \subitem {Button}, \hyperpage{17}
+    \subitem {render}, \hyperpage{17}
+    \subitem {update}, \hyperpage{18}
+
+  \indexspace
+
+  \item {Createmap}, \hyperpage{18}
+    \subitem {Createmap}, \hyperpage{21}
+    \subitem {endState}, \hyperpage{22}
+    \subitem {initKeyBinds}, \hyperpage{22}
+    \subitem {NextSpawnOrExit}, \hyperpage{23}
+    \subitem {NextTextureAt}, \hyperpage{24}
+    \subitem {render}, \hyperpage{25}
+    \subitem {renderButtons}, \hyperpage{25}
+    \subitem {ReplacePosition}, \hyperpage{26}
+    \subitem {ReplaceSpawnOrExit}, \hyperpage{26}
+    \subitem {TileAt}, \hyperpage{27}
+    \subitem {update}, \hyperpage{27}
+    \subitem {updateInput}, \hyperpage{29}
+
+  \indexspace
+
+  \item {dealDamage}
+    \subitem {Plane}, \hyperpage{60}
+    \subitem {Soldier}, \hyperpage{69}
+    \subitem {Tank}, \hyperpage{75}
+
+  \indexspace
+
+  \item {endState}
+    \subitem {Createmap}, \hyperpage{22}
+    \subitem {GameState}, \hyperpage{37}
+    \subitem {Highscorestate}, \hyperpage{46}
+    \subitem {MainMenuState}, \hyperpage{52}
+    \subitem {Mapselector}, \hyperpage{55}
+    \subitem {State}, \hyperpage{72}
+
+  \indexspace
+
+  \item {FindDirection}
+    \subitem {Plane}, \hyperpage{60}
+    \subitem {Soldier}, \hyperpage{69}
+    \subitem {Tank}, \hyperpage{75}
+
+  \indexspace
+
+  \item {Game}, \hyperpage{30}
+  \item {GameState}, \hyperpage{31}
+    \subitem {endState}, \hyperpage{37}
+    \subitem {GameState}, \hyperpage{36}
+    \subitem {getSpawn}, \hyperpage{37}
+    \subitem {initKeyBinds}, \hyperpage{37}
+    \subitem {render}, \hyperpage{38}
+    \subitem {update}, \hyperpage{38}
+    \subitem {updateInput}, \hyperpage{39}
+  \item {GameTile}, \hyperpage{40}
+    \subitem {GameTile}, \hyperpage{41}
+    \subitem {render}, \hyperpage{42}
+  \item {getHitpoints}
+    \subitem {Plane}, \hyperpage{61}
+    \subitem {Soldier}, \hyperpage{69}
+    \subitem {Tank}, \hyperpage{75}
+  \item {getPosition}
+    \subitem {Plane}, \hyperpage{61}
+    \subitem {Soldier}, \hyperpage{70}
+    \subitem {Tank}, \hyperpage{75}
+  \item {getSpawn}
+    \subitem {GameState}, \hyperpage{37}
+  \item {getTileCount}
+    \subitem {Tank}, \hyperpage{76}
+
+  \indexspace
+
+  \item {hasReachedEnd}
+    \subitem {Plane}, \hyperpage{61}
+    \subitem {Soldier}, \hyperpage{70}
+    \subitem {Tank}, \hyperpage{76}
+  \item {Highscorestate}, \hyperpage{42}
+    \subitem {Addhighscore}, \hyperpage{46}
+    \subitem {endState}, \hyperpage{46}
+    \subitem {Highscorestate}, \hyperpage{45}
+    \subitem {initKeyBinds}, \hyperpage{46}
+    \subitem {render}, \hyperpage{47}
+    \subitem {renderButtons}, \hyperpage{47}
+    \subitem {update}, \hyperpage{48}
+    \subitem {updateInput}, \hyperpage{48}
+
+  \indexspace
+
+  \item {initKeyBinds}
+    \subitem {Createmap}, \hyperpage{22}
+    \subitem {GameState}, \hyperpage{37}
+    \subitem {Highscorestate}, \hyperpage{46}
+    \subitem {MainMenuState}, \hyperpage{52}
+    \subitem {Mapselector}, \hyperpage{55}
+    \subitem {State}, \hyperpage{73}
+  \item {initNpc}
+    \subitem {Plane}, \hyperpage{61}
+    \subitem {Soldier}, \hyperpage{70}
+    \subitem {Tank}, \hyperpage{76}
+
+  \indexspace
+
+  \item {MainMenuState}, \hyperpage{49}
+    \subitem {endState}, \hyperpage{52}
+    \subitem {initKeyBinds}, \hyperpage{52}
+    \subitem {render}, \hyperpage{52}
+    \subitem {update}, \hyperpage{52}
+    \subitem {updateInput}, \hyperpage{52}
+  \item {Mapselector}, \hyperpage{53}
+    \subitem {endState}, \hyperpage{55}
+    \subitem {initKeyBinds}, \hyperpage{55}
+    \subitem {render}, \hyperpage{55}
+    \subitem {update}, \hyperpage{56}
+    \subitem {updateInput}, \hyperpage{56}
+  \item {Missile}, \hyperpage{57}
+  \item {MoveTo}
+    \subitem {Plane}, \hyperpage{61}
+    \subitem {Soldier}, \hyperpage{70}
+    \subitem {Tank}, \hyperpage{76}
+
+  \indexspace
+
+  \item {NextSpawnOrExit}
+    \subitem {Createmap}, \hyperpage{23}
+  \item {NextTextureAt}
+    \subitem {Createmap}, \hyperpage{24}
+  \item {Npc}, \hyperpage{58}
+    \subitem {Update}, \hyperpage{59}
+
+  \indexspace
+
+  \item {Plane}, \hyperpage{59}
+    \subitem {dealDamage}, \hyperpage{60}
+    \subitem {FindDirection}, \hyperpage{60}
+    \subitem {getHitpoints}, \hyperpage{61}
+    \subitem {getPosition}, \hyperpage{61}
+    \subitem {hasReachedEnd}, \hyperpage{61}
+    \subitem {initNpc}, \hyperpage{61}
+    \subitem {MoveTo}, \hyperpage{61}
+    \subitem {Render}, \hyperpage{61}
+    \subitem {Rotate}, \hyperpage{62}
+    \subitem {slowMovement}, \hyperpage{62}
+    \subitem {Update}, \hyperpage{62}
+
+  \indexspace
+
+  \item {Render}
+    \subitem {Plane}, \hyperpage{61}
+    \subitem {Soldier}, \hyperpage{70}
+    \subitem {Tank}, \hyperpage{76}
+  \item {render}
+    \subitem {BasicTower}, \hyperpage{9}
+    \subitem {BombTower}, \hyperpage{14}
+    \subitem {Button}, \hyperpage{17}
+    \subitem {Createmap}, \hyperpage{25}
+    \subitem {GameState}, \hyperpage{38}
+    \subitem {GameTile}, \hyperpage{42}
+    \subitem {Highscorestate}, \hyperpage{47}
+    \subitem {MainMenuState}, \hyperpage{52}
+    \subitem {Mapselector}, \hyperpage{55}
+    \subitem {SlowingTower}, \hyperpage{66}
+    \subitem {State}, \hyperpage{73}
+    \subitem {Textbox}, \hyperpage{79}
+    \subitem {Tower}, \hyperpage{84}
+  \item {renderButtons}
+    \subitem {Createmap}, \hyperpage{25}
+    \subitem {Highscorestate}, \hyperpage{47}
+  \item {ReplacePosition}
+    \subitem {Createmap}, \hyperpage{26}
+  \item {ReplaceSpawnOrExit}
+    \subitem {Createmap}, \hyperpage{26}
+  \item {Rotate}
+    \subitem {Plane}, \hyperpage{62}
+    \subitem {Soldier}, \hyperpage{70}
+    \subitem {Tank}, \hyperpage{76}
+  \item {rotateGun}
+    \subitem {BasicTower}, \hyperpage{10}
+    \subitem {BombTower}, \hyperpage{14}
+    \subitem {SlowingTower}, \hyperpage{66}
+    \subitem {Tower}, \hyperpage{84}
+
+  \indexspace
+
+  \item {Slimeball}, \hyperpage{62}
+  \item {SlowingTower}, \hyperpage{63}
+    \subitem {attack}, \hyperpage{65}
+    \subitem {render}, \hyperpage{66}
+    \subitem {rotateGun}, \hyperpage{66}
+    \subitem {update}, \hyperpage{67}
+    \subitem {upgrade}, \hyperpage{67}
+  \item {slowMovement}
+    \subitem {Plane}, \hyperpage{62}
+    \subitem {Soldier}, \hyperpage{71}
+    \subitem {Tank}, \hyperpage{77}
+  \item {Soldier}, \hyperpage{68}
+    \subitem {dealDamage}, \hyperpage{69}
+    \subitem {FindDirection}, \hyperpage{69}
+    \subitem {getHitpoints}, \hyperpage{69}
+    \subitem {getPosition}, \hyperpage{70}
+    \subitem {hasReachedEnd}, \hyperpage{70}
+    \subitem {initNpc}, \hyperpage{70}
+    \subitem {MoveTo}, \hyperpage{70}
+    \subitem {Render}, \hyperpage{70}
+    \subitem {Rotate}, \hyperpage{70}
+    \subitem {slowMovement}, \hyperpage{71}
+    \subitem {Update}, \hyperpage{71}
+  \item {src/basic\_tower.hpp}, \hyperpage{87}
+  \item {src/bomb\_tower.hpp}, \hyperpage{87}
+  \item {src/button.hpp}, \hyperpage{88}
+  \item {src/createmap\_state.hpp}, \hyperpage{89}
+  \item {src/game.hpp}, \hyperpage{90}
+  \item {src/gametile.hpp}, \hyperpage{91}
+  \item {src/gaming\_state.hpp}, \hyperpage{91}
+  \item {src/highscore\_state.hpp}, \hyperpage{94}
+  \item {src/main\_menu\_state.hpp}, \hyperpage{94}
+  \item {src/mapselector\_state.hpp}, \hyperpage{96}
+  \item {src/missile.hpp}, \hyperpage{96}
+  \item {src/npc.hpp}, \hyperpage{97}
+  \item {src/plane.hpp}, \hyperpage{98}
+  \item {src/slimeball.hpp}, \hyperpage{99}
+  \item {src/slowing\_tower.hpp}, \hyperpage{99}
+  \item {src/soldier.hpp}, \hyperpage{100}
+  \item {src/state.hpp}, \hyperpage{101}
+  \item {src/tank.hpp}, \hyperpage{101}
+  \item {src/textbox.hpp}, \hyperpage{102}
+  \item {src/tower.hpp}, \hyperpage{103}
+  \item {State}, \hyperpage{71}
+    \subitem {endState}, \hyperpage{72}
+    \subitem {initKeyBinds}, \hyperpage{73}
+    \subitem {render}, \hyperpage{73}
+    \subitem {update}, \hyperpage{73}
+    \subitem {updateInput}, \hyperpage{73}
+
+  \indexspace
+
+  \item {Tank}, \hyperpage{74}
+    \subitem {dealDamage}, \hyperpage{75}
+    \subitem {FindDirection}, \hyperpage{75}
+    \subitem {getHitpoints}, \hyperpage{75}
+    \subitem {getPosition}, \hyperpage{75}
+    \subitem {getTileCount}, \hyperpage{76}
+    \subitem {hasReachedEnd}, \hyperpage{76}
+    \subitem {initNpc}, \hyperpage{76}
+    \subitem {MoveTo}, \hyperpage{76}
+    \subitem {Render}, \hyperpage{76}
+    \subitem {Rotate}, \hyperpage{76}
+    \subitem {slowMovement}, \hyperpage{77}
+    \subitem {Update}, \hyperpage{77}
+  \item {Textbox}, \hyperpage{77}
+    \subitem {render}, \hyperpage{79}
+    \subitem {Textbox}, \hyperpage{78}
+    \subitem {update}, \hyperpage{79}
+  \item {TileAt}
+    \subitem {Createmap}, \hyperpage{27}
+  \item {Tower}, \hyperpage{80}
+    \subitem {attack}, \hyperpage{83}
+    \subitem {render}, \hyperpage{84}
+    \subitem {rotateGun}, \hyperpage{84}
+    \subitem {Tower}, \hyperpage{82}
+    \subitem {update}, \hyperpage{85}
+
+  \indexspace
+
+  \item {Update}
+    \subitem {Npc}, \hyperpage{59}
+    \subitem {Plane}, \hyperpage{62}
+    \subitem {Soldier}, \hyperpage{71}
+    \subitem {Tank}, \hyperpage{77}
+  \item {update}
+    \subitem {BasicTower}, \hyperpage{10}
+    \subitem {BombTower}, \hyperpage{15}
+    \subitem {Button}, \hyperpage{18}
+    \subitem {Createmap}, \hyperpage{27}
+    \subitem {GameState}, \hyperpage{38}
+    \subitem {Highscorestate}, \hyperpage{48}
+    \subitem {MainMenuState}, \hyperpage{52}
+    \subitem {Mapselector}, \hyperpage{56}
+    \subitem {SlowingTower}, \hyperpage{67}
+    \subitem {State}, \hyperpage{73}
+    \subitem {Textbox}, \hyperpage{79}
+    \subitem {Tower}, \hyperpage{85}
+  \item {updateInput}
+    \subitem {Createmap}, \hyperpage{29}
+    \subitem {GameState}, \hyperpage{39}
+    \subitem {Highscorestate}, \hyperpage{48}
+    \subitem {MainMenuState}, \hyperpage{52}
+    \subitem {Mapselector}, \hyperpage{56}
+    \subitem {State}, \hyperpage{73}
+  \item {upgrade}
+    \subitem {BasicTower}, \hyperpage{11}
+    \subitem {BombTower}, \hyperpage{15}
+    \subitem {SlowingTower}, \hyperpage{67}
+
+\end{theindex}

@@ -1,0 +1,87 @@
+\hypertarget{super__tank_8hpp_source}{}\doxysection{super\+\_\+tank.\+hpp}
+\label{super__tank_8hpp_source}\index{src/super\_tank.hpp@{src/super\_tank.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SUPERTANK\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SUPERTANK\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}gametile.hpp"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}npc.hpp"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classSuperTank}{SuperTank}} : \textcolor{keyword}{public} \mbox{\hyperlink{classNpc}{Npc}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \mbox{\hyperlink{classSuperTank_a79b0f254000d6dd331e0bc3818630357}{SuperTank}}(std::string root\_filepath,sf::Vector2f sLocation,sf::Vector2f eLocation,std::vector<GameTile*>* rTiles, \textcolor{keywordtype}{int} round);}
+\DoxyCodeLine{32             }
+\DoxyCodeLine{34     \mbox{\hyperlink{classSuperTank_a5fe394a0500e90b53aab94e27a7510a7}{\string~SuperTank}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSuperTank_a20d6c8a8922e1671aeefae0f0c5084ed}{Update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{40                 }
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSuperTank_aad1e97f943a6b105494761169289ba69}{Render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{45                 }
+\DoxyCodeLine{49     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSuperTank_a8391ee47e37f2a3a89dad08501e70735}{MoveTo}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{50     }
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSuperTank_a26549690e0e247e567376dfc674f9919}{initNpc}}();}
+\DoxyCodeLine{53                 }
+\DoxyCodeLine{57     std::pair<int,int> \mbox{\hyperlink{classSuperTank_aa8145e70d19256592e305ad5cd47ba0e}{FindDirection}}(sf::Vector2f \mbox{\hyperlink{classSuperTank_a114538c893e2b3aa2e2aba4f29fba504}{nextLocation}});}
+\DoxyCodeLine{58                 }
+\DoxyCodeLine{63     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSuperTank_a1bfdd1b84276835db5422f5a2b77af1e}{Rotate}}(\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{64                 }
+\DoxyCodeLine{66     sf::Vector2f \mbox{\hyperlink{classSuperTank_a17df13b95c51073e3984fd10a1cb442a}{getPosition}}();}
+\DoxyCodeLine{67                 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSuperTank_a0e2a872a26fd7a8f71f7dbb2062c12b6}{getHitpoints}}();}
+\DoxyCodeLine{70                 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSuperTank_abfbeef47c16789020dd79405610846dd}{hasReachedEnd}}();}
+\DoxyCodeLine{73                 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSuperTank_a04bcbd68aa10d6af5d136210b4e484b1}{dealDamage}}(\textcolor{keywordtype}{float} damage);}
+\DoxyCodeLine{78                 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSuperTank_a2232d4aa5e6cc47040445f3cd5bd0a84}{slowMovement}}(\textcolor{keywordtype}{float} slow);}
+\DoxyCodeLine{83             }
+\DoxyCodeLine{85     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSuperTank_a1a6a086f396d7b7a6842754a5450fca8}{getTileCount}}();}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{89     \textcolor{keywordtype}{float} \mbox{\hyperlink{classSuperTank_a26709ac1e8dcbd0666516964fb6c3250}{movementSpeed}};}
+\DoxyCodeLine{90                     }
+\DoxyCodeLine{92     \textcolor{keywordtype}{float} \mbox{\hyperlink{classSuperTank_a5868425d1183d30a4f618ea4ef3b22c0}{movementspeedmemory\_}};}
+\DoxyCodeLine{93                     }
+\DoxyCodeLine{95     \textcolor{keywordtype}{float} \mbox{\hyperlink{classSuperTank_ac6c4bb0bbad4c8af430c35434d0a5d04}{hitpoints}} = 1;}
+\DoxyCodeLine{96                     }
+\DoxyCodeLine{98     sf::Vector2f \mbox{\hyperlink{classSuperTank_afa7df2485d6dfef58ce5540a9689ea93}{spawnLocation}};}
+\DoxyCodeLine{99                     }
+\DoxyCodeLine{101     sf::Vector2f \mbox{\hyperlink{classSuperTank_a48ebc52f48ee3ea07da567b0fad7a380}{exitLocation}};}
+\DoxyCodeLine{102                     }
+\DoxyCodeLine{104     sf::Vector2f \mbox{\hyperlink{classSuperTank_a114538c893e2b3aa2e2aba4f29fba504}{nextLocation}};}
+\DoxyCodeLine{105                     }
+\DoxyCodeLine{107     std::vector<GameTile*>* \mbox{\hyperlink{classSuperTank_a11565d2aabf566a0e234a16a47787223}{roadTiles}};}
+\DoxyCodeLine{108                     }
+\DoxyCodeLine{110     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSuperTank_a86a9e98697f2c56e724a5717930ef33e}{tileCount}} = 0;}
+\DoxyCodeLine{111                     }
+\DoxyCodeLine{113     sf::Sprite \mbox{\hyperlink{classSuperTank_a2e59d9bf90e53caf810c4182542e1af3}{superTankTexture}};}
+\DoxyCodeLine{114                     }
+\DoxyCodeLine{116     sf::Texture \mbox{\hyperlink{classSuperTank_a1af7110b6081b1442e5046f4fcc5ab6a}{texture\_}};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{119     sf::Clock \mbox{\hyperlink{classSuperTank_a05dcfd8102d8e003dc8bd496c260da0b}{slowcooldown\_}};}
+\DoxyCodeLine{120                 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSuperTank_a36c499234cea340aedb92bf6ccb0011e}{end\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{125     std::string \mbox{\hyperlink{classSuperTank_af15016f28133a7643a6f07ab56a5f656}{root\_filepath\_}};}
+\DoxyCodeLine{126 \textcolor{keyword}{private}:}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

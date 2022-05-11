@@ -1,0 +1,509 @@
+\hypertarget{classCreatemap}{}\doxysection{Createmap Class Reference}
+\label{classCreatemap}\index{Createmap@{Createmap}}
+
+
+\mbox{\hyperlink{classState}{State}} that is used to display a map that can be edited.  
+
+
+
+
+{\ttfamily \#include $<$createmap\+\_\+state.\+hpp$>$}
+
+
+
+Inheritance diagram for Createmap\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classCreatemap__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Createmap\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classCreatemap__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCreatemap_a0f03c0fc778548fd901493171007d276}{Createmap}} (sf\+::\+Render\+Window $\ast$window, std\+::map$<$ std\+::string, int $>$ $\ast$supported\+Keys, std\+::string root\+\_\+filepath, std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$\mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf\+::\+Font $\ast$font, sf\+::\+Event $\ast$Event)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a22c9d089d8d1bb4c67bc09a30ae15ea3}\label{classCreatemap_a22c9d089d8d1bb4c67bc09a30ae15ea3}} 
+virtual {\bfseries $\sim$\+Createmap} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a4a95d6cf4a7ae9b8e0e43ba67659ad84}\label{classCreatemap_a4a95d6cf4a7ae9b8e0e43ba67659ad84}} 
+void {\bfseries init\+Sound\+Effect} ()
+\begin{DoxyCompactList}\small\item\em Initialize click sound effect. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCreatemap_a1bc1dc0fd5d084356c97446de6a284ba}{update\+Input}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCreatemap_a00c75c6ed48d0f16eacbf3b130de88f9}{end\+State}} ()
+\begin{DoxyCompactList}\small\item\em Called when ending this state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCreatemap_aac3eac47b90869999c18a69d6c64f341}{update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates objects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCreatemap_add3a8dba62e9e7306fc01cb04dcb2d97}{render}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\begin{DoxyCompactList}\small\item\em Renders objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a50b611e05ab914a29528bbb568116186}\label{classCreatemap_a50b611e05ab914a29528bbb568116186}} 
+void {\bfseries update\+Buttons} ()
+\begin{DoxyCompactList}\small\item\em Updates buttons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCreatemap_aa7b300c60d7f1efc3289fdaae6aadda0}{render\+Buttons}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\begin{DoxyCompactList}\small\item\em Renders all of the buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a2c724d5c344560115f2a26cfea61e32d}\label{classCreatemap_a2c724d5c344560115f2a26cfea61e32d}} 
+void {\bfseries init\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Initializes some of the needed variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a606dea73efa3d811d295ed430504ad93}\label{classCreatemap_a606dea73efa3d811d295ed430504ad93}} 
+void {\bfseries Save\+To\+File} (std\+::string mapname)
+\begin{DoxyCompactList}\small\item\em Saves the current map to a textfile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a493b700076c1d5151fd0e7c337660deb}\label{classCreatemap_a493b700076c1d5151fd0e7c337660deb}} 
+void {\bfseries init\+Tiles} ()
+\begin{DoxyCompactList}\small\item\em Initializes default map containing only sand tiles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCreatemap_ae9f13a7ba0a64eea1b1931353d2f61f8}{Replace\+Position}} (int x, int y, std\+::string texturename, bool buildable)
+\begin{DoxyCompactList}\small\item\em Changes the texture on the given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a269814ba67c0ac0c5c1431710e78a3c6}\label{classCreatemap_a269814ba67c0ac0c5c1431710e78a3c6}} 
+void {\bfseries init\+Textures} ()
+\begin{DoxyCompactList}\small\item\em Initializes all the given textures. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ \mbox{\hyperlink{classCreatemap_ae632ebe990a59721ad59b0706cd66d43}{Tile\+At}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Returns the tile at that position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCreatemap_a7599e5af7d855cdeeabb47f09b7e250b}{Next\+Texture\+At}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Changes the texture on the given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCreatemap_a755480b651ef735f04413ff01aae40b8}{Next\+Spawn\+Or\+Exit}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Changes the texture on the given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCreatemap_a9b76f8842ef691fe4e17475ebc42dc0c}{Replace\+Spawn\+Or\+Exit}} (int x, int y, std\+::string texturename)
+\begin{DoxyCompactList}\small\item\em Changes the texture on the given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae7ffd43d9da38fcdb420db95e297bfe6}\label{classState_ae7ffd43d9da38fcdb420db95e297bfe6}} 
+virtual void {\bfseries check\+For\+Quit} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a18c3b970753bab2937141803644aaf24}\label{classState_a18c3b970753bab2937141803644aaf24}} 
+const bool \& {\bfseries get\+Quit} () const
+\item 
+\mbox{\Hypertarget{classState_a6a5bc29c3bcc7b51d2beca0e83457203}\label{classState_a6a5bc29c3bcc7b51d2beca0e83457203}} 
+virtual void {\bfseries update\+Mouse\+Position} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_aefb9f5e6f768f587894545fa88d1d63d}\label{classState_aefb9f5e6f768f587894545fa88d1d63d}} 
+bool {\bfseries quit\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}\label{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}} 
+std\+::vector$<$ sf\+::\+Texture $>$ {\bfseries textures}
+\begin{DoxyCompactList}\small\item\em Container for textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_af4f86a4bd3b369693d17b4c21a5be044}\label{classState_af4f86a4bd3b369693d17b4c21a5be044}} 
+sf\+::\+Render\+Window $\ast$ {\bfseries window\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_aba797f16cff3648fedc7aba1fefd25ab}\label{classState_aba797f16cff3648fedc7aba1fefd25ab}} 
+std\+::map$<$ std\+::string, int $>$ $\ast$ {\bfseries supported\+Keys\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to supported keys. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a5692fac721147048fe1d2656f8a7a687}\label{classState_a5692fac721147048fe1d2656f8a7a687}} 
+std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$ {\bfseries states}
+\begin{DoxyCompactList}\small\item\em Pointer to a stack filled with state pointers (check \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}} private) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a21879afd59a7cd5aeede2a080fcd1d34}\label{classState_a21879afd59a7cd5aeede2a080fcd1d34}} 
+std\+::map$<$ std\+::string, int $>$ {\bfseries keybinds\+\_\+}
+\item 
+\mbox{\Hypertarget{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}\label{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Screen}
+\begin{DoxyCompactList}\small\item\em Mouse position variavles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae19be9c58de5545c8cd162f11969d6ee}\label{classState_ae19be9c58de5545c8cd162f11969d6ee}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Window}
+\item 
+\mbox{\Hypertarget{classState_a9f930912be370fcd0ecae58e17e0c35e}\label{classState_a9f930912be370fcd0ecae58e17e0c35e}} 
+sf\+::\+Vector2f {\bfseries mouse\+Pos\+View}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCreatemap_a0ba30d35ef39325a4543d143ec42565f}{init\+Key\+Binds}} ()
+\begin{DoxyCompactList}\small\item\em Initializes keybinds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_ac697f3203e2abb4a78f027a405b1893d}\label{classCreatemap_ac697f3203e2abb4a78f027a405b1893d}} 
+void {\bfseries init\+Buttons} ()
+\begin{DoxyCompactList}\small\item\em Initializes buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_ab4ece9f6236d91847ae580a1d55ed9c1}\label{classCreatemap_ab4ece9f6236d91847ae580a1d55ed9c1}} 
+const bool {\bfseries get\+Press\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Gets the presstimer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCreatemap_ad435f60435364bd564b610cd571f4cf3}\label{classCreatemap_ad435f60435364bd564b610cd571f4cf3}} 
+std\+::map$<$ std\+::pair$<$ int, int $>$, \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ {\bfseries Tiles}
+\begin{DoxyCompactList}\small\item\em Map containing all of the tiles and their x and y values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a1c3a52164db3fd57f7e1bef4a3397348}\label{classCreatemap_a1c3a52164db3fd57f7e1bef4a3397348}} 
+std\+::map$<$ std\+::pair$<$ int, int $>$, \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ {\bfseries Spawn\+And\+Exit\+\_\+}
+\begin{DoxyCompactList}\small\item\em Map containing all of the spawn and exit tiles and their x and y values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_abdcb200ee23fa99dd61516ef69e63cf0}\label{classCreatemap_abdcb200ee23fa99dd61516ef69e63cf0}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a3cad19051ba7df352402fe3de8c821fb}\label{classCreatemap_a3cad19051ba7df352402fe3de8c821fb}} 
+sf\+::\+Vector2u {\bfseries mouse\+Pos\+Grid}
+\begin{DoxyCompactList}\small\item\em Mouse position according to tiles starting from top left (0,0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a5e4b371f52d96e237cf71767568b6ddb}\label{classCreatemap_a5e4b371f52d96e237cf71767568b6ddb}} 
+std\+::vector$<$ std\+::pair$<$ bool, std\+::string $>$ $>$ {\bfseries textures\+\_\+}
+\begin{DoxyCompactList}\small\item\em Vector containing names of all the textures and bool values if they are buildable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a0b90221bb253b4f9ca6c04bbba21a965}\label{classCreatemap_a0b90221bb253b4f9ca6c04bbba21a965}} 
+std\+::vector$<$ std\+::pair$<$ bool, std\+::string $>$ $>$ {\bfseries spawnandexittextures\+\_\+}
+\begin{DoxyCompactList}\small\item\em Vector containing names of all the spawn and exit textures and bool values if they are buildable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_ac6abcf2f445ad783629a2dc8e1488ba8}\label{classCreatemap_ac6abcf2f445ad783629a2dc8e1488ba8}} 
+sf\+::\+Clock {\bfseries clock}
+\begin{DoxyCompactList}\small\item\em Counts time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_accbc2a54bc954ee5ae146f7f7a176c9f}\label{classCreatemap_accbc2a54bc954ee5ae146f7f7a176c9f}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classButton}{Button}} $\ast$ $>$ {\bfseries mapcreate\+Buttons\+\_\+}
+\begin{DoxyCompactList}\small\item\em Map containing all of the buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a7b034651efdea3d44e3d4f5a3968bc88}\label{classCreatemap_a7b034651efdea3d44e3d4f5a3968bc88}} 
+sf\+::\+Clock {\bfseries press\+Timer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a34b650d361e66c9e6b2d00f137842f06}\label{classCreatemap_a34b650d361e66c9e6b2d00f137842f06}} 
+sf\+::\+Int32 {\bfseries press\+Timer\+Max\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer max. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a83e89038650e123cdce38074ffd057f7}\label{classCreatemap_a83e89038650e123cdce38074ffd057f7}} 
+float {\bfseries window\+X\+\_\+}
+\begin{DoxyCompactList}\small\item\em Window\textquotesingle{}s x length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a775b32776aee6a028ae3dd60f7f9f18c}\label{classCreatemap_a775b32776aee6a028ae3dd60f7f9f18c}} 
+float {\bfseries window\+Y\+\_\+}
+\begin{DoxyCompactList}\small\item\em Window\textquotesingle{}s y length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_af3eedd4ae969486afa21ed841f0c4dcf}\label{classCreatemap_af3eedd4ae969486afa21ed841f0c4dcf}} 
+sf\+::\+Font $\ast$ {\bfseries font\+\_\+}
+\begin{DoxyCompactList}\small\item\em Font of the text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a59ba23fe94edb3008ba17933820875da}\label{classCreatemap_a59ba23fe94edb3008ba17933820875da}} 
+sf\+::\+Sound\+Buffer {\bfseries buffer}
+\item 
+\mbox{\Hypertarget{classCreatemap_af58caaafb1d1e4cb8b3cd8dd6cdb68fd}\label{classCreatemap_af58caaafb1d1e4cb8b3cd8dd6cdb68fd}} 
+sf\+::\+Sound {\bfseries click\+Sound\+\_\+}
+\item 
+\mbox{\Hypertarget{classCreatemap_a1456a53b542241681eb21d094fe9e9cf}\label{classCreatemap_a1456a53b542241681eb21d094fe9e9cf}} 
+sf\+::\+Event $\ast$ {\bfseries Event\+\_\+}
+\begin{DoxyCompactList}\small\item\em Event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCreatemap_a1c4f206a4f681159cfd1329e2eb24a62}\label{classCreatemap_a1c4f206a4f681159cfd1329e2eb24a62}} 
+\mbox{\hyperlink{classTextbox}{Textbox}} $\ast$ {\bfseries textbox\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTextbox}{Textbox}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classState}{State}} that is used to display a map that can be edited. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCreatemap_a0f03c0fc778548fd901493171007d276}\label{classCreatemap_a0f03c0fc778548fd901493171007d276}} 
+\index{Createmap@{Createmap}!Createmap@{Createmap}}
+\index{Createmap@{Createmap}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{Createmap()}{Createmap()}}
+{\footnotesize\ttfamily Createmap\+::\+Createmap (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::map$<$ std\+::string, int $>$ $\ast$}]{supported\+Keys,  }\item[{std\+::string}]{root\+\_\+filepath,  }\item[{std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$}]{states,  }\item[{sf\+::\+Font $\ast$}]{font,  }\item[{sf\+::\+Event $\ast$}]{Event }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window object where objects are drawn \\
+\hline
+{\em supported\+Keys} & Keys that are supported \\
+\hline
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em states} & Stack containing all of the current states \\
+\hline
+{\em font} & Font used for texts \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a0f03c0fc778548fd901493171007d276_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCreatemap_a00c75c6ed48d0f16eacbf3b130de88f9}\label{classCreatemap_a00c75c6ed48d0f16eacbf3b130de88f9}} 
+\index{Createmap@{Createmap}!endState@{endState}}
+\index{endState@{endState}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{endState()}{endState()}}
+{\footnotesize\ttfamily void Createmap\+::end\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when ending this state. 
+
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classCreatemap_a0ba30d35ef39325a4543d143ec42565f}\label{classCreatemap_a0ba30d35ef39325a4543d143ec42565f}} 
+\index{Createmap@{Createmap}!initKeyBinds@{initKeyBinds}}
+\index{initKeyBinds@{initKeyBinds}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{initKeyBinds()}{initKeyBinds()}}
+{\footnotesize\ttfamily void Createmap\+::init\+Key\+Binds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Initializes keybinds. 
+
+
+
+Implements \mbox{\hyperlink{classState_a7913fb79a9e90d93953e9844fd114186}{State}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a0ba30d35ef39325a4543d143ec42565f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_a755480b651ef735f04413ff01aae40b8}\label{classCreatemap_a755480b651ef735f04413ff01aae40b8}} 
+\index{Createmap@{Createmap}!NextSpawnOrExit@{NextSpawnOrExit}}
+\index{NextSpawnOrExit@{NextSpawnOrExit}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{NextSpawnOrExit()}{NextSpawnOrExit()}}
+{\footnotesize\ttfamily void Createmap\+::\+Next\+Spawn\+Or\+Exit (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Changes the texture on the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X value of Mouse position \\
+\hline
+{\em y} & y value of Mouse position \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a755480b651ef735f04413ff01aae40b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a755480b651ef735f04413ff01aae40b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_a7599e5af7d855cdeeabb47f09b7e250b}\label{classCreatemap_a7599e5af7d855cdeeabb47f09b7e250b}} 
+\index{Createmap@{Createmap}!NextTextureAt@{NextTextureAt}}
+\index{NextTextureAt@{NextTextureAt}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{NextTextureAt()}{NextTextureAt()}}
+{\footnotesize\ttfamily void Createmap\+::\+Next\+Texture\+At (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Changes the texture on the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X value of Mouse position \\
+\hline
+{\em y} & y value of Mouse position \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a7599e5af7d855cdeeabb47f09b7e250b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a7599e5af7d855cdeeabb47f09b7e250b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_add3a8dba62e9e7306fc01cb04dcb2d97}\label{classCreatemap_add3a8dba62e9e7306fc01cb04dcb2d97}} 
+\index{Createmap@{Createmap}!render@{render}}
+\index{render@{render}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Createmap\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_add3a8dba62e9e7306fc01cb04dcb2d97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_aa7b300c60d7f1efc3289fdaae6aadda0}\label{classCreatemap_aa7b300c60d7f1efc3289fdaae6aadda0}} 
+\index{Createmap@{Createmap}!renderButtons@{renderButtons}}
+\index{renderButtons@{renderButtons}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{renderButtons()}{renderButtons()}}
+{\footnotesize\ttfamily void Createmap\+::render\+Buttons (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Renders all of the buttons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_aa7b300c60d7f1efc3289fdaae6aadda0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_ae9f13a7ba0a64eea1b1931353d2f61f8}\label{classCreatemap_ae9f13a7ba0a64eea1b1931353d2f61f8}} 
+\index{Createmap@{Createmap}!ReplacePosition@{ReplacePosition}}
+\index{ReplacePosition@{ReplacePosition}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{ReplacePosition()}{ReplacePosition()}}
+{\footnotesize\ttfamily void Createmap\+::\+Replace\+Position (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::string}]{texturename,  }\item[{bool}]{buildable }\end{DoxyParamCaption})}
+
+
+
+Changes the texture on the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X value of Mouse position \\
+\hline
+{\em y} & y value of Mouse position \\
+\hline
+{\em texturename} & Name of the texture that will replace the current texture \\
+\hline
+{\em buildable} & Tells if the next tile is going to be buildable tile or not \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_ae9f13a7ba0a64eea1b1931353d2f61f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_a9b76f8842ef691fe4e17475ebc42dc0c}\label{classCreatemap_a9b76f8842ef691fe4e17475ebc42dc0c}} 
+\index{Createmap@{Createmap}!ReplaceSpawnOrExit@{ReplaceSpawnOrExit}}
+\index{ReplaceSpawnOrExit@{ReplaceSpawnOrExit}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{ReplaceSpawnOrExit()}{ReplaceSpawnOrExit()}}
+{\footnotesize\ttfamily void Createmap\+::\+Replace\+Spawn\+Or\+Exit (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::string}]{texturename }\end{DoxyParamCaption})}
+
+
+
+Changes the texture on the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X value of Mouse position \\
+\hline
+{\em y} & y value of Mouse position \\
+\hline
+{\em texturename} & Name of the texture that will replace the current texture \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a9b76f8842ef691fe4e17475ebc42dc0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_ae632ebe990a59721ad59b0706cd66d43}\label{classCreatemap_ae632ebe990a59721ad59b0706cd66d43}} 
+\index{Createmap@{Createmap}!TileAt@{TileAt}}
+\index{TileAt@{TileAt}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{TileAt()}{TileAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ Createmap\+::\+Tile\+At (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Returns the tile at that position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X value of Mouse position \\
+\hline
+{\em y} & y value of Mouse position \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_ae632ebe990a59721ad59b0706cd66d43_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_aac3eac47b90869999c18a69d6c64f341}\label{classCreatemap_aac3eac47b90869999c18a69d6c64f341}} 
+\index{Createmap@{Createmap}!update@{update}}
+\index{update@{update}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Createmap\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_aac3eac47b90869999c18a69d6c64f341_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCreatemap_a1bc1dc0fd5d084356c97446de6a284ba}\label{classCreatemap_a1bc1dc0fd5d084356c97446de6a284ba}} 
+\index{Createmap@{Createmap}!updateInput@{updateInput}}
+\index{updateInput@{updateInput}!Createmap@{Createmap}}
+\doxysubsubsection{\texorpdfstring{updateInput()}{updateInput()}}
+{\footnotesize\ttfamily void Createmap\+::update\+Input (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a1bc1dc0fd5d084356c97446de6a284ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCreatemap_a1bc1dc0fd5d084356c97446de6a284ba_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/createmap\+\_\+state.\+hpp\item 
+src/createmap\+\_\+state.\+cpp\end{DoxyCompactItemize}

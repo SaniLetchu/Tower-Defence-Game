@@ -1,0 +1,85 @@
+\hypertarget{plane_8hpp_source}{}\doxysection{plane.\+hpp}
+\label{plane_8hpp_source}\index{src/plane.hpp@{src/plane.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PLANE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PLANE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}gametile.hpp"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}npc.hpp"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classPlane}{Plane}} : \textcolor{keyword}{public} \mbox{\hyperlink{classNpc}{Npc}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \mbox{\hyperlink{classPlane_afd6692941242ab4f0581ba326011b994}{Plane}}(std::string root\_filepath,sf::Vector2f sLocation,sf::Vector2f eLocation,std::vector<GameTile*>* rTiles, \textcolor{keywordtype}{int} round, \textcolor{keywordtype}{int} newTileCount = 0);}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{35     \mbox{\hyperlink{classPlane_a69abd86051c880dcb44b249ad10c4436}{\string~Plane}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlane_a1a841df404d74e8677d2dc2b67a12539}{Update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlane_a8f693be4c8ca6a48620da2acf39d5e0b}{Render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlane_a6961380b8e13d0a85e9736793b0e2741}{MoveTo}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlane_a217944413aeb09efe0fda8f2358375e5}{initNpc}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58     std::pair<int,int> \mbox{\hyperlink{classPlane_a274cc71269f61be3639978ff5526e1f3}{FindDirection}}(sf::Vector2f \mbox{\hyperlink{classPlane_a53b72dbf8cd61370fa45ecd322f3791d}{nextLocation}});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{64     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlane_a08bbd5a8291edb2b15c198eabffd8f9f}{Rotate}}(\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67     sf::Vector2f \mbox{\hyperlink{classPlane_a8c4b088b87c2104adf8c750af40e222b}{getPosition}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPlane_ae91413a02c6edcbb5f56ca0afbc0c4e7}{getHitpoints}}();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPlane_a236b3347e1b61e651838caa8f017c164}{hasReachedEnd}}();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlane_a0a716b3b5cf2424f0c3ca5626df66dd8}{dealDamage}}(\textcolor{keywordtype}{float} damage);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlane_ab33a8ef3c90354ae310802ad17f3d0b9}{slowMovement}}(\textcolor{keywordtype}{float} slow);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{87     \textcolor{keywordtype}{float} \mbox{\hyperlink{classPlane_a45b91e53cda7085e91b4c0106c977f9a}{movementSpeed}};}
+\DoxyCodeLine{88     }
+\DoxyCodeLine{90     \textcolor{keywordtype}{float} \mbox{\hyperlink{classPlane_ae1e92ce453e4018f0e54d353c1e407ae}{movementspeedmemory\_}};}
+\DoxyCodeLine{91     }
+\DoxyCodeLine{93     \textcolor{keywordtype}{float} \mbox{\hyperlink{classPlane_af9f33826ab87106497b0307cc837f451}{hitpoints}} = 1;}
+\DoxyCodeLine{94     }
+\DoxyCodeLine{96     sf::Vector2f \mbox{\hyperlink{classPlane_a71ac92e6390a82a1d3b1c40c774b9f04}{spawnLocation}};}
+\DoxyCodeLine{97     }
+\DoxyCodeLine{99     sf::Vector2f \mbox{\hyperlink{classPlane_a1203ffed22cd4cff07bfbc305d16abb9}{exitLocation}};}
+\DoxyCodeLine{100     }
+\DoxyCodeLine{102     sf::Vector2f \mbox{\hyperlink{classPlane_a53b72dbf8cd61370fa45ecd322f3791d}{nextLocation}};}
+\DoxyCodeLine{103     }
+\DoxyCodeLine{105     std::vector<GameTile*>* \mbox{\hyperlink{classPlane_a34d9a90f49141a843a2f39b9ac55d2bf}{roadTiles}};}
+\DoxyCodeLine{106     }
+\DoxyCodeLine{108     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPlane_a36c5f745a2bc5eb70b04cfeecaab8081}{tileCount}} = 0;}
+\DoxyCodeLine{109     }
+\DoxyCodeLine{111     sf::Sprite \mbox{\hyperlink{classPlane_a6d097fdec2373c50ff8de23469834bea}{planeTexture}};}
+\DoxyCodeLine{112     }
+\DoxyCodeLine{114     sf::Texture \mbox{\hyperlink{classPlane_ab7bdef1edabd3d547a040f6aa0e8ce3e}{texture\_}};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{117     sf::Clock \mbox{\hyperlink{classPlane_a5617e649a5e3c9dc00e777b6fdde4994}{slowcooldown\_}};}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPlane_a3d2c9567cf631e3df8ecdb93682d550f}{end\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{123     std::string \mbox{\hyperlink{classPlane_a2f49fc1362b39abe763fc2d84a9bbd01}{root\_filepath\_}};}
+\DoxyCodeLine{124 \textcolor{keyword}{private}:}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

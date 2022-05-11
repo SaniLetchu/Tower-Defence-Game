@@ -1,0 +1,552 @@
+\hypertarget{classGameState}{}\doxysection{Game\+State Class Reference}
+\label{classGameState}\index{GameState@{GameState}}
+
+
+Inheritance diagram for Game\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classGameState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classGameState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameState_a4371ce5165f7c5a3bb21cbf4340e9814}{Game\+State}} (sf\+::\+Render\+Window $\ast$window, std\+::map$<$ std\+::string, int $>$ $\ast$supported\+Keys, std\+::string root\+\_\+filepath, std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$\mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf\+::\+Event $\ast$Event, std\+::string mapfile, sf\+::\+Font $\ast$font, int volume\+Level, int sound\+Effect\+Volume\+Level)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ae623df5042cd0c17daa3394fdcb397b3}\label{classGameState_ae623df5042cd0c17daa3394fdcb397b3}} 
+virtual {\bfseries $\sim$\+Game\+State} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGameState_a5dc4ac4f28b9487c9e35b8c452c7c58f}{update\+Input}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGameState_a5b6ccfff3ca74df5a7e67fdeb4ed5bce}{end\+State}} ()
+\begin{DoxyCompactList}\small\item\em Called when ending this state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGameState_ac135e64a5c269ecc94d806ed5255ca4b}{update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates objects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGameState_a805aea59388b8a5f302752333a86cf22}{render}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\begin{DoxyCompactList}\small\item\em Renders objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a29200d9eef30aca5948f1f18ca2c1c29}\label{classGameState_a29200d9eef30aca5948f1f18ca2c1c29}} 
+void {\bfseries loadmap} ()
+\begin{DoxyCompactList}\small\item\em Reads the file given from the Maps folder and initializes the tiles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a0949dad4e3e3d2f3be5136b6d0808ab8}\label{classGameState_a0949dad4e3e3d2f3be5136b6d0808ab8}} 
+void {\bfseries init\+Spawn\+Location} ()
+\begin{DoxyCompactList}\small\item\em Initializes the spawnlocation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ae85b611778da8b1e029c552db832fff0}\label{classGameState_ae85b611778da8b1e029c552db832fff0}} 
+void {\bfseries init\+Exit\+Location} ()
+\begin{DoxyCompactList}\small\item\em Initializes the exitlocation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a5e203c28b2d71b146711caef10b1dcac}\label{classGameState_a5e203c28b2d71b146711caef10b1dcac}} 
+void {\bfseries init\+Road} ()
+\begin{DoxyCompactList}\small\item\em Initializes the road for enemies. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_acaa9482fce4fc9950364648c7bc54dd0}\label{classGameState_acaa9482fce4fc9950364648c7bc54dd0}} 
+void {\bfseries init\+Music} ()
+\begin{DoxyCompactList}\small\item\em Initializes game state background music. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a03eed4f8e514c99b098542626d549f69}\label{classGameState_a03eed4f8e514c99b098542626d549f69}} 
+\mbox{\hyperlink{classTower}{Tower}} $\ast$ {\bfseries tower\+At} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Returns tower, if there is one, at that gridlocation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ae52aaaf92a4bde0a214b4cc320da620c}\label{classGameState_ae52aaaf92a4bde0a214b4cc320da620c}} 
+void {\bfseries build\+Road} (std\+::pair$<$ int, int $>$ current, std\+::pair$<$ int, int $>$ previous)
+\begin{DoxyCompactList}\small\item\em Builds the road recursively using this function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a1f0d35700749d2852f0b36133d701081}\label{classGameState_a1f0d35700749d2852f0b36133d701081}} 
+\mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ {\bfseries Tile\+At} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Returns tile, if there is one, at that gridlocation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_aa90a89c138aef8efeeac8e84a2d959ab}\label{classGameState_aa90a89c138aef8efeeac8e84a2d959ab}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ {\bfseries get\+Neighbours} (\mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$current)
+\begin{DoxyCompactList}\small\item\em Returns every neighbour (not diagonals) of this tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_aa38034e258db11e3668ee5c23278615c}\label{classGameState_aa38034e258db11e3668ee5c23278615c}} 
+void {\bfseries change\+Money} (int money)
+\begin{DoxyCompactList}\small\item\em Changes the money player has. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_aa316b54ac3a5e48e57203332439d22fc}\label{classGameState_aa316b54ac3a5e48e57203332439d22fc}} 
+void {\bfseries change\+Health} (int health)
+\begin{DoxyCompactList}\small\item\em Changes the health player has. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a7c9be543984fcc4fbd036af731969546}\label{classGameState_a7c9be543984fcc4fbd036af731969546}} 
+void {\bfseries change\+Score} (int score)
+\begin{DoxyCompactList}\small\item\em Changes the score player has. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a7e27b918380d022e44449a2903c5b7e6}\label{classGameState_a7e27b918380d022e44449a2903c5b7e6}} 
+bool {\bfseries lost\+Game} ()
+\begin{DoxyCompactList}\small\item\em Checks if the player has 0 or less health. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classGameState_a2e421810f9ed8033a21c0000434ca3be}{get\+Spawn}} ()
+\begin{DoxyCompactList}\small\item\em Returns the spawn position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a3ed1e1b03951efd2c4e64185f9f09d6f}\label{classGameState_a3ed1e1b03951efd2c4e64185f9f09d6f}} 
+sf\+::\+Vector2f {\bfseries get\+Exit} ()
+\begin{DoxyCompactList}\small\item\em Returns the exit position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a0c783163784286e06574e64684610563}\label{classGameState_a0c783163784286e06574e64684610563}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ {\bfseries get\+Road} ()
+\begin{DoxyCompactList}\small\item\em Returns all roadtiles inside a vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ac18e704757ab2a23d7abd585a41e682e}\label{classGameState_ac18e704757ab2a23d7abd585a41e682e}} 
+void {\bfseries message\+For\+Player} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Puts message on the screen for the player for 5 seconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_adef874e0762aa3cb4e97674eed0d301e}\label{classGameState_adef874e0762aa3cb4e97674eed0d301e}} 
+void {\bfseries update\+Buttons} ()
+\begin{DoxyCompactList}\small\item\em Updates buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_aae510eb7f14ebb53314062dbe6ca19ef}\label{classGameState_aae510eb7f14ebb53314062dbe6ca19ef}} 
+void {\bfseries init\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Initializes variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a249604f50f9ab53b95b792d7568f7f62}\label{classGameState_a249604f50f9ab53b95b792d7568f7f62}} 
+const bool {\bfseries get\+Press\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Gets press timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a93f680f9d641a98871701fd555bb136d}\label{classGameState_a93f680f9d641a98871701fd555bb136d}} 
+void {\bfseries render\+Soon\+To\+Be\+Tower} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders ghost towers if they are selected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_aa4e51e3ec77ef5e9b4b6b4e25b88522c}\label{classGameState_aa4e51e3ec77ef5e9b4b6b4e25b88522c}} 
+void {\bfseries init\+Ghost\+Towers} ()
+\begin{DoxyCompactList}\small\item\em Initializes ghost towers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a1dcbf4d284cdfb54215c2f05a79b6d25}\label{classGameState_a1dcbf4d284cdfb54215c2f05a79b6d25}} 
+void {\bfseries buy\+Tower} ()
+\begin{DoxyCompactList}\small\item\em Buys the selected tower and puts at the wanted location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a0cedffca4992a546da2de6b57a37c50a}\label{classGameState_a0cedffca4992a546da2de6b57a37c50a}} 
+void {\bfseries update\+Targeted\+Tower\+Info} ()
+\begin{DoxyCompactList}\small\item\em Updates info about selected tower to the UI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a66d042b403a8ace0d36074928ac8c7d0}\label{classGameState_a66d042b403a8ace0d36074928ac8c7d0}} 
+void {\bfseries update\+Game\+Logic} ()
+\begin{DoxyCompactList}\small\item\em Handles the Round system logic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_acb710521712a401963c98ec9c11e0a5f}\label{classGameState_acb710521712a401963c98ec9c11e0a5f}} 
+void {\bfseries spawn\+Enemies} ()
+\begin{DoxyCompactList}\small\item\em Handles the enemy spawning. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_aef49676574d3d7001b5988b42383a3ff}\label{classGameState_aef49676574d3d7001b5988b42383a3ff}} 
+void {\bfseries Save\+To\+File} ()
+\begin{DoxyCompactList}\small\item\em Save score to highscores file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae7ffd43d9da38fcdb420db95e297bfe6}\label{classState_ae7ffd43d9da38fcdb420db95e297bfe6}} 
+virtual void {\bfseries check\+For\+Quit} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a18c3b970753bab2937141803644aaf24}\label{classState_a18c3b970753bab2937141803644aaf24}} 
+const bool \& {\bfseries get\+Quit} () const
+\item 
+\mbox{\Hypertarget{classState_a6a5bc29c3bcc7b51d2beca0e83457203}\label{classState_a6a5bc29c3bcc7b51d2beca0e83457203}} 
+virtual void {\bfseries update\+Mouse\+Position} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_aefb9f5e6f768f587894545fa88d1d63d}\label{classState_aefb9f5e6f768f587894545fa88d1d63d}} 
+bool {\bfseries quit\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}\label{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}} 
+std\+::vector$<$ sf\+::\+Texture $>$ {\bfseries textures}
+\begin{DoxyCompactList}\small\item\em Container for textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_af4f86a4bd3b369693d17b4c21a5be044}\label{classState_af4f86a4bd3b369693d17b4c21a5be044}} 
+sf\+::\+Render\+Window $\ast$ {\bfseries window\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_aba797f16cff3648fedc7aba1fefd25ab}\label{classState_aba797f16cff3648fedc7aba1fefd25ab}} 
+std\+::map$<$ std\+::string, int $>$ $\ast$ {\bfseries supported\+Keys\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to supported keys. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a5692fac721147048fe1d2656f8a7a687}\label{classState_a5692fac721147048fe1d2656f8a7a687}} 
+std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$ {\bfseries states}
+\begin{DoxyCompactList}\small\item\em Pointer to a stack filled with state pointers (check \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}} private) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a21879afd59a7cd5aeede2a080fcd1d34}\label{classState_a21879afd59a7cd5aeede2a080fcd1d34}} 
+std\+::map$<$ std\+::string, int $>$ {\bfseries keybinds\+\_\+}
+\item 
+\mbox{\Hypertarget{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}\label{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Screen}
+\begin{DoxyCompactList}\small\item\em Mouse position variavles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae19be9c58de5545c8cd162f11969d6ee}\label{classState_ae19be9c58de5545c8cd162f11969d6ee}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Window}
+\item 
+\mbox{\Hypertarget{classState_a9f930912be370fcd0ecae58e17e0c35e}\label{classState_a9f930912be370fcd0ecae58e17e0c35e}} 
+sf\+::\+Vector2f {\bfseries mouse\+Pos\+View}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGameState_a89f1c8236814ca76e052b60a94c654a6}{init\+Key\+Binds}} ()
+\begin{DoxyCompactList}\small\item\em Initializes keybinds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGameState_a50f30a6fe8dbf21cabf53c7c0986aac3}\label{classGameState_a50f30a6fe8dbf21cabf53c7c0986aac3}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a76c267d4b4cd6f410e3571318316277b}\label{classGameState_a76c267d4b4cd6f410e3571318316277b}} 
+std\+::string {\bfseries mapfile\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a4d9d80388c7261ba40de134b2438b093}\label{classGameState_a4d9d80388c7261ba40de134b2438b093}} 
+std\+::map$<$ std\+::pair$<$ int, int $>$, \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ {\bfseries Tiles}
+\begin{DoxyCompactList}\small\item\em All tiles in the map and their gridlocations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_adb0e7936dee63df23a06e52808870165}\label{classGameState_adb0e7936dee63df23a06e52808870165}} 
+std\+::map$<$ std\+::pair$<$ int, int $>$, \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ {\bfseries Spawn\+And\+Exit\+\_\+}
+\begin{DoxyCompactList}\small\item\em All spawn and exit tiles in the map and their gridlocations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a0531b5a29bb0c12f952566a7a599d489}\label{classGameState_a0531b5a29bb0c12f952566a7a599d489}} 
+sf\+::\+Vector2f {\bfseries spawnlocation\+\_\+}
+\begin{DoxyCompactList}\small\item\em Spawn position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_aea7ed1cc07052b4da0db79240c3300a9}\label{classGameState_aea7ed1cc07052b4da0db79240c3300a9}} 
+sf\+::\+Vector2f {\bfseries exitlocation\+\_\+}
+\begin{DoxyCompactList}\small\item\em Exit position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ac77ed56a3969b93fbe481ccc844df717}\label{classGameState_ac77ed56a3969b93fbe481ccc844df717}} 
+sf\+::\+Text {\bfseries money\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current money as a text that can be drawn. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a92b13e633f61b9ac18be4d12c0dddd9d}\label{classGameState_a92b13e633f61b9ac18be4d12c0dddd9d}} 
+sf\+::\+Text {\bfseries health\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current health as a text that can be drawn. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a9cb6843d70e67fd87f3fe86a076cdf8c}\label{classGameState_a9cb6843d70e67fd87f3fe86a076cdf8c}} 
+sf\+::\+Text {\bfseries score\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current score as a text that can be drawn. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a552c124eba9369a4b7741dbab16ceada}\label{classGameState_a552c124eba9369a4b7741dbab16ceada}} 
+int {\bfseries int\+\_\+money\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em Current money. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ae6cf9f8e9478e5ea4893e0c34c8d7020}\label{classGameState_ae6cf9f8e9478e5ea4893e0c34c8d7020}} 
+int {\bfseries int\+\_\+health\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em Current health. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a0b1b5f3180c3560ae4f3e15fc1f1b420}\label{classGameState_a0b1b5f3180c3560ae4f3e15fc1f1b420}} 
+int {\bfseries int\+\_\+score\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em Current score. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ac9a22c51b1aff45ff06c743b6c9ea41f}\label{classGameState_ac9a22c51b1aff45ff06c743b6c9ea41f}} 
+\mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ {\bfseries spawn\+Tile\+\_\+}
+\begin{DoxyCompactList}\small\item\em Spawn tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a7b394ea2580f92ec5758c14bef9b74db}\label{classGameState_a7b394ea2580f92ec5758c14bef9b74db}} 
+\mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ {\bfseries exit\+Tile\+\_\+}
+\begin{DoxyCompactList}\small\item\em Exit tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_af13ae9050be3701549716712aa439306}\label{classGameState_af13ae9050be3701549716712aa439306}} 
+sf\+::\+Font $\ast$ {\bfseries font\+\_\+}
+\begin{DoxyCompactList}\small\item\em Font. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a1da536d4da5f71779112c23eb4c265fd}\label{classGameState_a1da536d4da5f71779112c23eb4c265fd}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ {\bfseries road\+Tiles\+\_\+}
+\begin{DoxyCompactList}\small\item\em All road tiles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a56c8479d2dcc4d6e23e3884246117501}\label{classGameState_a56c8479d2dcc4d6e23e3884246117501}} 
+sf\+::\+Rectangle\+Shape {\bfseries rect\+\_\+menu\+\_\+}
+\begin{DoxyCompactList}\small\item\em Rectangle\+Shape used as sidebar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ab1138e69a6886402c2b4360a3f79393a}\label{classGameState_ab1138e69a6886402c2b4360a3f79393a}} 
+sf\+::\+Vector2u {\bfseries mouse\+Pos\+Grid}
+\begin{DoxyCompactList}\small\item\em Tracks the current mouseposition on grid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_adeb3254a1c8d250457e85f20d6556720}\label{classGameState_adeb3254a1c8d250457e85f20d6556720}} 
+sf\+::\+Clock {\bfseries clock}
+\begin{DoxyCompactList}\small\item\em Timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a166b79c863db5062f85d4fd064b487c7}\label{classGameState_a166b79c863db5062f85d4fd064b487c7}} 
+sf\+::\+Clock {\bfseries super\+Tank\+Timer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Super tank timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a613cde8f1d58181724b99fef35ca580e}\label{classGameState_a613cde8f1d58181724b99fef35ca580e}} 
+sf\+::\+Clock {\bfseries super\+Plane\+Timer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Super plane timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a36a8f56351ea628b22a61cdda4db12c8}\label{classGameState_a36a8f56351ea628b22a61cdda4db12c8}} 
+std\+::map$<$ std\+::pair$<$ int, int $>$, \mbox{\hyperlink{classTower}{Tower}} $\ast$ $>$ {\bfseries towers\+\_\+}
+\begin{DoxyCompactList}\small\item\em All towers and their gridlocations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a8c3dccd77e3f10bc4389f5da13096c0e}\label{classGameState_a8c3dccd77e3f10bc4389f5da13096c0e}} 
+std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ {\bfseries enemies\+\_\+}
+\begin{DoxyCompactList}\small\item\em All enemies currently on the road. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_aa3830ba8cde255fe9fea000d9286bfab}\label{classGameState_aa3830ba8cde255fe9fea000d9286bfab}} 
+std\+::vector$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ {\bfseries tobedeleted}
+\begin{DoxyCompactList}\small\item\em Enemies to be deleted after the wave. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a0dd083dd7cf4eda11e6d1bdc01c1670d}\label{classGameState_a0dd083dd7cf4eda11e6d1bdc01c1670d}} 
+int {\bfseries n\+\_\+super\+\_\+tank\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em Number of super tanks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a266e0fac72c01fcf000ce6a3b482de06}\label{classGameState_a266e0fac72c01fcf000ce6a3b482de06}} 
+int {\bfseries n\+\_\+super\+\_\+plane\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em Number of super planes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a9dec796f22414f985b84fd4ebf6ce14f}\label{classGameState_a9dec796f22414f985b84fd4ebf6ce14f}} 
+sf\+::\+Text {\bfseries message\+\_\+}
+\begin{DoxyCompactList}\small\item\em Message to be displayed for the player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_ab187d0322141f32c7fd34fed7a8fbfe8}\label{classGameState_ab187d0322141f32c7fd34fed7a8fbfe8}} 
+sf\+::\+Clock {\bfseries message\+\_\+timer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Message timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_acea6bfc85069284ec178fb749105c3be}\label{classGameState_acea6bfc85069284ec178fb749105c3be}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classButton}{Button}} $\ast$ $>$ {\bfseries towerbuttons\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_aa951bd6f33f0efe88bea22cc045915d4}\label{classGameState_aa951bd6f33f0efe88bea22cc045915d4}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classButton}{Button}} $\ast$ $>$ {\bfseries targeted\+\_\+towerbuttons\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_acc344ece56150ad23504c001f5b5fadb}\label{classGameState_acc344ece56150ad23504c001f5b5fadb}} 
+bool {\bfseries basic\+\_\+tower\+\_\+flag\+\_\+} = false
+\item 
+\mbox{\Hypertarget{classGameState_acb615ea5df6685148604056222933a13}\label{classGameState_acb615ea5df6685148604056222933a13}} 
+bool {\bfseries bomb\+\_\+tower\+\_\+flag\+\_\+} = false
+\item 
+\mbox{\Hypertarget{classGameState_a4fc0a8e1723c6a817bdd72d101709c33}\label{classGameState_a4fc0a8e1723c6a817bdd72d101709c33}} 
+bool {\bfseries slowing\+\_\+tower\+\_\+flag\+\_\+} = false
+\item 
+\mbox{\Hypertarget{classGameState_a69871c48fd902ee79953e2097c5b84f6}\label{classGameState_a69871c48fd902ee79953e2097c5b84f6}} 
+sf\+::\+Clock {\bfseries press\+Timer\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a65c1ab7d187e0be9183fc0e548a07404}\label{classGameState_a65c1ab7d187e0be9183fc0e548a07404}} 
+sf\+::\+Int32 {\bfseries press\+Timer\+Max\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_aa973debe36a8caeafd7f8f6fc64680b0}\label{classGameState_aa973debe36a8caeafd7f8f6fc64680b0}} 
+sf\+::\+Clock {\bfseries timer\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a3814b2165c732580aaa8007e99221301}\label{classGameState_a3814b2165c732580aaa8007e99221301}} 
+sf\+::\+Int32 {\bfseries timer\+Max\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_ad5dc30bf73125574d8a9139f505a95a9}\label{classGameState_ad5dc30bf73125574d8a9139f505a95a9}} 
+float {\bfseries window\+X\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a1cba37d5ebded74937803345a7527c20}\label{classGameState_a1cba37d5ebded74937803345a7527c20}} 
+float {\bfseries window\+Y\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a1154710490aad6d6b9e576d93b8280ce}\label{classGameState_a1154710490aad6d6b9e576d93b8280ce}} 
+sf\+::\+Sprite {\bfseries basic\+\_\+ghost\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a759d4e6724bd060d35823c23021d794f}\label{classGameState_a759d4e6724bd060d35823c23021d794f}} 
+sf\+::\+Sprite {\bfseries bomb\+\_\+ghost\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_afbf9612ed625b6f38dfe364f07d61d14}\label{classGameState_afbf9612ed625b6f38dfe364f07d61d14}} 
+sf\+::\+Sprite {\bfseries slowing\+\_\+ghost\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_aead06b7ce73c5519ec74b602687e7db7}\label{classGameState_aead06b7ce73c5519ec74b602687e7db7}} 
+sf\+::\+Texture {\bfseries basic\+\_\+texture\+\_\+ghost\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_acc87c5494c9d667fd9815b9e8036d50a}\label{classGameState_acc87c5494c9d667fd9815b9e8036d50a}} 
+sf\+::\+Texture {\bfseries bomb\+\_\+texture\+\_\+ghost\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_ad13d09f8c7f16d482719a2d2e218f56c}\label{classGameState_ad13d09f8c7f16d482719a2d2e218f56c}} 
+sf\+::\+Texture {\bfseries slowing\+\_\+texture\+\_\+ghost\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_ac66536ade4baf90d9870f7f44f44c0e1}\label{classGameState_ac66536ade4baf90d9870f7f44f44c0e1}} 
+sf\+::\+Clock {\bfseries shoptimer\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a46362ed6dfc33ed4af74a226f9b9cf44}\label{classGameState_a46362ed6dfc33ed4af74a226f9b9cf44}} 
+\mbox{\hyperlink{classTower}{Tower}} $\ast$ {\bfseries target\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{classGameState_a938f494a722d2d8140af0ec6fa2d0a16}\label{classGameState_a938f494a722d2d8140af0ec6fa2d0a16}} 
+int {\bfseries upgradeprice\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_aa4cb70c8642232e18a4e1556a46ba10a}\label{classGameState_aa4cb70c8642232e18a4e1556a46ba10a}} 
+int {\bfseries sellprice\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_ad94ae40b692cdc4b66c6d1ecaac3f6c3}\label{classGameState_ad94ae40b692cdc4b66c6d1ecaac3f6c3}} 
+sf\+::\+Text {\bfseries damage\+\_\+text\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a9680c6195486f435b9cb13daafd0030f}\label{classGameState_a9680c6195486f435b9cb13daafd0030f}} 
+sf\+::\+Text {\bfseries attack\+\_\+speed\+\_\+text\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_af3aeb29c175d59fc589df0d9dd551bf5}\label{classGameState_af3aeb29c175d59fc589df0d9dd551bf5}} 
+sf\+::\+Text {\bfseries tower\+\_\+level\+\_\+text}
+\item 
+\mbox{\Hypertarget{classGameState_a1e3a2e86d1dfb7f63abb49f1b618aa3b}\label{classGameState_a1e3a2e86d1dfb7f63abb49f1b618aa3b}} 
+int {\bfseries current\+Round\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{classGameState_a32a4e4a9cc14e342c295043bb4f837d8}\label{classGameState_a32a4e4a9cc14e342c295043bb4f837d8}} 
+int {\bfseries enemiestobespawnedremaining\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{classGameState_a0370326f3b40a225da8837de4531dd80}\label{classGameState_a0370326f3b40a225da8837de4531dd80}} 
+sf\+::\+Clock {\bfseries roundtimer\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_ae3169ffedc705aeb663c075fad9d52ab}\label{classGameState_ae3169ffedc705aeb663c075fad9d52ab}} 
+sf\+::\+Text {\bfseries roundtimer\+\_\+text\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a02e15a7e66ff46c92cdae5fcc479d2e0}\label{classGameState_a02e15a7e66ff46c92cdae5fcc479d2e0}} 
+int {\bfseries roundtimer\+\_\+int\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_af08accec755672d0ce94d51e4a025994}\label{classGameState_af08accec755672d0ce94d51e4a025994}} 
+bool {\bfseries roundover\+\_\+flag\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a9c52397eb3f8081467d60988f787e122}\label{classGameState_a9c52397eb3f8081467d60988f787e122}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classButton}{Button}} $\ast$ $>$ {\bfseries roundoverbuttons\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a0a67cdb5243d4a70ab1d1a45d061d33b}\label{classGameState_a0a67cdb5243d4a70ab1d1a45d061d33b}} 
+sf\+::\+Clock {\bfseries spawntimer\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a64ce1bf41f5897bf7f0deea5ed452a3b}\label{classGameState_a64ce1bf41f5897bf7f0deea5ed452a3b}} 
+sf\+::\+Text {\bfseries currentwave\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a0739b26ede3bfbe515ae1c9f11c1df6e}\label{classGameState_a0739b26ede3bfbe515ae1c9f11c1df6e}} 
+sf\+::\+Text {\bfseries enemiesleft\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_aa31297cb5c84cc433a2f0ccabb5593b3}\label{classGameState_aa31297cb5c84cc433a2f0ccabb5593b3}} 
+sf\+::\+Text {\bfseries you\+\_\+have\+\_\+lost\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a6eefe4ce4043d075dce5299bb68b72a9}\label{classGameState_a6eefe4ce4043d075dce5299bb68b72a9}} 
+bool {\bfseries game\+\_\+over\+\_\+} = false
+\item 
+\mbox{\Hypertarget{classGameState_a108587fd889b77e0ff4cb77c11916966}\label{classGameState_a108587fd889b77e0ff4cb77c11916966}} 
+sf\+::\+Music {\bfseries gaming\+State\+Music\+\_\+}
+\begin{DoxyCompactList}\small\item\em Music object and volume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameState_a8496a504f5944db19f22f5fcfce8dd55}\label{classGameState_a8496a504f5944db19f22f5fcfce8dd55}} 
+int {\bfseries volume\+Level\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a26fcbc2041c626e5133e393990d86d95}\label{classGameState_a26fcbc2041c626e5133e393990d86d95}} 
+int {\bfseries sound\+Effect\+Volume\+Level\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_ae8a902c6ee918a4b284d6372ca126dd3}\label{classGameState_ae8a902c6ee918a4b284d6372ca126dd3}} 
+sf\+::\+Event $\ast$ {\bfseries Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classGameState_a3a0c80a7ab15c64f298322509a6e9fcd}\label{classGameState_a3a0c80a7ab15c64f298322509a6e9fcd}} 
+\mbox{\hyperlink{classTextbox}{Textbox}} $\ast$ {\bfseries textbox\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameState_a4371ce5165f7c5a3bb21cbf4340e9814}\label{classGameState_a4371ce5165f7c5a3bb21cbf4340e9814}} 
+\index{GameState@{GameState}!GameState@{GameState}}
+\index{GameState@{GameState}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{GameState()}{GameState()}}
+{\footnotesize\ttfamily Game\+State\+::\+Game\+State (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::map$<$ std\+::string, int $>$ $\ast$}]{supported\+Keys,  }\item[{std\+::string}]{root\+\_\+filepath,  }\item[{std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$}]{states,  }\item[{sf\+::\+Event $\ast$}]{Event,  }\item[{std\+::string}]{mapfile,  }\item[{sf\+::\+Font $\ast$}]{font,  }\item[{int}]{volume\+Level,  }\item[{int}]{sound\+Effect\+Volume\+Level }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window object where objects are drawn \\
+\hline
+{\em supported\+Keys} & Keys that are supported \\
+\hline
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em states} & Stack containing all of the current states \\
+\hline
+{\em mapfile} & Name of the map to be loaded \\
+\hline
+{\em font} & Font used for text \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameState_a4371ce5165f7c5a3bb21cbf4340e9814_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGameState_a5b6ccfff3ca74df5a7e67fdeb4ed5bce}\label{classGameState_a5b6ccfff3ca74df5a7e67fdeb4ed5bce}} 
+\index{GameState@{GameState}!endState@{endState}}
+\index{endState@{endState}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{endState()}{endState()}}
+{\footnotesize\ttfamily void Game\+State\+::end\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when ending this state. 
+
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classGameState_a2e421810f9ed8033a21c0000434ca3be}\label{classGameState_a2e421810f9ed8033a21c0000434ca3be}} 
+\index{GameState@{GameState}!getSpawn@{getSpawn}}
+\index{getSpawn@{getSpawn}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{getSpawn()}{getSpawn()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Game\+State\+::get\+Spawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the spawn position. 
+
+Osku addition. \mbox{\Hypertarget{classGameState_a89f1c8236814ca76e052b60a94c654a6}\label{classGameState_a89f1c8236814ca76e052b60a94c654a6}} 
+\index{GameState@{GameState}!initKeyBinds@{initKeyBinds}}
+\index{initKeyBinds@{initKeyBinds}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{initKeyBinds()}{initKeyBinds()}}
+{\footnotesize\ttfamily void Game\+State\+::init\+Key\+Binds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Initializes keybinds. 
+
+
+
+Implements \mbox{\hyperlink{classState_a7913fb79a9e90d93953e9844fd114186}{State}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameState_a89f1c8236814ca76e052b60a94c654a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGameState_a805aea59388b8a5f302752333a86cf22}\label{classGameState_a805aea59388b8a5f302752333a86cf22}} 
+\index{GameState@{GameState}!render@{render}}
+\index{render@{render}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Game\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameState_a805aea59388b8a5f302752333a86cf22_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGameState_ac135e64a5c269ecc94d806ed5255ca4b}\label{classGameState_ac135e64a5c269ecc94d806ed5255ca4b}} 
+\index{GameState@{GameState}!update@{update}}
+\index{update@{update}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+State\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameState_ac135e64a5c269ecc94d806ed5255ca4b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGameState_a5dc4ac4f28b9487c9e35b8c452c7c58f}\label{classGameState_a5dc4ac4f28b9487c9e35b8c452c7c58f}} 
+\index{GameState@{GameState}!updateInput@{updateInput}}
+\index{updateInput@{updateInput}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{updateInput()}{updateInput()}}
+{\footnotesize\ttfamily void Game\+State\+::update\+Input (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameState_a5dc4ac4f28b9487c9e35b8c452c7c58f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameState_a5dc4ac4f28b9487c9e35b8c452c7c58f_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gaming\+\_\+state.\+hpp\item 
+src/gaming\+\_\+state.\+cpp\end{DoxyCompactItemize}

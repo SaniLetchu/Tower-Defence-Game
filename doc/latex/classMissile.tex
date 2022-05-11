@@ -1,0 +1,220 @@
+\hypertarget{classMissile}{}\doxysection{Missile Class Reference}
+\label{classMissile}\index{Missile@{Missile}}
+
+
+\mbox{\hyperlink{classMissile}{Missile}} object that is initialized from bomb tower.  
+
+
+
+
+{\ttfamily \#include $<$missile.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMissile_aa1e6e225869bf0201101d6a8b35ba870}{Missile}} (std\+::string root\+\_\+filepath, sf\+::\+Vector2f spawn, sf\+::\+Vector2f target, int damage, int speed, int sound\+Effect\+Volume\+Level)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_ad42379e48a46ec3556056f98ce8bd912}\label{classMissile_ad42379e48a46ec3556056f98ce8bd912}} 
+{\bfseries $\sim$\+Missile} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMissile_acc591b910fa24185a737eb8d719f6d90}{move}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Moves the missile towards target location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_aba3b405c2dff017ec6cdbc1812d9f741}\label{classMissile_aba3b405c2dff017ec6cdbc1812d9f741}} 
+void {\bfseries set\+Up\+Sprites} ()
+\begin{DoxyCompactList}\small\item\em Sets up all the sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMissile_abb4290952b5451efd011995e784be583}{render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders the missile on target (window) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a21bfe6e8c97374a39821ce3e84c9553d}\label{classMissile_a21bfe6e8c97374a39821ce3e84c9553d}} 
+bool {\bfseries has\+Exploded} ()
+\begin{DoxyCompactList}\small\item\em Checks if explosion has happened. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMissile_a74f51212483f4de4469299dc7871124c}{deal\+Damage}} (std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ enemies)
+\begin{DoxyCompactList}\small\item\em Deals damage to all enemies in missile radius. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMissile_a53cbc0eae028985f5df1689d97e8c970}{update}} (std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ enemies)
+\begin{DoxyCompactList}\small\item\em Updates this object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a805a59a58c349102a879ebf2c12ac761}\label{classMissile_a805a59a58c349102a879ebf2c12ac761}} 
+void {\bfseries init\+Sound\+Effect} ()
+\begin{DoxyCompactList}\small\item\em Initializes explostion sound effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMissile_a7dd4c87339fbcc352d49e8588ad32d2d}\label{classMissile_a7dd4c87339fbcc352d49e8588ad32d2d}} 
+sf\+::\+Clock {\bfseries clock\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMissile_afa374df4300849e990ef07da1d5f0ca5}\label{classMissile_afa374df4300849e990ef07da1d5f0ca5}} 
+std\+::string {\bfseries missile\+\_\+texture\+\_\+name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the missile texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a62f69b91dd7892afaa99cbfd34df193b}\label{classMissile_a62f69b91dd7892afaa99cbfd34df193b}} 
+std\+::string {\bfseries explosion\+\_\+texture\+\_\+name\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the explosion texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_ac10457007565c54abba6627a0f225c22}\label{classMissile_ac10457007565c54abba6627a0f225c22}} 
+sf\+::\+Texture {\bfseries missile\+\_\+texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMissile}{Missile}} texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a21d7236fa03dc9f0ec5b51e99680e542}\label{classMissile_a21d7236fa03dc9f0ec5b51e99680e542}} 
+sf\+::\+Texture {\bfseries explosion\+\_\+texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Explosion texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a7c42266298298fed3627747faa105f13}\label{classMissile_a7c42266298298fed3627747faa105f13}} 
+sf\+::\+Sprite {\bfseries missile\+\_\+sprite\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMissile}{Missile}} sprite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a7af598b1c0a98a4ec80b4ee4dd098314}\label{classMissile_a7af598b1c0a98a4ec80b4ee4dd098314}} 
+sf\+::\+Sprite {\bfseries explosion\+\_\+sprite\+\_\+}
+\begin{DoxyCompactList}\small\item\em Explosion sprite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_acf39ae2962b58baeb3837adcabdbf947}\label{classMissile_acf39ae2962b58baeb3837adcabdbf947}} 
+sf\+::\+Vector2f {\bfseries spawn\+\_\+}
+\begin{DoxyCompactList}\small\item\em Spawn location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_ac3104ab647030184030b8e73ebd9a486}\label{classMissile_ac3104ab647030184030b8e73ebd9a486}} 
+sf\+::\+Vector2f {\bfseries target\+\_\+}
+\begin{DoxyCompactList}\small\item\em Target location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a8b7cb6a93aa7eb3f166b0c3287487133}\label{classMissile_a8b7cb6a93aa7eb3f166b0c3287487133}} 
+std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ {\bfseries enemies\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of current enemies. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_ae73f6113c85e0a1cf2586965db0d0cc0}\label{classMissile_ae73f6113c85e0a1cf2586965db0d0cc0}} 
+int {\bfseries damage\+\_\+}
+\begin{DoxyCompactList}\small\item\em Damage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_ab34170895fcad26aad7f5c14c825fa8c}\label{classMissile_ab34170895fcad26aad7f5c14c825fa8c}} 
+int {\bfseries blast\+\_\+radius\+\_\+}
+\begin{DoxyCompactList}\small\item\em Blast radius. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a273f4b0e632ccb7692ba85622826c7b0}\label{classMissile_a273f4b0e632ccb7692ba85622826c7b0}} 
+int {\bfseries speed\+\_\+}
+\begin{DoxyCompactList}\small\item\em Speed of the missile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a361a41848fdcbf565cd9de897a284faa}\label{classMissile_a361a41848fdcbf565cd9de897a284faa}} 
+sf\+::\+Vector2f {\bfseries direction\+\_\+}
+\begin{DoxyCompactList}\small\item\em Direction for the missile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a67a2e56f7b42e6d3f190ac9c6096581f}\label{classMissile_a67a2e56f7b42e6d3f190ac9c6096581f}} 
+bool {\bfseries explosion\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Checks if explosion has happened. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_ac40681ccf654f5cf402e5844c4e7a592}\label{classMissile_ac40681ccf654f5cf402e5844c4e7a592}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a8a8739fee4594395231966d8357360bc}\label{classMissile_a8a8739fee4594395231966d8357360bc}} 
+sf\+::\+Sound\+Buffer {\bfseries buffer}
+\begin{DoxyCompactList}\small\item\em Explosion sound effect buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a9aaaf424e6a8a48e70158011ccc1e5b7}\label{classMissile_a9aaaf424e6a8a48e70158011ccc1e5b7}} 
+sf\+::\+Sound {\bfseries sound}
+\begin{DoxyCompactList}\small\item\em Explosion sound effect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMissile_a64798964ae5e82c011c6e40507072483}\label{classMissile_a64798964ae5e82c011c6e40507072483}} 
+int {\bfseries sound\+Effect\+Volume\+Level\+\_\+}
+\begin{DoxyCompactList}\small\item\em Volume level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classMissile}{Missile}} object that is initialized from bomb tower. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMissile_aa1e6e225869bf0201101d6a8b35ba870}\label{classMissile_aa1e6e225869bf0201101d6a8b35ba870}} 
+\index{Missile@{Missile}!Missile@{Missile}}
+\index{Missile@{Missile}!Missile@{Missile}}
+\doxysubsubsection{\texorpdfstring{Missile()}{Missile()}}
+{\footnotesize\ttfamily Missile\+::\+Missile (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{sf\+::\+Vector2f}]{spawn,  }\item[{sf\+::\+Vector2f}]{target,  }\item[{int}]{damage,  }\item[{int}]{speed,  }\item[{int}]{sound\+Effect\+Volume\+Level }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em spawn} & Coordinates for spawn location \\
+\hline
+{\em target} & Coordinates to target location \\
+\hline
+{\em damage} & Damage in integers \\
+\hline
+{\em speed} & Speed of the missile \\
+\hline
+{\em sound\+Effect\+Volume\+Level} & Sound level (0-\/100) \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classMissile_aa1e6e225869bf0201101d6a8b35ba870_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMissile_a74f51212483f4de4469299dc7871124c}\label{classMissile_a74f51212483f4de4469299dc7871124c}} 
+\index{Missile@{Missile}!dealDamage@{dealDamage}}
+\index{dealDamage@{dealDamage}!Missile@{Missile}}
+\doxysubsubsection{\texorpdfstring{dealDamage()}{dealDamage()}}
+{\footnotesize\ttfamily void Missile\+::deal\+Damage (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$}]{enemies }\end{DoxyParamCaption})}
+
+
+
+Deals damage to all enemies in missile radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemies} & List of all the current enemies \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classMissile_a74f51212483f4de4469299dc7871124c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMissile_acc591b910fa24185a737eb8d719f6d90}\label{classMissile_acc591b910fa24185a737eb8d719f6d90}} 
+\index{Missile@{Missile}!move@{move}}
+\index{move@{move}!Missile@{Missile}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Missile\+::move (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})}
+
+
+
+Moves the missile towards target location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classMissile_acc591b910fa24185a737eb8d719f6d90_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMissile_abb4290952b5451efd011995e784be583}\label{classMissile_abb4290952b5451efd011995e784be583}} 
+\index{Missile@{Missile}!render@{render}}
+\index{render@{render}!Missile@{Missile}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Missile\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Renders the missile on target (window) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMissile_a53cbc0eae028985f5df1689d97e8c970}\label{classMissile_a53cbc0eae028985f5df1689d97e8c970}} 
+\index{Missile@{Missile}!update@{update}}
+\index{update@{update}!Missile@{Missile}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Missile\+::update (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$}]{enemies }\end{DoxyParamCaption})}
+
+
+
+Updates this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemies} & List of all the current enemies \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/missile.\+hpp\item 
+src/missile.\+cpp\end{DoxyCompactItemize}

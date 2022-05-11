@@ -1,0 +1,188 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Basic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tower Class Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Member Function Documentation}{9}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}attack()}{9}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}render()}{9}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}rotateGun()}{10}{subsubsection.4.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}update()}{10}{subsubsection.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}upgrade()}{11}{subsubsection.4.1.1.5}%
+\contentsline {section}{\numberline {4.2}Bomb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tower Class Reference}{11}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Member Function Documentation}{13}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}attack()}{13}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}render()}{14}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}rotateGun()}{14}{subsubsection.4.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}update()}{15}{subsubsection.4.2.1.4}%
+\contentsline {subsubsection}{\numberline {4.2.1.5}upgrade()}{15}{subsubsection.4.2.1.5}%
+\contentsline {section}{\numberline {4.3}Button Class Reference}{16}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{17}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{17}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Button()}{17}{subsubsection.4.3.2.1}%
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{17}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}render()}{18}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}update()}{18}{subsubsection.4.3.3.2}%
+\contentsline {section}{\numberline {4.4}Createmap Class Reference}{18}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{21}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{21}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Createmap()}{21}{subsubsection.4.4.2.1}%
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{22}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}endState()}{22}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}initKeyBinds()}{23}{subsubsection.4.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}NextSpawnOrExit()}{23}{subsubsection.4.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}NextTextureAt()}{24}{subsubsection.4.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.4.3.5}render()}{25}{subsubsection.4.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.4.3.6}renderButtons()}{25}{subsubsection.4.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.4.3.7}ReplacePosition()}{26}{subsubsection.4.4.3.7}%
+\contentsline {subsubsection}{\numberline {4.4.3.8}ReplaceSpawnOrExit()}{26}{subsubsection.4.4.3.8}%
+\contentsline {subsubsection}{\numberline {4.4.3.9}TileAt()}{27}{subsubsection.4.4.3.9}%
+\contentsline {subsubsection}{\numberline {4.4.3.10}update()}{27}{subsubsection.4.4.3.10}%
+\contentsline {subsubsection}{\numberline {4.4.3.11}updateInput()}{29}{subsubsection.4.4.3.11}%
+\contentsline {section}{\numberline {4.5}Game Class Reference}{30}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{31}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State Class Reference}{31}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Constructor \& Destructor Documentation}{36}{subsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}GameState()}{36}{subsubsection.4.6.1.1}%
+\contentsline {subsection}{\numberline {4.6.2}Member Function Documentation}{37}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}endState()}{37}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}getSpawn()}{37}{subsubsection.4.6.2.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}initKeyBinds()}{38}{subsubsection.4.6.2.3}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}render()}{38}{subsubsection.4.6.2.4}%
+\contentsline {subsubsection}{\numberline {4.6.2.5}update()}{38}{subsubsection.4.6.2.5}%
+\contentsline {subsubsection}{\numberline {4.6.2.6}updateInput()}{39}{subsubsection.4.6.2.6}%
+\contentsline {section}{\numberline {4.7}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tile Class Reference}{40}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{41}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Constructor \& Destructor Documentation}{41}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}GameTile()}{41}{subsubsection.4.7.2.1}%
+\contentsline {subsection}{\numberline {4.7.3}Member Function Documentation}{42}{subsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.1}render()}{42}{subsubsection.4.7.3.1}%
+\contentsline {section}{\numberline {4.8}Highscorestate Class Reference}{42}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{45}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Constructor \& Destructor Documentation}{45}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}Highscorestate()}{45}{subsubsection.4.8.2.1}%
+\contentsline {subsection}{\numberline {4.8.3}Member Function Documentation}{46}{subsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.1}Addhighscore()}{46}{subsubsection.4.8.3.1}%
+\contentsline {subsubsection}{\numberline {4.8.3.2}endState()}{46}{subsubsection.4.8.3.2}%
+\contentsline {subsubsection}{\numberline {4.8.3.3}initKeyBinds()}{47}{subsubsection.4.8.3.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.4}render()}{47}{subsubsection.4.8.3.4}%
+\contentsline {subsubsection}{\numberline {4.8.3.5}renderButtons()}{47}{subsubsection.4.8.3.5}%
+\contentsline {subsubsection}{\numberline {4.8.3.6}update()}{48}{subsubsection.4.8.3.6}%
+\contentsline {subsubsection}{\numberline {4.8.3.7}updateInput()}{48}{subsubsection.4.8.3.7}%
+\contentsline {section}{\numberline {4.9}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State Class Reference}{49}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Member Function Documentation}{52}{subsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.1}endState()}{52}{subsubsection.4.9.1.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.2}initKeyBinds()}{52}{subsubsection.4.9.1.2}%
+\contentsline {subsubsection}{\numberline {4.9.1.3}render()}{52}{subsubsection.4.9.1.3}%
+\contentsline {subsubsection}{\numberline {4.9.1.4}update()}{52}{subsubsection.4.9.1.4}%
+\contentsline {subsubsection}{\numberline {4.9.1.5}updateInput()}{53}{subsubsection.4.9.1.5}%
+\contentsline {section}{\numberline {4.10}Mapselector Class Reference}{53}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{55}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Member Function Documentation}{55}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}endState()}{55}{subsubsection.4.10.2.1}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}initKeyBinds()}{55}{subsubsection.4.10.2.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.3}render()}{56}{subsubsection.4.10.2.3}%
+\contentsline {subsubsection}{\numberline {4.10.2.4}update()}{56}{subsubsection.4.10.2.4}%
+\contentsline {subsubsection}{\numberline {4.10.2.5}updateInput()}{56}{subsubsection.4.10.2.5}%
+\contentsline {section}{\numberline {4.11}Missile Class Reference}{57}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Npc Class Reference}{58}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Member Function Documentation}{59}{subsection.4.12.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.1}Update()}{59}{subsubsection.4.12.1.1}%
+\contentsline {section}{\numberline {4.13}Plane Class Reference}{59}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Member Function Documentation}{60}{subsection.4.13.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.1}dealDamage()}{60}{subsubsection.4.13.1.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.2}FindDirection()}{61}{subsubsection.4.13.1.2}%
+\contentsline {subsubsection}{\numberline {4.13.1.3}getHitpoints()}{61}{subsubsection.4.13.1.3}%
+\contentsline {subsubsection}{\numberline {4.13.1.4}getPosition()}{61}{subsubsection.4.13.1.4}%
+\contentsline {subsubsection}{\numberline {4.13.1.5}hasReachedEnd()}{61}{subsubsection.4.13.1.5}%
+\contentsline {subsubsection}{\numberline {4.13.1.6}initNpc()}{61}{subsubsection.4.13.1.6}%
+\contentsline {subsubsection}{\numberline {4.13.1.7}MoveTo()}{61}{subsubsection.4.13.1.7}%
+\contentsline {subsubsection}{\numberline {4.13.1.8}Render()}{62}{subsubsection.4.13.1.8}%
+\contentsline {subsubsection}{\numberline {4.13.1.9}Rotate()}{62}{subsubsection.4.13.1.9}%
+\contentsline {subsubsection}{\numberline {4.13.1.10}slowMovement()}{62}{subsubsection.4.13.1.10}%
+\contentsline {subsubsection}{\numberline {4.13.1.11}Update()}{62}{subsubsection.4.13.1.11}%
+\contentsline {section}{\numberline {4.14}Slimeball Class Reference}{62}{section.4.14}%
+\contentsline {section}{\numberline {4.15}Slowing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tower Class Reference}{63}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Member Function Documentation}{65}{subsection.4.15.1}%
+\contentsline {subsubsection}{\numberline {4.15.1.1}attack()}{65}{subsubsection.4.15.1.1}%
+\contentsline {subsubsection}{\numberline {4.15.1.2}render()}{66}{subsubsection.4.15.1.2}%
+\contentsline {subsubsection}{\numberline {4.15.1.3}rotateGun()}{66}{subsubsection.4.15.1.3}%
+\contentsline {subsubsection}{\numberline {4.15.1.4}update()}{67}{subsubsection.4.15.1.4}%
+\contentsline {subsubsection}{\numberline {4.15.1.5}upgrade()}{67}{subsubsection.4.15.1.5}%
+\contentsline {section}{\numberline {4.16}Soldier Class Reference}{68}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Member Function Documentation}{69}{subsection.4.16.1}%
+\contentsline {subsubsection}{\numberline {4.16.1.1}dealDamage()}{69}{subsubsection.4.16.1.1}%
+\contentsline {subsubsection}{\numberline {4.16.1.2}FindDirection()}{69}{subsubsection.4.16.1.2}%
+\contentsline {subsubsection}{\numberline {4.16.1.3}getHitpoints()}{70}{subsubsection.4.16.1.3}%
+\contentsline {subsubsection}{\numberline {4.16.1.4}getPosition()}{70}{subsubsection.4.16.1.4}%
+\contentsline {subsubsection}{\numberline {4.16.1.5}hasReachedEnd()}{70}{subsubsection.4.16.1.5}%
+\contentsline {subsubsection}{\numberline {4.16.1.6}initNpc()}{70}{subsubsection.4.16.1.6}%
+\contentsline {subsubsection}{\numberline {4.16.1.7}MoveTo()}{70}{subsubsection.4.16.1.7}%
+\contentsline {subsubsection}{\numberline {4.16.1.8}Render()}{70}{subsubsection.4.16.1.8}%
+\contentsline {subsubsection}{\numberline {4.16.1.9}Rotate()}{71}{subsubsection.4.16.1.9}%
+\contentsline {subsubsection}{\numberline {4.16.1.10}slowMovement()}{71}{subsubsection.4.16.1.10}%
+\contentsline {subsubsection}{\numberline {4.16.1.11}Update()}{71}{subsubsection.4.16.1.11}%
+\contentsline {section}{\numberline {4.17}State Class Reference}{71}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Detailed Description}{72}{subsection.4.17.1}%
+\contentsline {subsection}{\numberline {4.17.2}Member Function Documentation}{72}{subsection.4.17.2}%
+\contentsline {subsubsection}{\numberline {4.17.2.1}endState()}{73}{subsubsection.4.17.2.1}%
+\contentsline {subsubsection}{\numberline {4.17.2.2}initKeyBinds()}{73}{subsubsection.4.17.2.2}%
+\contentsline {subsubsection}{\numberline {4.17.2.3}render()}{73}{subsubsection.4.17.2.3}%
+\contentsline {subsubsection}{\numberline {4.17.2.4}update()}{73}{subsubsection.4.17.2.4}%
+\contentsline {subsubsection}{\numberline {4.17.2.5}updateInput()}{73}{subsubsection.4.17.2.5}%
+\contentsline {section}{\numberline {4.18}Tank Class Reference}{74}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Member Function Documentation}{75}{subsection.4.18.1}%
+\contentsline {subsubsection}{\numberline {4.18.1.1}dealDamage()}{75}{subsubsection.4.18.1.1}%
+\contentsline {subsubsection}{\numberline {4.18.1.2}FindDirection()}{75}{subsubsection.4.18.1.2}%
+\contentsline {subsubsection}{\numberline {4.18.1.3}getHitpoints()}{75}{subsubsection.4.18.1.3}%
+\contentsline {subsubsection}{\numberline {4.18.1.4}getPosition()}{76}{subsubsection.4.18.1.4}%
+\contentsline {subsubsection}{\numberline {4.18.1.5}getTileCount()}{76}{subsubsection.4.18.1.5}%
+\contentsline {subsubsection}{\numberline {4.18.1.6}hasReachedEnd()}{76}{subsubsection.4.18.1.6}%
+\contentsline {subsubsection}{\numberline {4.18.1.7}initNpc()}{76}{subsubsection.4.18.1.7}%
+\contentsline {subsubsection}{\numberline {4.18.1.8}MoveTo()}{76}{subsubsection.4.18.1.8}%
+\contentsline {subsubsection}{\numberline {4.18.1.9}Render()}{76}{subsubsection.4.18.1.9}%
+\contentsline {subsubsection}{\numberline {4.18.1.10}Rotate()}{77}{subsubsection.4.18.1.10}%
+\contentsline {subsubsection}{\numberline {4.18.1.11}slowMovement()}{77}{subsubsection.4.18.1.11}%
+\contentsline {subsubsection}{\numberline {4.18.1.12}Update()}{77}{subsubsection.4.18.1.12}%
+\contentsline {section}{\numberline {4.19}Textbox Class Reference}{77}{section.4.19}%
+\contentsline {subsection}{\numberline {4.19.1}Detailed Description}{78}{subsection.4.19.1}%
+\contentsline {subsection}{\numberline {4.19.2}Constructor \& Destructor Documentation}{78}{subsection.4.19.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.1}Textbox()}{78}{subsubsection.4.19.2.1}%
+\contentsline {subsection}{\numberline {4.19.3}Member Function Documentation}{79}{subsection.4.19.3}%
+\contentsline {subsubsection}{\numberline {4.19.3.1}render()}{79}{subsubsection.4.19.3.1}%
+\contentsline {subsubsection}{\numberline {4.19.3.2}update()}{80}{subsubsection.4.19.3.2}%
+\contentsline {section}{\numberline {4.20}Tower Class Reference}{80}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Detailed Description}{82}{subsection.4.20.1}%
+\contentsline {subsection}{\numberline {4.20.2}Constructor \& Destructor Documentation}{82}{subsection.4.20.2}%
+\contentsline {subsubsection}{\numberline {4.20.2.1}Tower()}{83}{subsubsection.4.20.2.1}%
+\contentsline {subsection}{\numberline {4.20.3}Member Function Documentation}{83}{subsection.4.20.3}%
+\contentsline {subsubsection}{\numberline {4.20.3.1}attack()}{83}{subsubsection.4.20.3.1}%
+\contentsline {subsubsection}{\numberline {4.20.3.2}render()}{84}{subsubsection.4.20.3.2}%
+\contentsline {subsubsection}{\numberline {4.20.3.3}rotateGun()}{84}{subsubsection.4.20.3.3}%
+\contentsline {subsubsection}{\numberline {4.20.3.4}update()}{85}{subsubsection.4.20.3.4}%
+\contentsline {chapter}{\numberline {5}File Documentation}{87}{chapter.5}%
+\contentsline {section}{\numberline {5.1}basic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tower.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{87}{section.5.1}%
+\contentsline {section}{\numberline {5.2}bomb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tower.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{87}{section.5.2}%
+\contentsline {section}{\numberline {5.3}button.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{88}{section.5.3}%
+\contentsline {section}{\numberline {5.4}createmap\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{89}{section.5.4}%
+\contentsline {section}{\numberline {5.5}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{90}{section.5.5}%
+\contentsline {section}{\numberline {5.6}gametile.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{91}{section.5.6}%
+\contentsline {section}{\numberline {5.7}gaming\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{91}{section.5.7}%
+\contentsline {section}{\numberline {5.8}highscore\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{94}{section.5.8}%
+\contentsline {section}{\numberline {5.9}main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{94}{section.5.9}%
+\contentsline {section}{\numberline {5.10}mapselector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{96}{section.5.10}%
+\contentsline {section}{\numberline {5.11}missile.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{96}{section.5.11}%
+\contentsline {section}{\numberline {5.12}npc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{97}{section.5.12}%
+\contentsline {section}{\numberline {5.13}plane.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{98}{section.5.13}%
+\contentsline {section}{\numberline {5.14}slimeball.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{99}{section.5.14}%
+\contentsline {section}{\numberline {5.15}slowing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tower.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{99}{section.5.15}%
+\contentsline {section}{\numberline {5.16}soldier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{100}{section.5.16}%
+\contentsline {section}{\numberline {5.17}state.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{101}{section.5.17}%
+\contentsline {section}{\numberline {5.18}tank.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{101}{section.5.18}%
+\contentsline {section}{\numberline {5.19}textbox.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{102}{section.5.19}%
+\contentsline {section}{\numberline {5.20}tower.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{103}{section.5.20}%
+\contentsline {chapter}{Index}{105}{section*.137}%

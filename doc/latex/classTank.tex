@@ -1,0 +1,409 @@
+\hypertarget{classTank}{}\doxysection{Tank Class Reference}
+\label{classTank}\index{Tank@{Tank}}
+
+
+\mbox{\hyperlink{classTank}{Tank}} class which spawns 3 Soldiers.  
+
+
+
+
+{\ttfamily \#include $<$tank.\+hpp$>$}
+
+
+
+Inheritance diagram for Tank\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=119pt]{classTank__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tank\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=119pt]{classTank__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTank_aad9f72109a7d2eaaaf801f5e945e6824}{Tank}} (std\+::string root\+\_\+filepath, sf\+::\+Vector2f s\+Location, sf\+::\+Vector2f e\+Location, std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$r\+Tiles, int round, int new\+Tile\+Count=0)
+\begin{DoxyCompactList}\small\item\em Constructor for NPC sub-\/class \mbox{\hyperlink{classTank}{Tank}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_a9e4fce49ae7fe871894c1a3122c10269}\label{classTank_a9e4fce49ae7fe871894c1a3122c10269}} 
+{\bfseries $\sim$\+Tank} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTank_a0327395ef42745192f89e6536618928a}{Update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTank_a4c168f9ed04a48bfffb6b0964737ab46}{Render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders \mbox{\hyperlink{classTank}{Tank}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTank_accc3e7f7a9dd073590439a8256803b63}{Move\+To}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Handles the logic for \mbox{\hyperlink{classTank}{Tank}} to move along road tiles. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTank_ac7dc5cd358a9f8a8310af34aa1a4cd4a}{init\+Npc}} ()
+\begin{DoxyCompactList}\small\item\em Initializes \mbox{\hyperlink{classTank}{Tank}} setting movespeed, textures, spawnpoint and hitpoints. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classTank_a80209664c045f84a6d8a3730d942460f}{Find\+Direction}} (sf\+::\+Vector2f \mbox{\hyperlink{classTank_ae1732238c489f11b9d006b021edd42f8}{next\+Location}})
+\begin{DoxyCompactList}\small\item\em Finds the direction \mbox{\hyperlink{classTank}{Tank}} has to go. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTank_a57f9d3b4aee6924ffd66feb5e354e870}{Rotate}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Rotates \mbox{\hyperlink{classTank}{Tank}} object while it changes direction. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classTank_a32129b287c0510311034cadd641dc6b9}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets current position coordinates of \mbox{\hyperlink{classTank}{Tank}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTank_a568320269ffc0a9efbf1ecf8ee7a6312}{get\+Hitpoints}} ()
+\begin{DoxyCompactList}\small\item\em Gets \mbox{\hyperlink{classTank}{Tank}}\textquotesingle{}s current hitpoints. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTank_ae46d28ae133856423f136f186e66bc5b}{has\+Reached\+End}} ()
+\begin{DoxyCompactList}\small\item\em Checks if \mbox{\hyperlink{classTank}{Tank}} has reached to exit tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTank_a03483739aa30bb73903fbcb72f468823}{deal\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em Calculates the difference of current \mbox{\hyperlink{classTank}{Tank}} hitpoints and damage of tower. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTank_ab3e903b0721a1c950b66687746f1f13d}{slow\+Movement}} (float slow)
+\begin{DoxyCompactList}\small\item\em Slows \mbox{\hyperlink{classTank}{Tank}}\textquotesingle{}s movement speed with the product of movement speed and slowing parameter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTank_a7ca1c99521a4a40b459f00b505678860}{get\+Tile\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets \mbox{\hyperlink{classTank}{Tank}}\textquotesingle{}s tile count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}\label{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}} 
+virtual int {\bfseries get\+Worth} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs worth to give player money. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTank_a2fc4cf44e2563f563b729577929b4340}\label{classTank_a2fc4cf44e2563f563b729577929b4340}} 
+float {\bfseries movement\+Speed}
+\begin{DoxyCompactList}\small\item\em Movement speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_a294c9b62f3b4364b4e7a08c242274773}\label{classTank_a294c9b62f3b4364b4e7a08c242274773}} 
+float {\bfseries movementspeedmemory\+\_\+}
+\begin{DoxyCompactList}\small\item\em Temporary movement speed to use in slowing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_ab44ba820a289e6fa1a881773eb8a3edd}\label{classTank_ab44ba820a289e6fa1a881773eb8a3edd}} 
+float {\bfseries hitpoints} = 1
+\begin{DoxyCompactList}\small\item\em Hitpoints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_ab84985657d707ea2292d3fd39a3d7fa1}\label{classTank_ab84985657d707ea2292d3fd39a3d7fa1}} 
+sf\+::\+Vector2f {\bfseries spawn\+Location}
+\begin{DoxyCompactList}\small\item\em Spawn location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_a5a2a451ca2c2ac16c11db2ee526f4482}\label{classTank_a5a2a451ca2c2ac16c11db2ee526f4482}} 
+sf\+::\+Vector2f {\bfseries exit\+Location}
+\begin{DoxyCompactList}\small\item\em Exit location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_ae1732238c489f11b9d006b021edd42f8}\label{classTank_ae1732238c489f11b9d006b021edd42f8}} 
+sf\+::\+Vector2f {\bfseries next\+Location}
+\begin{DoxyCompactList}\small\item\em Next location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_a538f9e5b547ca5b2407fe801d1f523c5}\label{classTank_a538f9e5b547ca5b2407fe801d1f523c5}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$ {\bfseries road\+Tiles}
+\begin{DoxyCompactList}\small\item\em Vector to save road tile coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_a07170e4d61e8450d66aeb863c81ded7d}\label{classTank_a07170e4d61e8450d66aeb863c81ded7d}} 
+int {\bfseries tile\+Count} = 0
+\begin{DoxyCompactList}\small\item\em Counter to keep count on what tile \mbox{\hyperlink{classTank}{Tank}} is on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_a3952fcbdfd6cafb816fb2c5bcb4c7f0c}\label{classTank_a3952fcbdfd6cafb816fb2c5bcb4c7f0c}} 
+sf\+::\+Sprite {\bfseries tank\+Texture}
+\begin{DoxyCompactList}\small\item\em Sprite for \mbox{\hyperlink{classTank}{Tank}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_ae5f1c570d63f135a3ac3282a2b1b4423}\label{classTank_ae5f1c570d63f135a3ac3282a2b1b4423}} 
+sf\+::\+Texture {\bfseries texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_a10f29ce9ef7414f2e0b6a8f483360eb7}\label{classTank_a10f29ce9ef7414f2e0b6a8f483360eb7}} 
+sf\+::\+Clock {\bfseries slowcooldown\+\_\+}
+\begin{DoxyCompactList}\small\item\em Clock to slow the \mbox{\hyperlink{classTank}{Tank}} for certain amount of time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_aad99dfe9f8920759cf41b4647946e87f}\label{classTank_aad99dfe9f8920759cf41b4647946e87f}} 
+bool {\bfseries end\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Boolean for \mbox{\hyperlink{classTank}{Tank}} to be on exit tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTank_ad4f748596233800bd5f45c77fbb06e13}\label{classTank_ad4f748596233800bd5f45c77fbb06e13}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}\label{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}} 
+sf\+::\+Sprite {\bfseries sotilastektuuri}
+\begin{DoxyCompactList}\small\item\em Sprite for NPC class (debugging class) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}\label{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}} 
+sf\+::\+Texture {\bfseries stexture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a9b3331bad14442a3fe125779cce7490e}\label{classNpc_a9b3331bad14442a3fe125779cce7490e}} 
+int {\bfseries worth\+\_\+} = 1
+\begin{DoxyCompactList}\small\item\em Amount of money NPC is worth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classTank}{Tank}} class which spawns 3 Soldiers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTank_aad9f72109a7d2eaaaf801f5e945e6824}\label{classTank_aad9f72109a7d2eaaaf801f5e945e6824}} 
+\index{Tank@{Tank}!Tank@{Tank}}
+\index{Tank@{Tank}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{Tank()}{Tank()}}
+{\footnotesize\ttfamily Tank\+::\+Tank (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{sf\+::\+Vector2f}]{s\+Location,  }\item[{sf\+::\+Vector2f}]{e\+Location,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$}]{r\+Tiles,  }\item[{int}]{round,  }\item[{int}]{new\+Tile\+Count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for NPC sub-\/class \mbox{\hyperlink{classTank}{Tank}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em s\+Location} & Spawning location for \mbox{\hyperlink{classTank}{Tank}} \\
+\hline
+{\em e\+Location} & Exit location to delete \mbox{\hyperlink{classTank}{Tank}} \\
+\hline
+{\em r\+Tiles} & Vector of tile coordinates for \mbox{\hyperlink{classTank}{Tank}} to follow \\
+\hline
+{\em round} & Counter for round amount \\
+\hline
+{\em new\+Tile\+Count} & Used to overwrite tile\+Counter while spawning \mbox{\hyperlink{classTank}{Tank}} from dying \mbox{\hyperlink{classSuperTank}{Super\+Tank}} \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classTank_aad9f72109a7d2eaaaf801f5e945e6824_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTank_a03483739aa30bb73903fbcb72f468823}\label{classTank_a03483739aa30bb73903fbcb72f468823}} 
+\index{Tank@{Tank}!dealDamage@{dealDamage}}
+\index{dealDamage@{dealDamage}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{dealDamage()}{dealDamage()}}
+{\footnotesize\ttfamily void Tank\+::deal\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the difference of current \mbox{\hyperlink{classTank}{Tank}} hitpoints and damage of tower. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage parameter of projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a6a369b595667cb0a058630faa717ab7c}{Npc}}.
+
+\mbox{\Hypertarget{classTank_a80209664c045f84a6d8a3730d942460f}\label{classTank_a80209664c045f84a6d8a3730d942460f}} 
+\index{Tank@{Tank}!FindDirection@{FindDirection}}
+\index{FindDirection@{FindDirection}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{FindDirection()}{FindDirection()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Tank\+::\+Find\+Direction (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{next\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finds the direction \mbox{\hyperlink{classTank}{Tank}} has to go. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Location} & Next tile coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_ae8779c3e879ab383f093b60ce445f753}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTank_a80209664c045f84a6d8a3730d942460f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTank_a568320269ffc0a9efbf1ecf8ee7a6312}\label{classTank_a568320269ffc0a9efbf1ecf8ee7a6312}} 
+\index{Tank@{Tank}!getHitpoints@{getHitpoints}}
+\index{getHitpoints@{getHitpoints}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{getHitpoints()}{getHitpoints()}}
+{\footnotesize\ttfamily int Tank\+::get\+Hitpoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets \mbox{\hyperlink{classTank}{Tank}}\textquotesingle{}s current hitpoints. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_aa737d1ed48edc211df6e7648f4f61069}{Npc}}.
+
+\mbox{\Hypertarget{classTank_a32129b287c0510311034cadd641dc6b9}\label{classTank_a32129b287c0510311034cadd641dc6b9}} 
+\index{Tank@{Tank}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Tank\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets current position coordinates of \mbox{\hyperlink{classTank}{Tank}} object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62}{Npc}}.
+
+\mbox{\Hypertarget{classTank_a7ca1c99521a4a40b459f00b505678860}\label{classTank_a7ca1c99521a4a40b459f00b505678860}} 
+\index{Tank@{Tank}!getTileCount@{getTileCount}}
+\index{getTileCount@{getTileCount}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{getTileCount()}{getTileCount()}}
+{\footnotesize\ttfamily int Tank\+::get\+Tile\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets \mbox{\hyperlink{classTank}{Tank}}\textquotesingle{}s tile count. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a97879f68d40197370f11f6ecd4341091}{Npc}}.
+
+\mbox{\Hypertarget{classTank_ae46d28ae133856423f136f186e66bc5b}\label{classTank_ae46d28ae133856423f136f186e66bc5b}} 
+\index{Tank@{Tank}!hasReachedEnd@{hasReachedEnd}}
+\index{hasReachedEnd@{hasReachedEnd}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{hasReachedEnd()}{hasReachedEnd()}}
+{\footnotesize\ttfamily bool Tank\+::has\+Reached\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if \mbox{\hyperlink{classTank}{Tank}} has reached to exit tile. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a4181be8190f1b81ababc23f6492afd88}{Npc}}.
+
+\mbox{\Hypertarget{classTank_ac7dc5cd358a9f8a8310af34aa1a4cd4a}\label{classTank_ac7dc5cd358a9f8a8310af34aa1a4cd4a}} 
+\index{Tank@{Tank}!initNpc@{initNpc}}
+\index{initNpc@{initNpc}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{initNpc()}{initNpc()}}
+{\footnotesize\ttfamily void Tank\+::init\+Npc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes \mbox{\hyperlink{classTank}{Tank}} setting movespeed, textures, spawnpoint and hitpoints. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_aa49117d3c5d41f7f306e08d6a28f582e}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classTank_ac7dc5cd358a9f8a8310af34aa1a4cd4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTank_accc3e7f7a9dd073590439a8256803b63}\label{classTank_accc3e7f7a9dd073590439a8256803b63}} 
+\index{Tank@{Tank}!MoveTo@{MoveTo}}
+\index{MoveTo@{MoveTo}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{MoveTo()}{MoveTo()}}
+{\footnotesize\ttfamily void Tank\+::\+Move\+To (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the logic for \mbox{\hyperlink{classTank}{Tank}} to move along road tiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25}{Npc}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classTank_accc3e7f7a9dd073590439a8256803b63_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classTank_accc3e7f7a9dd073590439a8256803b63_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTank_a4c168f9ed04a48bfffb6b0964737ab46}\label{classTank_a4c168f9ed04a48bfffb6b0964737ab46}} 
+\index{Tank@{Tank}!Render@{Render}}
+\index{Render@{Render}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Tank\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders \mbox{\hyperlink{classTank}{Tank}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Reference to target parameter for Gaming state to handle \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a7a34f6a6322c56cf74683a78c75cfe15}{Npc}}.
+
+\mbox{\Hypertarget{classTank_a57f9d3b4aee6924ffd66feb5e354e870}\label{classTank_a57f9d3b4aee6924ffd66feb5e354e870}} 
+\index{Tank@{Tank}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Tank\+::\+Rotate (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates \mbox{\hyperlink{classTank}{Tank}} object while it changes direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Gives x direction movement \\
+\hline
+{\em y} & Gives y direction movement \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a0801ec5847a696ecf281384bc8eb5c8d}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTank_a57f9d3b4aee6924ffd66feb5e354e870_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTank_ab3e903b0721a1c950b66687746f1f13d}\label{classTank_ab3e903b0721a1c950b66687746f1f13d}} 
+\index{Tank@{Tank}!slowMovement@{slowMovement}}
+\index{slowMovement@{slowMovement}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{slowMovement()}{slowMovement()}}
+{\footnotesize\ttfamily void Tank\+::slow\+Movement (\begin{DoxyParamCaption}\item[{float}]{slow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Slows \mbox{\hyperlink{classTank}{Tank}}\textquotesingle{}s movement speed with the product of movement speed and slowing parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slow} & Slowing parameter from slimeball projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a8ec65489be62e6c69a5e9f512fbad748}{Npc}}.
+
+\mbox{\Hypertarget{classTank_a0327395ef42745192f89e6536618928a}\label{classTank_a0327395ef42745192f89e6536618928a}} 
+\index{Tank@{Tank}!Update@{Update}}
+\index{Update@{Update}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Tank\+::\+Update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e}{Npc}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTank_a0327395ef42745192f89e6536618928a_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/tank.\+hpp\item 
+src/tank.\+cpp\end{DoxyCompactItemize}

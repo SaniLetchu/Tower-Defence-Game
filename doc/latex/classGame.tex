@@ -1,0 +1,122 @@
+\hypertarget{classGame}{}\doxysection{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+Base class for the game.  
+
+
+
+
+{\ttfamily \#include $<$game.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGame_ab28fbb4bf16491693a83e916adefd32f}{Game}} (std\+::string \&root\+\_\+filepath)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530}} 
+virtual {\bfseries $\sim$\+Game} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a7ab64d477b806da35ee0aebe46e24af3}\label{classGame_a7ab64d477b806da35ee0aebe46e24af3}} 
+void {\bfseries end\+Application} ()
+\begin{DoxyCompactList}\small\item\em Function dealing with ending application. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a8a513f3fa9524a00cb5b009fefa32c3a}\label{classGame_a8a513f3fa9524a00cb5b009fefa32c3a}} 
+void {\bfseries update\+Dt} ()
+\begin{DoxyCompactList}\small\item\em Measures the refresh time of the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_aec4876cfb285b9301b39d3a134bd608a}\label{classGame_aec4876cfb285b9301b39d3a134bd608a}} 
+void {\bfseries update\+SFMLEvents} ()
+\begin{DoxyCompactList}\small\item\em Updates SFML pollevents. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a79df6376b332d63c9eca0dcee30305c3}\label{classGame_a79df6376b332d63c9eca0dcee30305c3}} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Updates functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a15ddd769261d923827a3cdf41499c843}\label{classGame_a15ddd769261d923827a3cdf41499c843}} 
+void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Renders objects on screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}\label{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}} 
+void {\bfseries run} ()
+\begin{DoxyCompactList}\small\item\em Core function for running the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_aa7255464a62947a22ebcf9f0e5e6c52d}\label{classGame_aa7255464a62947a22ebcf9f0e5e6c52d}} 
+void {\bfseries init\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Initializes variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a15f85bb1959ffeae84f17c7f08db9018}\label{classGame_a15f85bb1959ffeae84f17c7f08db9018}} 
+void {\bfseries init\+Window} ()
+\begin{DoxyCompactList}\small\item\em Initializes window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a9374c8f07e57e5697fb0b35f51d96361}\label{classGame_a9374c8f07e57e5697fb0b35f51d96361}} 
+void {\bfseries init\+States} ()
+\begin{DoxyCompactList}\small\item\em Initializes states stack. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a51bd4898283e795b5f95ee2db1653229}\label{classGame_a51bd4898283e795b5f95ee2db1653229}} 
+void {\bfseries init\+Keys} ()
+\begin{DoxyCompactList}\small\item\em Initializes keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_a36abf89e84cc7bda6ba75df32a0436af}\label{classGame_a36abf89e84cc7bda6ba75df32a0436af}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_af00d15651edd39b7c28262b23bb50c7a}\label{classGame_af00d15651edd39b7c28262b23bb50c7a}} 
+sf\+::\+Render\+Window $\ast$ {\bfseries window}
+\begin{DoxyCompactList}\small\item\em Window pointer object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a1392fa61566de5b31a8d5e22586f3dcc}\label{classGame_a1392fa61566de5b31a8d5e22586f3dcc}} 
+sf\+::\+Event {\bfseries sf\+Event}
+\begin{DoxyCompactList}\small\item\em SFML event object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a38b59b1574b4c4380edf53285d144702}\label{classGame_a38b59b1574b4c4380edf53285d144702}} 
+std\+::vector$<$ sf\+::\+Video\+Mode $>$ {\bfseries video\+Modes\+\_\+}
+\begin{DoxyCompactList}\small\item\em Vector of available video modes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a769c3d21235d21c1787e9094528dc741}\label{classGame_a769c3d21235d21c1787e9094528dc741}} 
+sf\+::\+Context\+Settings {\bfseries window\+Settings\+\_\+}
+\begin{DoxyCompactList}\small\item\em Window settings object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a972d3696cbdb67398f167939e4611106}\label{classGame_a972d3696cbdb67398f167939e4611106}} 
+bool {\bfseries fullscreen\+\_\+}
+\begin{DoxyCompactList}\small\item\em Boolean for the fullscreen mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a5184b0439c5cefb45050d0bfaca9ac97}\label{classGame_a5184b0439c5cefb45050d0bfaca9ac97}} 
+float {\bfseries dt}
+\begin{DoxyCompactList}\small\item\em dt variable to measure refresh time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a255dd8ce84d69a79cdec0454400a4bc8}\label{classGame_a255dd8ce84d69a79cdec0454400a4bc8}} 
+sf\+::\+Clock {\bfseries dt\+Clock}
+\begin{DoxyCompactList}\small\item\em Clock object to measure elapsed time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a8ec3dea8509aed9c2355b1bba323da0e}\label{classGame_a8ec3dea8509aed9c2355b1bba323da0e}} 
+sf\+::\+Clock {\bfseries quitclock\+\_\+}
+\begin{DoxyCompactList}\small\item\em Clock for timing the call for quit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_ab953bd17e03bc976b1dc13eb6dde9ee0}\label{classGame_ab953bd17e03bc976b1dc13eb6dde9ee0}} 
+std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ {\bfseries states}
+\begin{DoxyCompactList}\small\item\em States stack. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a0ebf5e039be4084b26cbb1de8c6468a7}\label{classGame_a0ebf5e039be4084b26cbb1de8c6468a7}} 
+std\+::map$<$ std\+::string, int $>$ {\bfseries supported\+Keys}
+\begin{DoxyCompactList}\small\item\em Map of supported keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGame_ab28fbb4bf16491693a83e916adefd32f}\label{classGame_ab28fbb4bf16491693a83e916adefd32f}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{std\+::string \&}]{root\+\_\+filepath }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Root} & filepath \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classGame_ab28fbb4bf16491693a83e916adefd32f_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/game.\+hpp\item 
+src/game.\+cpp\end{DoxyCompactItemize}

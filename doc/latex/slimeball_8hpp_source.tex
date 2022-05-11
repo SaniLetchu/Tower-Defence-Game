@@ -1,0 +1,73 @@
+\hypertarget{slimeball_8hpp_source}{}\doxysection{slimeball.\+hpp}
+\label{slimeball_8hpp_source}\index{src/slimeball.hpp@{src/slimeball.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SLIMEBALL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SLIMEBALL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classSlimeball}{Slimeball}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{22     \mbox{\hyperlink{classSlimeball_abf619bb075c1d20fed51b46dda993172}{Slimeball}}(std::string root\_filepath, sf::Vector2f spawn, sf::Vector2f target, \textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} speed, \textcolor{keywordtype}{float} slowing\_parameter);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \mbox{\hyperlink{classSlimeball_a2266c5871631df2bd32d41302d206fbb}{\string~Slimeball}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSlimeball_a65d20e45afeb1c42b84fd3596e857161}{move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSlimeball_a3119d955539b0ddbd6093027e54171ed}{setUpSprites}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSlimeball_aed654c55343828187c9b6abf2b9e86d3}{render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSlimeball_ac0c9282525bb3ec023f5439bb63c1a60}{hasExploded}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSlimeball_aa7c67b12b949570657555b0cf8344136}{dealDamage}}(std::list<Npc*> enemies);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSlimeball_a47cf00d6f8a052b06a0708770c08106c}{update}}(std::list<Npc*> enemies);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{54     sf::Clock \mbox{\hyperlink{classSlimeball_abf58522639bfe990519031ccb003c622}{clock\_}};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{private}:}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{59     std::string \mbox{\hyperlink{classSlimeball_ad2804ea0d8ea1b03e01403566f912cae}{missile\_texture\_name\_}};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{62     std::string \mbox{\hyperlink{classSlimeball_a84b9635c4df5f9ca76c6d265a73ea39c}{explosion\_texture\_name\_}};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65     sf::Texture \mbox{\hyperlink{classSlimeball_a43940a929500f9fe5df2c4f5cfd2e9d5}{missile\_texture\_}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68     sf::Texture \mbox{\hyperlink{classSlimeball_ad5e8707740a609542704e15d6bdd1fbc}{explosion\_texture\_}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71     sf::Sprite \mbox{\hyperlink{classSlimeball_a2a45c8c1d7c0b9a9cd1f2804cf5197e7}{missile\_sprite\_}};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74     sf::Sprite \mbox{\hyperlink{classSlimeball_a2a0b11874df45ece888d7871b9526c19}{explosion\_sprite\_}};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77     sf::Vector2f \mbox{\hyperlink{classSlimeball_ace197a45a7340042bcdf4e142a1b18e3}{spawn\_}};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{80     sf::Vector2f \mbox{\hyperlink{classSlimeball_a6893d01e0f9337291eb5ab9334d4d34f}{target\_}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83     std::list<Npc*> \mbox{\hyperlink{classSlimeball_aeaef01bc96610266e189653ef66d52d0}{enemies\_}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSlimeball_a7a6d459294431e01036b50f725df8e72}{damage\_}};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSlimeball_a84e017f92f4d41e4a21a996cc533b2f1}{blast\_radius\_}};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{int} \mbox{\hyperlink{classSlimeball_a5f3cd581e3baddb8a224a2f7cdf9e90a}{speed\_}};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{95     \textcolor{keywordtype}{float} \mbox{\hyperlink{classSlimeball_a3cf27fb4cebf5760a6ec32d942234359}{slowing\_parameter\_}};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{98     sf::Vector2f \mbox{\hyperlink{classSlimeball_a6a29699c2c7c593ad926e148915adc1f}{direction\_}};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{101     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSlimeball_a3f559e2a3c8c9bcc2d106a2a4041b850}{explosion\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{104     std::string \mbox{\hyperlink{classSlimeball_a307bb1a7559ccc097ae39f95e0ea91f2}{root\_filepath\_}};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

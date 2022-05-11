@@ -1,0 +1,71 @@
+\hypertarget{game_8hpp_source}{}\doxysection{game.\+hpp}
+\label{game_8hpp_source}\index{src/game.hpp@{src/game.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// Game header}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef GAME\_H}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define GAME\_H}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// Include needed headers}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}main\_menu\_state.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}main\_menu\_state.cpp"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classGame}{Game}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classGame_ab28fbb4bf16491693a83e916adefd32f}{Game}}(std::string\& root\_filepath);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} \mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a7ab64d477b806da35ee0aebe46e24af3}{endApplication}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a8a513f3fa9524a00cb5b009fefa32c3a}{updateDt}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_aec4876cfb285b9301b39d3a134bd608a}{updateSFMLEvents}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a79df6376b332d63c9eca0dcee30305c3}{update}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a15ddd769261d923827a3cdf41499c843}{render}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{private}:}
+\DoxyCodeLine{41     \textcolor{comment}{// Initializing}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_aa7255464a62947a22ebcf9f0e5e6c52d}{initVariables}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a15f85bb1959ffeae84f17c7f08db9018}{initWindow}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a9374c8f07e57e5697fb0b35f51d96361}{initStates}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a51bd4898283e795b5f95ee2db1653229}{initKeys}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{// Variables}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58     std::string \mbox{\hyperlink{classGame_a36abf89e84cc7bda6ba75df32a0436af}{root\_filepath\_}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{61     sf::RenderWindow *\mbox{\hyperlink{classGame_af00d15651edd39b7c28262b23bb50c7a}{window}};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64     sf::Event \mbox{\hyperlink{classGame_a1392fa61566de5b31a8d5e22586f3dcc}{sfEvent}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67     std::vector<sf::VideoMode> \mbox{\hyperlink{classGame_a38b59b1574b4c4380edf53285d144702}{videoModes\_}};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70     sf::ContextSettings \mbox{\hyperlink{classGame_a769c3d21235d21c1787e9094528dc741}{windowSettings\_}};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGame_a972d3696cbdb67398f167939e4611106}{fullscreen\_}};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{float} \mbox{\hyperlink{classGame_a5184b0439c5cefb45050d0bfaca9ac97}{dt}};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{79     sf::Clock \mbox{\hyperlink{classGame_a255dd8ce84d69a79cdec0454400a4bc8}{dtClock}};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{82     sf::Clock \mbox{\hyperlink{classGame_a8ec3dea8509aed9c2355b1bba323da0e}{quitclock\_}};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{85     std::stack<State*> \mbox{\hyperlink{classGame_ab953bd17e03bc976b1dc13eb6dde9ee0}{states}}; }
+\DoxyCodeLine{86 }
+\DoxyCodeLine{88     std::map<std::string, int> \mbox{\hyperlink{classGame_a0ebf5e039be4084b26cbb1de8c6468a7}{supportedKeys}}; }
+\DoxyCodeLine{89 \};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,106 @@
+\hypertarget{createmap__state_8hpp_source}{}\doxysection{createmap\+\_\+state.\+hpp}
+\label{createmap__state_8hpp_source}\index{src/createmap\_state.hpp@{src/createmap\_state.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CREATEMAPSTATE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CREATEMAPSTATE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}state.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}gametile.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}gametile.cpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}button.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}textbox.hpp"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}textbox.cpp"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classCreatemap}{Createmap}} : \textcolor{keyword}{public} \mbox{\hyperlink{classState}{State}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{28     \mbox{\hyperlink{classCreatemap_a0f03c0fc778548fd901493171007d276}{Createmap}}(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::string root\_filepath, std::stack<State*>* \mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf::Font* font, sf::Event* Event);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{31     \textcolor{keyword}{virtual} \mbox{\hyperlink{classCreatemap_a22c9d089d8d1bb4c67bc09a30ae15ea3}{\string~Createmap}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a4a95d6cf4a7ae9b8e0e43ba67659ad84}{initSoundEffect}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a1bc1dc0fd5d084356c97446de6a284ba}{updateInput}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a00c75c6ed48d0f16eacbf3b130de88f9}{endState}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_aac3eac47b90869999c18a69d6c64f341}{update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_add3a8dba62e9e7306fc01cb04dcb2d97}{render}}(sf::RenderTarget* target = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a50b611e05ab914a29528bbb568116186}{updateButtons}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_aa7b300c60d7f1efc3289fdaae6aadda0}{renderButtons}}(sf::RenderTarget* target = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a2c724d5c344560115f2a26cfea61e32d}{initVariables}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a606dea73efa3d811d295ed430504ad93}{SaveToFile}}(std::string mapname);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a493b700076c1d5151fd0e7c337660deb}{initTiles}}();}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_ae9f13a7ba0a64eea1b1931353d2f61f8}{ReplacePosition}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::string texturename, \textcolor{keywordtype}{bool} buildable);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a269814ba67c0ac0c5c1431710e78a3c6}{initTextures}}();}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{86     \mbox{\hyperlink{classGameTile}{GameTile}}* \mbox{\hyperlink{classCreatemap_ae632ebe990a59721ad59b0706cd66d43}{TileAt}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a7599e5af7d855cdeeabb47f09b7e250b}{NextTextureAt}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a755480b651ef735f04413ff01aae40b8}{NextSpawnOrExit}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a9b76f8842ef691fe4e17475ebc42dc0c}{ReplaceSpawnOrExit}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::string texturename);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keyword}{private}:}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110     std::map<std::pair<int, int>, \mbox{\hyperlink{classGameTile}{GameTile}} *> \mbox{\hyperlink{classCreatemap_ad435f60435364bd564b610cd571f4cf3}{Tiles}};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{113     std::map<std::pair<int, int>, \mbox{\hyperlink{classGameTile}{GameTile}} *> \mbox{\hyperlink{classCreatemap_a1c3a52164db3fd57f7e1bef4a3397348}{SpawnAndExit\_}};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116     std::string \mbox{\hyperlink{classCreatemap_abdcb200ee23fa99dd61516ef69e63cf0}{root\_filepath\_}};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{119     sf::Vector2u \mbox{\hyperlink{classCreatemap_a3cad19051ba7df352402fe3de8c821fb}{mousePosGrid}};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{122     std::vector<std::pair<bool, std::string>> \mbox{\hyperlink{classCreatemap_a5e4b371f52d96e237cf71767568b6ddb}{textures\_}};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{125     std::vector<std::pair<bool, std::string>> \mbox{\hyperlink{classCreatemap_a0b90221bb253b4f9ca6c04bbba21a965}{spawnandexittextures\_}};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{128     sf::Clock \mbox{\hyperlink{classCreatemap_ac6abcf2f445ad783629a2dc8e1488ba8}{clock}};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{131     std::map<std::string, Button*> \mbox{\hyperlink{classCreatemap_accbc2a54bc954ee5ae146f7f7a176c9f}{mapcreateButtons\_}};}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{134     sf::Clock \mbox{\hyperlink{classCreatemap_a7b034651efdea3d44e3d4f5a3968bc88}{pressTimer\_}};}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{137     sf::Int32 \mbox{\hyperlink{classCreatemap_a34b650d361e66c9e6b2d00f137842f06}{pressTimerMax\_}};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{140     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCreatemap_a83e89038650e123cdce38074ffd057f7}{windowX\_}};}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{143     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCreatemap_a775b32776aee6a028ae3dd60f7f9f18c}{windowY\_}};}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{146     sf::Font* \mbox{\hyperlink{classCreatemap_af3eedd4ae969486afa21ed841f0c4dcf}{font\_}};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \textcolor{comment}{// Click sound effect}}
+\DoxyCodeLine{149     sf::SoundBuffer buffer;}
+\DoxyCodeLine{150     sf::Sound clickSound\_;}
+\DoxyCodeLine{151     }
+\DoxyCodeLine{153     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_a0ba30d35ef39325a4543d143ec42565f}{initKeyBinds}}();}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{156     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCreatemap_ac697f3203e2abb4a78f027a405b1893d}{initButtons}}();}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{159     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classCreatemap_ab4ece9f6236d91847ae580a1d55ed9c1}{getPressTimer}}();}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{162     sf::Event* \mbox{\hyperlink{classCreatemap_a1456a53b542241681eb21d094fe9e9cf}{Event\_}};}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{165     \mbox{\hyperlink{classTextbox}{Textbox}}* \mbox{\hyperlink{classCreatemap_a1c4f206a4f681159cfd1329e2eb24a62}{textbox\_}};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 \};}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

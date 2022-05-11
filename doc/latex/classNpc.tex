@@ -1,0 +1,413 @@
+\hypertarget{classNpc}{}\doxysection{Npc Class Reference}
+\label{classNpc}\index{Npc@{Npc}}
+
+
+\mbox{\hyperlink{classNpc}{Npc}} class as a base class fo enemies.  
+
+
+
+
+{\ttfamily \#include $<$npc.\+hpp$>$}
+
+
+
+Inheritance diagram for Npc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNpc__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNpc_aa3286a3fcc2d555e3ca51cdbdc998262}{Npc}} (std\+::string root\+\_\+filepath, sf\+::\+Vector2f s\+Location, sf\+::\+Vector2f e\+Location, std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$r\+Tiles, int new\+Tile\+Count=0)
+\begin{DoxyCompactList}\small\item\em Constructor for NPC class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a2249c5155af3d692e51ff610064e81fe}\label{classNpc_a2249c5155af3d692e51ff610064e81fe}} 
+{\bfseries $\sim$\+Npc} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e}{Update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNpc_a7a34f6a6322c56cf74683a78c75cfe15}{Render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders NPC object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25}{Move\+To}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Handles the logic for NPCs to move along road tiles. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNpc_aa49117d3c5d41f7f306e08d6a28f582e}{init\+Npc}} ()
+\begin{DoxyCompactList}\small\item\em Initializes NPCs setting movespeed, textures, spawnpoint and hitpoints. \end{DoxyCompactList}\item 
+virtual std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classNpc_ae8779c3e879ab383f093b60ce445f753}{Find\+Direction}} (sf\+::\+Vector2f \mbox{\hyperlink{classNpc_a6ce7235a13c632e99220e4f250d1e069}{next\+Location}})
+\begin{DoxyCompactList}\small\item\em Finds the direction NPC has to go. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNpc_a0801ec5847a696ecf281384bc8eb5c8d}{Rotate}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Rotates NPC object while it changes direction. \end{DoxyCompactList}\item 
+virtual sf\+::\+Vector2f \mbox{\hyperlink{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets current position coordinates of NPC object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classNpc_aa737d1ed48edc211df6e7648f4f61069}{get\+Hitpoints}} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs current hitpoints. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classNpc_a4181be8190f1b81ababc23f6492afd88}{has\+Reached\+End}} ()
+\begin{DoxyCompactList}\small\item\em Checks if NPC has reached to exit tile. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNpc_a6a369b595667cb0a058630faa717ab7c}{deal\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em Calculates the difference of current NPC hitpoints and damage of tower. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNpc_a8ec65489be62e6c69a5e9f512fbad748}{slow\+Movement}} (float slow)
+\begin{DoxyCompactList}\small\item\em Slows NPCs movement speed with the product of movement speed and slowing parameter. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classNpc_a97879f68d40197370f11f6ecd4341091}{get\+Tile\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs tile count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}\label{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}} 
+virtual int {\bfseries get\+Worth} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs worth to give player money. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNpc_a3bbfc3c846cc9690700d83a7730c3f83}\label{classNpc_a3bbfc3c846cc9690700d83a7730c3f83}} 
+float {\bfseries movement\+Speed}
+\begin{DoxyCompactList}\small\item\em Movement speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a87e660848854965c029a10ab49a58f54}\label{classNpc_a87e660848854965c029a10ab49a58f54}} 
+float {\bfseries movementspeedmemory\+\_\+}
+\begin{DoxyCompactList}\small\item\em Temporary movement speed to use in slowing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_aeb39dc20111fda7c68b0d1ca5e69eb0c}\label{classNpc_aeb39dc20111fda7c68b0d1ca5e69eb0c}} 
+float {\bfseries hitpoints} = 1
+\begin{DoxyCompactList}\small\item\em Hitpoints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a805a12ab98468d845a866091ddf72b68}\label{classNpc_a805a12ab98468d845a866091ddf72b68}} 
+sf\+::\+Vector2f {\bfseries spawn\+Location}
+\begin{DoxyCompactList}\small\item\em Spawn location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_aeb3819c5ec67506be70d0526912c3bd2}\label{classNpc_aeb3819c5ec67506be70d0526912c3bd2}} 
+sf\+::\+Vector2f {\bfseries exit\+Location}
+\begin{DoxyCompactList}\small\item\em Exit location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a6ce7235a13c632e99220e4f250d1e069}\label{classNpc_a6ce7235a13c632e99220e4f250d1e069}} 
+sf\+::\+Vector2f {\bfseries next\+Location}
+\begin{DoxyCompactList}\small\item\em Next location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a862d677bddbcabfd09ac994d509e2d6b}\label{classNpc_a862d677bddbcabfd09ac994d509e2d6b}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$ {\bfseries road\+Tiles}
+\begin{DoxyCompactList}\small\item\em Vector to save road tile coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a3cbb76aaced3969a81e59bb84afd4c33}\label{classNpc_a3cbb76aaced3969a81e59bb84afd4c33}} 
+int {\bfseries tile\+Count} = 0
+\begin{DoxyCompactList}\small\item\em Counter to keep count on what tile NPC is on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}\label{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}} 
+sf\+::\+Sprite {\bfseries sotilastektuuri}
+\begin{DoxyCompactList}\small\item\em Sprite for NPC class (debugging class) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}\label{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}} 
+sf\+::\+Texture {\bfseries stexture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a9b3331bad14442a3fe125779cce7490e}\label{classNpc_a9b3331bad14442a3fe125779cce7490e}} 
+int {\bfseries worth\+\_\+} = 1
+\begin{DoxyCompactList}\small\item\em Amount of money NPC is worth. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a01d0f3e271281227e65de42ae1363f87}\label{classNpc_a01d0f3e271281227e65de42ae1363f87}} 
+sf\+::\+Clock {\bfseries slowcooldown\+\_\+}
+\begin{DoxyCompactList}\small\item\em Clock to slow the NPC for certain amount of time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a99223c27463a9acae22386f0ac416d75}\label{classNpc_a99223c27463a9acae22386f0ac416d75}} 
+bool {\bfseries end\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Boolean for NPC to be on exit tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_acf741509a824e13c2003057c9869c102}\label{classNpc_acf741509a824e13c2003057c9869c102}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classNpc}{Npc}} class as a base class fo enemies. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNpc_aa3286a3fcc2d555e3ca51cdbdc998262}\label{classNpc_aa3286a3fcc2d555e3ca51cdbdc998262}} 
+\index{Npc@{Npc}!Npc@{Npc}}
+\index{Npc@{Npc}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{Npc()}{Npc()}}
+{\footnotesize\ttfamily Npc\+::\+Npc (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{sf\+::\+Vector2f}]{s\+Location,  }\item[{sf\+::\+Vector2f}]{e\+Location,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$}]{r\+Tiles,  }\item[{int}]{new\+Tile\+Count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for NPC class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em s\+Location} & Spawning location for NPC \\
+\hline
+{\em e\+Location} & Exit location to delete NPC \\
+\hline
+{\em r\+Tiles} & Vector of tile coordinates for NPC to follow \\
+\hline
+{\em new\+Tile\+Count} & Used to overwrite tile\+Counter while spawning NPCs from dying NPC \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classNpc_aa3286a3fcc2d555e3ca51cdbdc998262_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNpc_a6a369b595667cb0a058630faa717ab7c}\label{classNpc_a6a369b595667cb0a058630faa717ab7c}} 
+\index{Npc@{Npc}!dealDamage@{dealDamage}}
+\index{dealDamage@{dealDamage}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{dealDamage()}{dealDamage()}}
+{\footnotesize\ttfamily void Npc\+::deal\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the difference of current NPC hitpoints and damage of tower. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage parameter of projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a0a716b3b5cf2424f0c3ca5626df66dd8}{Plane}}, \mbox{\hyperlink{classSoldier_a4d514363468720e978901cb7adff4431}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a600f39d1f738564f7213436d7db3eaad}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a04bcbd68aa10d6af5d136210b4e484b1}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a03483739aa30bb73903fbcb72f468823}{Tank}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNpc_a6a369b595667cb0a058630faa717ab7c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNpc_ae8779c3e879ab383f093b60ce445f753}\label{classNpc_ae8779c3e879ab383f093b60ce445f753}} 
+\index{Npc@{Npc}!FindDirection@{FindDirection}}
+\index{FindDirection@{FindDirection}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{FindDirection()}{FindDirection()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Npc\+::\+Find\+Direction (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{next\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finds the direction NPC has to go. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Location} & Next tile coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a274cc71269f61be3639978ff5526e1f3}{Plane}}, \mbox{\hyperlink{classSoldier_ab52b59c6ecb36eac003d147138948b0c}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a19204628b184e0abf415a22dac949d2c}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_aa8145e70d19256592e305ad5cd47ba0e}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a80209664c045f84a6d8a3730d942460f}{Tank}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNpc_ae8779c3e879ab383f093b60ce445f753_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNpc_aa737d1ed48edc211df6e7648f4f61069}\label{classNpc_aa737d1ed48edc211df6e7648f4f61069}} 
+\index{Npc@{Npc}!getHitpoints@{getHitpoints}}
+\index{getHitpoints@{getHitpoints}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{getHitpoints()}{getHitpoints()}}
+{\footnotesize\ttfamily int Npc\+::get\+Hitpoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets NPCs current hitpoints. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_ae91413a02c6edcbb5f56ca0afbc0c4e7}{Plane}}, \mbox{\hyperlink{classSoldier_a14d5511c9d9f8d3673659515057b98ff}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a24db731034c719f16bc25873fe31c567}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a0e2a872a26fd7a8f71f7dbb2062c12b6}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a568320269ffc0a9efbf1ecf8ee7a6312}{Tank}}.
+
+\mbox{\Hypertarget{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62}\label{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62}} 
+\index{Npc@{Npc}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Npc\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets current position coordinates of NPC object. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a8c4b088b87c2104adf8c750af40e222b}{Plane}}, \mbox{\hyperlink{classSoldier_aedf87ee5dd0c435aa930184e0f5da015}{Soldier}}, \mbox{\hyperlink{classSuperPlane_aada8639ff725245cf59b3ba669e69a7c}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a17df13b95c51073e3984fd10a1cb442a}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a32129b287c0510311034cadd641dc6b9}{Tank}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNpc_a97879f68d40197370f11f6ecd4341091}\label{classNpc_a97879f68d40197370f11f6ecd4341091}} 
+\index{Npc@{Npc}!getTileCount@{getTileCount}}
+\index{getTileCount@{getTileCount}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{getTileCount()}{getTileCount()}}
+{\footnotesize\ttfamily int Npc\+::get\+Tile\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets NPCs tile count. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classSuperPlane_a50eb05090f915f712e6c899764273e9b}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a1a6a086f396d7b7a6842754a5450fca8}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a7ca1c99521a4a40b459f00b505678860}{Tank}}.
+
+\mbox{\Hypertarget{classNpc_a4181be8190f1b81ababc23f6492afd88}\label{classNpc_a4181be8190f1b81ababc23f6492afd88}} 
+\index{Npc@{Npc}!hasReachedEnd@{hasReachedEnd}}
+\index{hasReachedEnd@{hasReachedEnd}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{hasReachedEnd()}{hasReachedEnd()}}
+{\footnotesize\ttfamily bool Npc\+::has\+Reached\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if NPC has reached to exit tile. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a236b3347e1b61e651838caa8f017c164}{Plane}}, \mbox{\hyperlink{classSoldier_a3ed93784583baa9e3ac1ae97a225427b}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a3063dc83c71f3ba4c7bb018e1772b501}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_abfbeef47c16789020dd79405610846dd}{Super\+Tank}}, and \mbox{\hyperlink{classTank_ae46d28ae133856423f136f186e66bc5b}{Tank}}.
+
+\mbox{\Hypertarget{classNpc_aa49117d3c5d41f7f306e08d6a28f582e}\label{classNpc_aa49117d3c5d41f7f306e08d6a28f582e}} 
+\index{Npc@{Npc}!initNpc@{initNpc}}
+\index{initNpc@{initNpc}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{initNpc()}{initNpc()}}
+{\footnotesize\ttfamily void Npc\+::init\+Npc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes NPCs setting movespeed, textures, spawnpoint and hitpoints. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a217944413aeb09efe0fda8f2358375e5}{Plane}}, \mbox{\hyperlink{classSoldier_a8f4ea4a324f235ce970991e18b82563b}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a6c29c079dada987875d69193712debfa}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a26549690e0e247e567376dfc674f9919}{Super\+Tank}}, and \mbox{\hyperlink{classTank_ac7dc5cd358a9f8a8310af34aa1a4cd4a}{Tank}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classNpc_aa49117d3c5d41f7f306e08d6a28f582e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25}\label{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25}} 
+\index{Npc@{Npc}!MoveTo@{MoveTo}}
+\index{MoveTo@{MoveTo}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{MoveTo()}{MoveTo()}}
+{\footnotesize\ttfamily void Npc\+::\+Move\+To (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the logic for NPCs to move along road tiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a6961380b8e13d0a85e9736793b0e2741}{Plane}}, \mbox{\hyperlink{classSoldier_a890c2da9bc9be5c34c38c036a100a5a2}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a6e2ddfb0d1ac776d5bc2837b1f2567e7}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a8391ee47e37f2a3a89dad08501e70735}{Super\+Tank}}, and \mbox{\hyperlink{classTank_accc3e7f7a9dd073590439a8256803b63}{Tank}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNpc_a7a34f6a6322c56cf74683a78c75cfe15}\label{classNpc_a7a34f6a6322c56cf74683a78c75cfe15}} 
+\index{Npc@{Npc}!Render@{Render}}
+\index{Render@{Render}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Npc\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders NPC object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Reference to target parameter for Gaming state to handle \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a8f693be4c8ca6a48620da2acf39d5e0b}{Plane}}, \mbox{\hyperlink{classSoldier_a13aab644f9699ab5a40346f0dfba03b9}{Soldier}}, \mbox{\hyperlink{classSuperPlane_aba66c8629cdaec16b21e43cae52e52ce}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_aad1e97f943a6b105494761169289ba69}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a4c168f9ed04a48bfffb6b0964737ab46}{Tank}}.
+
+\mbox{\Hypertarget{classNpc_a0801ec5847a696ecf281384bc8eb5c8d}\label{classNpc_a0801ec5847a696ecf281384bc8eb5c8d}} 
+\index{Npc@{Npc}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Npc\+::\+Rotate (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates NPC object while it changes direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Gives x direction movement \\
+\hline
+{\em y} & Gives y direction movement \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a08bbd5a8291edb2b15c198eabffd8f9f}{Plane}}, \mbox{\hyperlink{classSoldier_aececf082e604e5205de41b99cea5867d}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a9da728cd062d992b93d44c5b5033028e}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a1bfdd1b84276835db5422f5a2b77af1e}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a57f9d3b4aee6924ffd66feb5e354e870}{Tank}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNpc_a0801ec5847a696ecf281384bc8eb5c8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNpc_a8ec65489be62e6c69a5e9f512fbad748}\label{classNpc_a8ec65489be62e6c69a5e9f512fbad748}} 
+\index{Npc@{Npc}!slowMovement@{slowMovement}}
+\index{slowMovement@{slowMovement}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{slowMovement()}{slowMovement()}}
+{\footnotesize\ttfamily void Npc\+::slow\+Movement (\begin{DoxyParamCaption}\item[{float}]{slow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Slows NPCs movement speed with the product of movement speed and slowing parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slow} & Slowing parameter from slimeball projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_ab33a8ef3c90354ae310802ad17f3d0b9}{Plane}}, \mbox{\hyperlink{classSoldier_a72bbc6aaeda2eee59c39caa7cb97b42a}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a5da977c21453bf5713b2ef3ce9d6e25d}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a2232d4aa5e6cc47040445f3cd5bd0a84}{Super\+Tank}}, and \mbox{\hyperlink{classTank_ab3e903b0721a1c950b66687746f1f13d}{Tank}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNpc_a8ec65489be62e6c69a5e9f512fbad748_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e}\label{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e}} 
+\index{Npc@{Npc}!Update@{Update}}
+\index{Update@{Update}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Npc\+::\+Update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classPlane_a1a841df404d74e8677d2dc2b67a12539}{Plane}}, \mbox{\hyperlink{classSoldier_abd4002ce1b10c8db0ace437a910fb70c}{Soldier}}, \mbox{\hyperlink{classSuperPlane_a63d996f542620f1960b3ddd78d08d825}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a20d6c8a8922e1671aeefae0f0c5084ed}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a0327395ef42745192f89e6536618928a}{Tank}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/npc.\+hpp\item 
+src/npc.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,409 @@
+\hypertarget{classPlane}{}\doxysection{Plane Class Reference}
+\label{classPlane}\index{Plane@{Plane}}
+
+
+\mbox{\hyperlink{classPlane}{Plane}} class to be used as fast moving enemy.  
+
+
+
+
+{\ttfamily \#include $<$plane.\+hpp$>$}
+
+
+
+Inheritance diagram for Plane\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=124pt]{classPlane__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Plane\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=124pt]{classPlane__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlane_afd6692941242ab4f0581ba326011b994}{Plane}} (std\+::string root\+\_\+filepath, sf\+::\+Vector2f s\+Location, sf\+::\+Vector2f e\+Location, std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$r\+Tiles, int round, int new\+Tile\+Count=0)
+\begin{DoxyCompactList}\small\item\em Constructor for NPC sub-\/class \mbox{\hyperlink{classPlane}{Plane}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a69abd86051c880dcb44b249ad10c4436}\label{classPlane_a69abd86051c880dcb44b249ad10c4436}} 
+{\bfseries $\sim$\+Plane} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPlane_a1a841df404d74e8677d2dc2b67a12539}{Update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPlane_a8f693be4c8ca6a48620da2acf39d5e0b}{Render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders \mbox{\hyperlink{classPlane}{Plane}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPlane_a6961380b8e13d0a85e9736793b0e2741}{Move\+To}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Handles the logic for \mbox{\hyperlink{classPlane}{Plane}} to move along road tiles. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPlane_a217944413aeb09efe0fda8f2358375e5}{init\+Npc}} ()
+\begin{DoxyCompactList}\small\item\em Initializes \mbox{\hyperlink{classPlane}{Plane}} setting movespeed, textures, spawnpoint and hitpoints. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classPlane_a274cc71269f61be3639978ff5526e1f3}{Find\+Direction}} (sf\+::\+Vector2f \mbox{\hyperlink{classPlane_a53b72dbf8cd61370fa45ecd322f3791d}{next\+Location}})
+\begin{DoxyCompactList}\small\item\em Finds the direction \mbox{\hyperlink{classPlane}{Plane}} has to go. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPlane_a08bbd5a8291edb2b15c198eabffd8f9f}{Rotate}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Rotates \mbox{\hyperlink{classPlane}{Plane}} object while it changes direction. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classPlane_a8c4b088b87c2104adf8c750af40e222b}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets current position coordinates of \mbox{\hyperlink{classPlane}{Plane}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlane_ae91413a02c6edcbb5f56ca0afbc0c4e7}{get\+Hitpoints}} ()
+\begin{DoxyCompactList}\small\item\em Gets \mbox{\hyperlink{classPlane}{Plane}}\textquotesingle{}s current hitpoints. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlane_a236b3347e1b61e651838caa8f017c164}{has\+Reached\+End}} ()
+\begin{DoxyCompactList}\small\item\em Checks if \mbox{\hyperlink{classPlane}{Plane}} has reached to exit tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlane_a0a716b3b5cf2424f0c3ca5626df66dd8}{deal\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em Calculates the difference of current \mbox{\hyperlink{classPlane}{Plane}} hitpoints and damage of tower. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlane_ab33a8ef3c90354ae310802ad17f3d0b9}{slow\+Movement}} (float slow)
+\begin{DoxyCompactList}\small\item\em Slows \mbox{\hyperlink{classPlane}{Plane}}\textquotesingle{}s movement speed with the product of movement speed and slowing parameter. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classNpc_a97879f68d40197370f11f6ecd4341091}{get\+Tile\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs tile count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}\label{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}} 
+virtual int {\bfseries get\+Worth} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs worth to give player money. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlane_a45b91e53cda7085e91b4c0106c977f9a}\label{classPlane_a45b91e53cda7085e91b4c0106c977f9a}} 
+float {\bfseries movement\+Speed}
+\begin{DoxyCompactList}\small\item\em Movement speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_ae1e92ce453e4018f0e54d353c1e407ae}\label{classPlane_ae1e92ce453e4018f0e54d353c1e407ae}} 
+float {\bfseries movementspeedmemory\+\_\+}
+\begin{DoxyCompactList}\small\item\em Temporary movement speed to use in slowing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_af9f33826ab87106497b0307cc837f451}\label{classPlane_af9f33826ab87106497b0307cc837f451}} 
+float {\bfseries hitpoints} = 1
+\begin{DoxyCompactList}\small\item\em Hitpoints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a71ac92e6390a82a1d3b1c40c774b9f04}\label{classPlane_a71ac92e6390a82a1d3b1c40c774b9f04}} 
+sf\+::\+Vector2f {\bfseries spawn\+Location}
+\begin{DoxyCompactList}\small\item\em Spawn location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a1203ffed22cd4cff07bfbc305d16abb9}\label{classPlane_a1203ffed22cd4cff07bfbc305d16abb9}} 
+sf\+::\+Vector2f {\bfseries exit\+Location}
+\begin{DoxyCompactList}\small\item\em Exit location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a53b72dbf8cd61370fa45ecd322f3791d}\label{classPlane_a53b72dbf8cd61370fa45ecd322f3791d}} 
+sf\+::\+Vector2f {\bfseries next\+Location}
+\begin{DoxyCompactList}\small\item\em Next location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a34d9a90f49141a843a2f39b9ac55d2bf}\label{classPlane_a34d9a90f49141a843a2f39b9ac55d2bf}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$ {\bfseries road\+Tiles}
+\begin{DoxyCompactList}\small\item\em Vector to save road tile coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a36c5f745a2bc5eb70b04cfeecaab8081}\label{classPlane_a36c5f745a2bc5eb70b04cfeecaab8081}} 
+int {\bfseries tile\+Count} = 0
+\begin{DoxyCompactList}\small\item\em Counter to keep count on what tile \mbox{\hyperlink{classPlane}{Plane}} is on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a6d097fdec2373c50ff8de23469834bea}\label{classPlane_a6d097fdec2373c50ff8de23469834bea}} 
+sf\+::\+Sprite {\bfseries plane\+Texture}
+\begin{DoxyCompactList}\small\item\em Sprite for \mbox{\hyperlink{classPlane}{Plane}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_ab7bdef1edabd3d547a040f6aa0e8ce3e}\label{classPlane_ab7bdef1edabd3d547a040f6aa0e8ce3e}} 
+sf\+::\+Texture {\bfseries texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a5617e649a5e3c9dc00e777b6fdde4994}\label{classPlane_a5617e649a5e3c9dc00e777b6fdde4994}} 
+sf\+::\+Clock {\bfseries slowcooldown\+\_\+}
+\begin{DoxyCompactList}\small\item\em Clock to slow the \mbox{\hyperlink{classPlane}{Plane}} for certain amount of time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a3d2c9567cf631e3df8ecdb93682d550f}\label{classPlane_a3d2c9567cf631e3df8ecdb93682d550f}} 
+bool {\bfseries end\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Boolean for \mbox{\hyperlink{classPlane}{Plane}} to be on exit tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlane_a2f49fc1362b39abe763fc2d84a9bbd01}\label{classPlane_a2f49fc1362b39abe763fc2d84a9bbd01}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}\label{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}} 
+sf\+::\+Sprite {\bfseries sotilastektuuri}
+\begin{DoxyCompactList}\small\item\em Sprite for NPC class (debugging class) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}\label{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}} 
+sf\+::\+Texture {\bfseries stexture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a9b3331bad14442a3fe125779cce7490e}\label{classNpc_a9b3331bad14442a3fe125779cce7490e}} 
+int {\bfseries worth\+\_\+} = 1
+\begin{DoxyCompactList}\small\item\em Amount of money NPC is worth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classPlane}{Plane}} class to be used as fast moving enemy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlane_afd6692941242ab4f0581ba326011b994}\label{classPlane_afd6692941242ab4f0581ba326011b994}} 
+\index{Plane@{Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{Plane()}{Plane()}}
+{\footnotesize\ttfamily Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{sf\+::\+Vector2f}]{s\+Location,  }\item[{sf\+::\+Vector2f}]{e\+Location,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$}]{r\+Tiles,  }\item[{int}]{round,  }\item[{int}]{new\+Tile\+Count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for NPC sub-\/class \mbox{\hyperlink{classPlane}{Plane}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em s\+Location} & Spawning location for \mbox{\hyperlink{classPlane}{Plane}} \\
+\hline
+{\em e\+Location} & Exit location to delete \mbox{\hyperlink{classPlane}{Plane}} \\
+\hline
+{\em r\+Tiles} & Vector of tile coordinates for \mbox{\hyperlink{classPlane}{Plane}} to follow \\
+\hline
+{\em round} & Counter for round amount \\
+\hline
+{\em new\+Tile\+Count} & Used to overwrite tile\+Counter while spawning \mbox{\hyperlink{classPlane}{Plane}} from dying \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classPlane_afd6692941242ab4f0581ba326011b994_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlane_a0a716b3b5cf2424f0c3ca5626df66dd8}\label{classPlane_a0a716b3b5cf2424f0c3ca5626df66dd8}} 
+\index{Plane@{Plane}!dealDamage@{dealDamage}}
+\index{dealDamage@{dealDamage}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{dealDamage()}{dealDamage()}}
+{\footnotesize\ttfamily void Plane\+::deal\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the difference of current \mbox{\hyperlink{classPlane}{Plane}} hitpoints and damage of tower. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage parameter of projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a6a369b595667cb0a058630faa717ab7c}{Npc}}.
+
+\mbox{\Hypertarget{classPlane_a274cc71269f61be3639978ff5526e1f3}\label{classPlane_a274cc71269f61be3639978ff5526e1f3}} 
+\index{Plane@{Plane}!FindDirection@{FindDirection}}
+\index{FindDirection@{FindDirection}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{FindDirection()}{FindDirection()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Plane\+::\+Find\+Direction (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{next\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finds the direction \mbox{\hyperlink{classPlane}{Plane}} has to go. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Location} & Next tile coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_ae8779c3e879ab383f093b60ce445f753}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlane_a274cc71269f61be3639978ff5526e1f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlane_ae91413a02c6edcbb5f56ca0afbc0c4e7}\label{classPlane_ae91413a02c6edcbb5f56ca0afbc0c4e7}} 
+\index{Plane@{Plane}!getHitpoints@{getHitpoints}}
+\index{getHitpoints@{getHitpoints}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{getHitpoints()}{getHitpoints()}}
+{\footnotesize\ttfamily int Plane\+::get\+Hitpoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets \mbox{\hyperlink{classPlane}{Plane}}\textquotesingle{}s current hitpoints. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_aa737d1ed48edc211df6e7648f4f61069}{Npc}}.
+
+\mbox{\Hypertarget{classPlane_a8c4b088b87c2104adf8c750af40e222b}\label{classPlane_a8c4b088b87c2104adf8c750af40e222b}} 
+\index{Plane@{Plane}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Plane\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets current position coordinates of \mbox{\hyperlink{classPlane}{Plane}} object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62}{Npc}}.
+
+\mbox{\Hypertarget{classNpc_a97879f68d40197370f11f6ecd4341091}\label{classNpc_a97879f68d40197370f11f6ecd4341091}} 
+\index{Plane@{Plane}!getTileCount@{getTileCount}}
+\index{getTileCount@{getTileCount}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{getTileCount()}{getTileCount()}}
+{\footnotesize\ttfamily int Npc\+::get\+Tile\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Gets NPCs tile count. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classSuperPlane_a50eb05090f915f712e6c899764273e9b}{Super\+Plane}}, \mbox{\hyperlink{classSuperTank_a1a6a086f396d7b7a6842754a5450fca8}{Super\+Tank}}, and \mbox{\hyperlink{classTank_a7ca1c99521a4a40b459f00b505678860}{Tank}}.
+
+\mbox{\Hypertarget{classPlane_a236b3347e1b61e651838caa8f017c164}\label{classPlane_a236b3347e1b61e651838caa8f017c164}} 
+\index{Plane@{Plane}!hasReachedEnd@{hasReachedEnd}}
+\index{hasReachedEnd@{hasReachedEnd}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{hasReachedEnd()}{hasReachedEnd()}}
+{\footnotesize\ttfamily bool Plane\+::has\+Reached\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if \mbox{\hyperlink{classPlane}{Plane}} has reached to exit tile. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a4181be8190f1b81ababc23f6492afd88}{Npc}}.
+
+\mbox{\Hypertarget{classPlane_a217944413aeb09efe0fda8f2358375e5}\label{classPlane_a217944413aeb09efe0fda8f2358375e5}} 
+\index{Plane@{Plane}!initNpc@{initNpc}}
+\index{initNpc@{initNpc}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{initNpc()}{initNpc()}}
+{\footnotesize\ttfamily void Plane\+::init\+Npc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes \mbox{\hyperlink{classPlane}{Plane}} setting movespeed, textures, spawnpoint and hitpoints. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_aa49117d3c5d41f7f306e08d6a28f582e}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classPlane_a217944413aeb09efe0fda8f2358375e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlane_a6961380b8e13d0a85e9736793b0e2741}\label{classPlane_a6961380b8e13d0a85e9736793b0e2741}} 
+\index{Plane@{Plane}!MoveTo@{MoveTo}}
+\index{MoveTo@{MoveTo}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{MoveTo()}{MoveTo()}}
+{\footnotesize\ttfamily void Plane\+::\+Move\+To (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the logic for \mbox{\hyperlink{classPlane}{Plane}} to move along road tiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25}{Npc}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classPlane_a6961380b8e13d0a85e9736793b0e2741_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classPlane_a6961380b8e13d0a85e9736793b0e2741_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlane_a8f693be4c8ca6a48620da2acf39d5e0b}\label{classPlane_a8f693be4c8ca6a48620da2acf39d5e0b}} 
+\index{Plane@{Plane}!Render@{Render}}
+\index{Render@{Render}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Plane\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders \mbox{\hyperlink{classPlane}{Plane}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Reference to target parameter for Gaming state to handle \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a7a34f6a6322c56cf74683a78c75cfe15}{Npc}}.
+
+\mbox{\Hypertarget{classPlane_a08bbd5a8291edb2b15c198eabffd8f9f}\label{classPlane_a08bbd5a8291edb2b15c198eabffd8f9f}} 
+\index{Plane@{Plane}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Plane\+::\+Rotate (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates \mbox{\hyperlink{classPlane}{Plane}} object while it changes direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Gives x direction movement \\
+\hline
+{\em y} & Gives y direction movement \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a0801ec5847a696ecf281384bc8eb5c8d}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlane_a08bbd5a8291edb2b15c198eabffd8f9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlane_ab33a8ef3c90354ae310802ad17f3d0b9}\label{classPlane_ab33a8ef3c90354ae310802ad17f3d0b9}} 
+\index{Plane@{Plane}!slowMovement@{slowMovement}}
+\index{slowMovement@{slowMovement}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{slowMovement()}{slowMovement()}}
+{\footnotesize\ttfamily void Plane\+::slow\+Movement (\begin{DoxyParamCaption}\item[{float}]{slow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Slows \mbox{\hyperlink{classPlane}{Plane}}\textquotesingle{}s movement speed with the product of movement speed and slowing parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slow} & Slowing parameter from slimeball projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a8ec65489be62e6c69a5e9f512fbad748}{Npc}}.
+
+\mbox{\Hypertarget{classPlane_a1a841df404d74e8677d2dc2b67a12539}\label{classPlane_a1a841df404d74e8677d2dc2b67a12539}} 
+\index{Plane@{Plane}!Update@{Update}}
+\index{Update@{Update}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Plane\+::\+Update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e}{Npc}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlane_a1a841df404d74e8677d2dc2b67a12539_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/plane.\+hpp\item 
+src/plane.\+cpp\end{DoxyCompactItemize}

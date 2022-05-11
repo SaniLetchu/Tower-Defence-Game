@@ -1,0 +1,87 @@
+\hypertarget{tank_8hpp_source}{}\doxysection{tank.\+hpp}
+\label{tank_8hpp_source}\index{src/tank.hpp@{src/tank.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TANK\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TANK\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}gametile.hpp"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}npc.hpp"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classTank}{Tank}} : \textcolor{keyword}{public} \mbox{\hyperlink{classNpc}{Npc}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \mbox{\hyperlink{classTank_aad9f72109a7d2eaaaf801f5e945e6824}{Tank}}(std::string root\_filepath,sf::Vector2f sLocation,sf::Vector2f eLocation,std::vector<GameTile*>* rTiles, \textcolor{keywordtype}{int} round, \textcolor{keywordtype}{int} newTileCount = 0);}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{35     \mbox{\hyperlink{classTank_a9e4fce49ae7fe871894c1a3122c10269}{\string~Tank}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classTank_a0327395ef42745192f89e6536618928a}{Update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{41         }
+\DoxyCodeLine{45     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classTank_a4c168f9ed04a48bfffb6b0964737ab46}{Render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{46         }
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classTank_accc3e7f7a9dd073590439a8256803b63}{MoveTo}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classTank_ac7dc5cd358a9f8a8310af34aa1a4cd4a}{initNpc}}();}
+\DoxyCodeLine{54         }
+\DoxyCodeLine{58     std::pair<int,int> \mbox{\hyperlink{classTank_a80209664c045f84a6d8a3730d942460f}{FindDirection}}(sf::Vector2f \mbox{\hyperlink{classTank_ae1732238c489f11b9d006b021edd42f8}{nextLocation}});}
+\DoxyCodeLine{59         }
+\DoxyCodeLine{64     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classTank_a57f9d3b4aee6924ffd66feb5e354e870}{Rotate}}(\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{65         }
+\DoxyCodeLine{67     sf::Vector2f \mbox{\hyperlink{classTank_a32129b287c0510311034cadd641dc6b9}{getPosition}}();}
+\DoxyCodeLine{68         }
+\DoxyCodeLine{70     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTank_a568320269ffc0a9efbf1ecf8ee7a6312}{getHitpoints}}();}
+\DoxyCodeLine{71         }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTank_ae46d28ae133856423f136f186e66bc5b}{hasReachedEnd}}();}
+\DoxyCodeLine{74         }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTank_a03483739aa30bb73903fbcb72f468823}{dealDamage}}(\textcolor{keywordtype}{float} damage);}
+\DoxyCodeLine{79         }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTank_ab3e903b0721a1c950b66687746f1f13d}{slowMovement}}(\textcolor{keywordtype}{float} slow);}
+\DoxyCodeLine{84     }
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTank_a7ca1c99521a4a40b459f00b505678860}{getTileCount}}();}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{90     \textcolor{keywordtype}{float} \mbox{\hyperlink{classTank_a2fc4cf44e2563f563b729577929b4340}{movementSpeed}};}
+\DoxyCodeLine{91             }
+\DoxyCodeLine{93     \textcolor{keywordtype}{float} \mbox{\hyperlink{classTank_a294c9b62f3b4364b4e7a08c242274773}{movementspeedmemory\_}};}
+\DoxyCodeLine{94             }
+\DoxyCodeLine{96     \textcolor{keywordtype}{float} \mbox{\hyperlink{classTank_ab44ba820a289e6fa1a881773eb8a3edd}{hitpoints}} = 1;}
+\DoxyCodeLine{97             }
+\DoxyCodeLine{99     sf::Vector2f \mbox{\hyperlink{classTank_ab84985657d707ea2292d3fd39a3d7fa1}{spawnLocation}};}
+\DoxyCodeLine{100             }
+\DoxyCodeLine{102     sf::Vector2f \mbox{\hyperlink{classTank_a5a2a451ca2c2ac16c11db2ee526f4482}{exitLocation}};}
+\DoxyCodeLine{103             }
+\DoxyCodeLine{105     sf::Vector2f \mbox{\hyperlink{classTank_ae1732238c489f11b9d006b021edd42f8}{nextLocation}};}
+\DoxyCodeLine{106             }
+\DoxyCodeLine{108     std::vector<GameTile*>* \mbox{\hyperlink{classTank_a538f9e5b547ca5b2407fe801d1f523c5}{roadTiles}};}
+\DoxyCodeLine{109             }
+\DoxyCodeLine{111     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTank_a07170e4d61e8450d66aeb863c81ded7d}{tileCount}} = 0;}
+\DoxyCodeLine{112             }
+\DoxyCodeLine{114     sf::Sprite \mbox{\hyperlink{classTank_a3952fcbdfd6cafb816fb2c5bcb4c7f0c}{tankTexture}};}
+\DoxyCodeLine{115             }
+\DoxyCodeLine{117     sf::Texture \mbox{\hyperlink{classTank_ae5f1c570d63f135a3ac3282a2b1b4423}{texture\_}};}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{120     sf::Clock \mbox{\hyperlink{classTank_a10f29ce9ef7414f2e0b6a8f483360eb7}{slowcooldown\_}};}
+\DoxyCodeLine{121         }
+\DoxyCodeLine{123     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTank_aad99dfe9f8920759cf41b4647946e87f}{end\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{126     std::string \mbox{\hyperlink{classTank_ad4f748596233800bd5f45c77fbb06e13}{root\_filepath\_}};}
+\DoxyCodeLine{127 \textcolor{keyword}{private}:}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \};}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

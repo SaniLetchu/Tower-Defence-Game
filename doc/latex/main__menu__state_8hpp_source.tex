@@ -1,0 +1,91 @@
+\hypertarget{main__menu__state_8hpp_source}{}\doxysection{main\+\_\+menu\+\_\+state.\+hpp}
+\label{main__menu__state_8hpp_source}\index{src/main\_menu\_state.hpp@{src/main\_menu\_state.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAINMENUSTATE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAINMENUSTATE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}gaming\_state.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}gaming\_state.cpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}button.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}button.cpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}highscore\_state.hpp"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}highscore\_state.cpp"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}createmap\_state.hpp"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}createmap\_state.cpp"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}mapselector\_state.hpp"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}mapselector\_state.cpp"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classMainMenuState}{MainMenuState}} : \textcolor{keyword}{public} \mbox{\hyperlink{classState}{State}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{classMainMenuState_a532dc4b4eeda0e97dc2feb84b4d20c3a}{MainMenuState}}(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::string root\_filepath, std::stack<State*>* \mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf::Event *Event);}
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} \mbox{\hyperlink{classMainMenuState}{\string~MainMenuState}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMainMenuState_af3e9e0b5222a05920d3c871da08cac4d}{getSFXVolume}}();}
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} updateInput(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} endState();}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} update(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} render(sf::RenderTarget* target = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} updateButtons();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} renderButtons(sf::RenderTarget* target = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMainMenuState_a54cd50943f0e1751cb28414b8afe21eb}{updateAnimation}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{private}:}
+\DoxyCodeLine{38     sf::RenderWindow* \mbox{\hyperlink{classMainMenuState_ab2b3ef9f581a25c9934bb08d81fd3023}{window\_}};}
+\DoxyCodeLine{39     std::string root\_filepath\_;}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{42     sf::Texture \mbox{\hyperlink{classMainMenuState_aa9cf81985e8bf17388d0c56d278ba714}{backgroundTexture\_}};}
+\DoxyCodeLine{43     sf::RectangleShape background\_;}
+\DoxyCodeLine{44     sf::RectangleShape backgroundText\_;}
+\DoxyCodeLine{45     sf::RectangleShape backgroundShader\_;}
+\DoxyCodeLine{46     sf::Text backgroundTextUsingFont\_;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     sf::Font font\_;}
+\DoxyCodeLine{50     sf::Music backgroundMusic\_;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     std::map<std::string, Button*> buttons\_;}
+\DoxyCodeLine{53     \textcolor{keywordtype}{float} windowX\_;}
+\DoxyCodeLine{54     \textcolor{keywordtype}{float} windowY\_;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     sf::Event *Event\_;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{59     sf::Texture \mbox{\hyperlink{classMainMenuState_af2ea87eeb222541ecae694f5edb60f43}{rocketTexture\_}};}
+\DoxyCodeLine{60     sf::Texture rocketExhaustTX\_;}
+\DoxyCodeLine{61     sf::Sprite rocket\_;}
+\DoxyCodeLine{62     sf::Sprite rocketExhaust\_;}
+\DoxyCodeLine{63     \textcolor{keywordtype}{bool} passState\_;}
+\DoxyCodeLine{64     \textcolor{keywordtype}{float} rocketMoveSpeed\_;}
+\DoxyCodeLine{65     sf::Clock timer\_;}
+\DoxyCodeLine{66     sf::Int32 timerMax\_;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{69     sf::Clock \mbox{\hyperlink{classMainMenuState_ac5352488aaf1aae7dd3173d831f4a6c5}{pressTimer\_}};}
+\DoxyCodeLine{70     sf::Int32 pressTimerMax\_;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMainMenuState_aca29741e1d46cad405a788e7a59bc0cc}{volumeLevel\_}};}
+\DoxyCodeLine{74     \textcolor{keywordtype}{int} soundEffectVolumeLevel\_;}
+\DoxyCodeLine{75     sf::Text volumeLevelText\_;}
+\DoxyCodeLine{76     sf::Text soundEffectvolumeLevelText\_;}
+\DoxyCodeLine{77     sf::SoundBuffer buffer;}
+\DoxyCodeLine{78     sf::Sound clickSound\_;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMainMenuState_a02b29575bd5d10d73f1c311090cce97e}{initVariables}}();}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} initBackground();}
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMainMenuState_a56d1fd14d809c146b6c27ec77d06b1ea}{initKeyBinds}}();}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} initFonts();}
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} initButtons();}
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} initMusic();}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} initBGAnimation(); \textcolor{comment}{// For background animation}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{90     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMainMenuState_afd3e091538e5cf94ab9867e74c951a19}{getTimer}}();}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{93     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMainMenuState_a0eefdfc701bd6ad2d5e55a1edc15fe61}{getPressTimer}}();}
+\DoxyCodeLine{94 \};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

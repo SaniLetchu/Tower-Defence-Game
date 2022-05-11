@@ -1,0 +1,56 @@
+\hypertarget{gametile_8hpp_source}{}\doxysection{gametile.\+hpp}
+\label{gametile_8hpp_source}\index{src/gametile.hpp@{src/gametile.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GAMETILE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GAMETILE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}state.hpp"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{classGameTile}{GameTile}} }
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classGameTile_a2457013a8d5e5b798175d634b8355e91}{GameTile}}(std::string root\_filepath, std::string texturename, sf::Vector2f pos, \textcolor{keywordtype}{bool} buildable, \textcolor{keywordtype}{int} squaresize); }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{20     \mbox{\hyperlink{classGameTile_a7b1fa027aaab51087f2f1b96c9ba17ab}{\string~GameTile}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameTile_aa3fe93eda4603005bc96d3ec2bcac2c2}{setUpSprite}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{26     std::string \mbox{\hyperlink{classGameTile_a9f81a6ecbc747e5a3eb1e8d503cb6ca2}{CurrentTexture}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29     sf::Vector2f \mbox{\hyperlink{classGameTile_a169750a746dff1aca9c434469e522953}{getCenterPosition}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{32     sf::Vector2f \mbox{\hyperlink{classGameTile_a71379c21a8c019988262eaf0bd51ad12}{getPosition}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{classGameTile_afd876ca2113446badd1e785a73599c14}{getSquareSize}}();}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGameTile_a50d14415a8796884addc40ca75398499}{isExit}}();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGameTile_a3277406c07248336406e1fa524613c5b}{isSpawn}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGameTile_a41811b75a60d0c5976200a9251b9a745}{isRoad}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGameTile_a871d3a5e9cb1a70569f1476b41ec6bf3}{isBuildable}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameTile_ae01fcd100d9aee7fba47a0a97cbdac5d}{render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{56     sf::Vector2f \mbox{\hyperlink{classGameTile_a69e93754b002bc6f420d6a743ade3ede}{pos\_}};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{59     sf::Texture \mbox{\hyperlink{classGameTile_a4a67c592b9f56311cac66a41d5773c42}{texture\_}};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{62     sf::Sprite \mbox{\hyperlink{classGameTile_a271b8a661c701834289508e2cf974129}{sprite\_}};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65     std::string \mbox{\hyperlink{classGameTile_a3dcadc0a57f3ef00a390f887c3b49869}{root\_filepath\_}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68     std::string \mbox{\hyperlink{classGameTile_a6b3670079d42946f10fe1c6cccbc1cac}{texturename\_}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGameTile_a42a1bec66e29292fc925b37483154001}{buildable\_}};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{int} \mbox{\hyperlink{classGameTile_a9cd4fb1dd9691014fca25e6a44b90701}{squaresize\_}};}
+\DoxyCodeLine{75     }
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

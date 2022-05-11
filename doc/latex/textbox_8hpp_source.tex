@@ -1,0 +1,73 @@
+\hypertarget{textbox_8hpp_source}{}\doxysection{textbox.\+hpp}
+\label{textbox_8hpp_source}\index{src/textbox.hpp@{src/textbox.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef TEXTBOX\_H}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define TEXTBOX\_H}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classTextbox}{Textbox}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \textcolor{comment}{// Constructor and destructor}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{42     \mbox{\hyperlink{classTextbox_af825688f386e540988f3c7ee4e982d51}{Textbox}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{float} width, \textcolor{keywordtype}{float} height, sf::Font* font, std::string text,}
+\DoxyCodeLine{43      sf::Color idleColor, sf::Color hoverColor, sf::Color activeColor, \textcolor{keywordtype}{int} text\_size, \textcolor{keywordtype}{bool} box, sf::Event *Event);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{46     \mbox{\hyperlink{classTextbox_a3691c8a226ec90cada4c36466a940ba2}{\string~Textbox}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{comment}{// Accessor}}
+\DoxyCodeLine{50     }
+\DoxyCodeLine{52     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTextbox_aa925fcc63cc1a6662344c06c8e228a28}{isPressed}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     std::string GetText();}
+\DoxyCodeLine{55     \textcolor{comment}{// Functions}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTextbox_ae973b51c5a5c0f80effddf2b74dc9294}{update}}(\textcolor{keyword}{const} sf::Vector2f mousePos);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTextbox_a09517c08468c500648ebfc3d1790a450}{render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keyword}{private}:}
+\DoxyCodeLine{70     \textcolor{comment}{// Variables}}
+\DoxyCodeLine{71     }
+\DoxyCodeLine{73     sf::Font* \mbox{\hyperlink{classTextbox_ac9f6d4814680a768158cff68cae309d2}{font\_}};}
+\DoxyCodeLine{75     sf::RectangleShape \mbox{\hyperlink{classTextbox_a7f788c2070bdead2b1f7a519781967c9}{shape\_}};}
+\DoxyCodeLine{77     sf::Text \mbox{\hyperlink{classTextbox_a7bca6b19e8dbada0bb239417282a22c3}{buttonText\_}};}
+\DoxyCodeLine{79     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTextbox_a8e3fa6cf060b47b7d7437ccf1e4993e2}{text\_size\_}};}
+\DoxyCodeLine{81     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classTextbox_a010d9fb7671d552c580174657dc75d60}{boxBoolean\_}};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{84     sf::Color \mbox{\hyperlink{classTextbox_a1d7bcfa83b52d2db1457e34a7502c6df}{idleColor\_}};}
+\DoxyCodeLine{86     sf::Color \mbox{\hyperlink{classTextbox_a8bc06540f79550a7d5fa4fb0f4b52e60}{hoverColor\_}};}
+\DoxyCodeLine{88     sf::Color \mbox{\hyperlink{classTextbox_ad6cd2adaf6279de435458a66444c982b}{activeColor\_}};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{91     std::string \mbox{\hyperlink{classTextbox_ac91ba0ce80c0b8edc2746cc00e8fe863}{text\_}};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{94     sf::Clock \mbox{\hyperlink{classTextbox_ac169a523171838408c1703ec8e393b82}{clock\_}};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 }
+\DoxyCodeLine{98     sf::Event *\mbox{\hyperlink{classTextbox_aa777c7b42d7743862e6029391ffc4cb5}{Event\_}};}
+\DoxyCodeLine{99     }
+\DoxyCodeLine{101     \textcolor{keywordtype}{short} \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{classTextbox_aa9fb9711f8cf47c8d4d6d6d09a674a1b}{buttonState\_}};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

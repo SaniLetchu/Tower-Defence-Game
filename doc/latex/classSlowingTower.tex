@@ -1,0 +1,329 @@
+\hypertarget{classSlowingTower}{}\doxysection{Slowing\+Tower Class Reference}
+\label{classSlowingTower}\index{SlowingTower@{SlowingTower}}
+
+
+Slowing tower object that shoots slimeballs.  
+
+
+
+
+{\ttfamily \#include $<$slowing\+\_\+tower.\+hpp$>$}
+
+
+
+Inheritance diagram for Slowing\+Tower\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classSlowingTower__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Slowing\+Tower\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classSlowingTower__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSlowingTower_a598b0410215905d5f767fe4c77426224}{Slowing\+Tower}} (std\+::string root\+\_\+filepath, sf\+::\+Vector2f pos, float attack\+\_\+speed, int damage, float radius, int sound\+Effect\+Volume\+Level)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlowingTower_a9cbda06d4dfbe36e39be8103f6f56533}\label{classSlowingTower_a9cbda06d4dfbe36e39be8103f6f56533}} 
+virtual {\bfseries $\sim$\+Slowing\+Tower} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSlowingTower_a9a59064247e1fb01dea48a391dc7153c}{attack}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTower}{Tower}} attacks a target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSlowingTower_a0ab366e07b0be05a66b428b0ef112ad7}{update}} (const float \&dt, std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ enemies, const sf\+::\+Vector2f mouse\+Pos)
+\begin{DoxyCompactList}\small\item\em Updates the tower. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSlowingTower_a82fd33f320190829b4c457a731ef5032}{render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders the tower on target (window) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSlowingTower_a83897f2e1015450eea54174134d152e0}{upgrade}} ()
+\begin{DoxyCompactList}\small\item\em Upgrades the tower to next level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlowingTower_a18cb29178674e635be93a93a71f2c94f}\label{classSlowingTower_a18cb29178674e635be93a93a71f2c94f}} 
+void {\bfseries init\+Sound\+Effect} ()
+\begin{DoxyCompactList}\small\item\em Initializes shooting sound effect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_ac8a1fa887374eeb8e298a95304dbeff4}\label{classTower_ac8a1fa887374eeb8e298a95304dbeff4}} 
+void {\bfseries set\+Up\+Sprites} ()
+\begin{DoxyCompactList}\small\item\em Loads required textures and sets up sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTower_a7b98293018efc4a829a99ef2de277a82}{rotate\+Gun}} (const float \&dt, std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$ enemies)
+\begin{DoxyCompactList}\small\item\em Rotates the gun part of the tower towards first enemy and targets that enemy for the next attack. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_acdcf79c9b6c65a9e5134ec249bf6bd4a}\label{classTower_acdcf79c9b6c65a9e5134ec249bf6bd4a}} 
+float {\bfseries get\+Damage} ()
+\begin{DoxyCompactList}\small\item\em Returns the damage of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_ad32d3639a9bf9aaef1d3dc5275f37c80}\label{classTower_ad32d3639a9bf9aaef1d3dc5275f37c80}} 
+float {\bfseries get\+Attack\+Speed} ()
+\begin{DoxyCompactList}\small\item\em Returns the attack speed of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a889f45ba70281d0d1cdb9442e780d297}\label{classTower_a889f45ba70281d0d1cdb9442e780d297}} 
+int {\bfseries get\+Tower\+Level} ()
+\begin{DoxyCompactList}\small\item\em Returns the level of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_abbc2ee927fde4a5df613f7dbfe51718c}\label{classTower_abbc2ee927fde4a5df613f7dbfe51718c}} 
+sf\+::\+Vector2f {\bfseries get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Returns the position of the tower. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTower_aebec77a068e4356610a699eaeacd1ca7}\label{classTower_aebec77a068e4356610a699eaeacd1ca7}} 
+sf\+::\+Sprite {\bfseries platform\+\_\+}
+\begin{DoxyCompactList}\small\item\em Sprite for the platform part of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_ab3b0005ef1977c829653bcebdfff1ab7}\label{classTower_ab3b0005ef1977c829653bcebdfff1ab7}} 
+sf\+::\+Sprite {\bfseries gun\+\_\+}
+\begin{DoxyCompactList}\small\item\em Sprite for the gun part of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a90239fe85da1075d4bfb68c9f8d5a6b3}\label{classTower_a90239fe85da1075d4bfb68c9f8d5a6b3}} 
+sf\+::\+Texture {\bfseries sftexture\+\_\+platform\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture for the platform part of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_acebaba47357d65ba8c966d55f04ac9e7}\label{classTower_acebaba47357d65ba8c966d55f04ac9e7}} 
+sf\+::\+Texture {\bfseries sftexture\+\_\+gun\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture for the gun part of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a2f7adcd0f84b62ee03fd8a23f60e2704}\label{classTower_a2f7adcd0f84b62ee03fd8a23f60e2704}} 
+sf\+::\+Texture {\bfseries sftexture\+\_\+gunfire\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture for the gunfire part of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a7793be80c4cbb5a4ab977aa285c84dc2}\label{classTower_a7793be80c4cbb5a4ab977aa285c84dc2}} 
+std\+::string {\bfseries texture\+\_\+gunfire\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the gunfire texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_ad451e5e441c1c034a1d4e640c6b03e5c}\label{classTower_ad451e5e441c1c034a1d4e640c6b03e5c}} 
+sf\+::\+Sprite {\bfseries gunfire\+\_\+}
+\begin{DoxyCompactList}\small\item\em Sprite for the gunfire part of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_ab00c1407437f5cbac6343b9aebece26a}\label{classTower_ab00c1407437f5cbac6343b9aebece26a}} 
+\mbox{\hyperlink{classNpc}{Npc}} $\ast$ {\bfseries target\+\_\+}
+\begin{DoxyCompactList}\small\item\em Target for the next attack. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a95967520dd655a78e4989e6bdb4daf0f}\label{classTower_a95967520dd655a78e4989e6bdb4daf0f}} 
+sf\+::\+Clock {\bfseries clock\+\_\+}
+\begin{DoxyCompactList}\small\item\em Measures time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a3ce2ab51635eac327839f74fd1b34ab9}\label{classTower_a3ce2ab51635eac327839f74fd1b34ab9}} 
+sf\+::\+Vector2f {\bfseries pos\+\_\+}
+\begin{DoxyCompactList}\small\item\em Position of this tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a2f35a8b2fc57a71f6e00e6b480ad5d05}\label{classTower_a2f35a8b2fc57a71f6e00e6b480ad5d05}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_ae439812849c3ab3c4ae4336ce675e7db}\label{classTower_ae439812849c3ab3c4ae4336ce675e7db}} 
+std\+::string {\bfseries texture\+\_\+platform\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the platform texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a60163826ca83780e8d62ce96e46f8e75}\label{classTower_a60163826ca83780e8d62ce96e46f8e75}} 
+std\+::string {\bfseries texture\+\_\+gun\+\_\+}
+\begin{DoxyCompactList}\small\item\em Name of the gun texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a20e77fa0d741e9deda8ec826ec022437}\label{classTower_a20e77fa0d741e9deda8ec826ec022437}} 
+sf\+::\+Circle\+Shape {\bfseries radius\+\_\+shape\+\_\+}
+\begin{DoxyCompactList}\small\item\em Circle\+Shape to show the radius of the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a8ef376e4c3d24ac35897f17a170fd878}\label{classTower_a8ef376e4c3d24ac35897f17a170fd878}} 
+float {\bfseries attack\+\_\+speed\+\_\+}
+\begin{DoxyCompactList}\small\item\em Attack speed (seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a244ff8271208b3e9addde913a0c57748}\label{classTower_a244ff8271208b3e9addde913a0c57748}} 
+float {\bfseries damage\+\_\+}
+\begin{DoxyCompactList}\small\item\em Damage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_af76c621eab5359a400cae1fd53496137}\label{classTower_af76c621eab5359a400cae1fd53496137}} 
+int {\bfseries tower\+\_\+level\+\_\+} = 1
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTower}{Tower}} level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_af6acf9613894dac5d46718c65ebc52d7}\label{classTower_af6acf9613894dac5d46718c65ebc52d7}} 
+float {\bfseries radius\+\_\+}
+\begin{DoxyCompactList}\small\item\em Attack radius. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_ad228802f956fc6803f7973ca29e26a01}\label{classTower_ad228802f956fc6803f7973ca29e26a01}} 
+float {\bfseries slowing\+\_\+parameter\+\_\+}
+\begin{DoxyCompactList}\small\item\em Slowing parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a08e713fc88f204f4c1560e5404a51780}\label{classTower_a08e713fc88f204f4c1560e5404a51780}} 
+short unsigned {\bfseries tower\+State\+\_\+}
+\begin{DoxyCompactList}\small\item\em Checks if the mouse is hovering the tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a38d5deb909e46c14def7464b74136526}\label{classTower_a38d5deb909e46c14def7464b74136526}} 
+sf\+::\+Transform {\bfseries transform\+\_\+}
+\begin{DoxyCompactList}\small\item\em Transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a203e5354a64a3cb950b51af0bc360b79}\label{classTower_a203e5354a64a3cb950b51af0bc360b79}} 
+double {\bfseries angle\+\_\+}
+\begin{DoxyCompactList}\small\item\em Angle towards target. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a75c30fa16d9fccbf999a82f48cf47df0}\label{classTower_a75c30fa16d9fccbf999a82f48cf47df0}} 
+sf\+::\+Clock {\bfseries gunfire\+\_\+clock\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer for gunfire. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTower_a67bdf313acb874ff5d64b51815959326}\label{classTower_a67bdf313acb874ff5d64b51815959326}} 
+sf\+::\+Color {\bfseries gunfire\+\_\+color\+\_\+}
+\begin{DoxyCompactList}\small\item\em Color for gunfire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSlowingTower_ac642c39a7bb9f7b98d2752e0dc896f7d}\label{classSlowingTower_ac642c39a7bb9f7b98d2752e0dc896f7d}} 
+std\+::list$<$ \mbox{\hyperlink{classSlimeball}{Slimeball}} $\ast$ $>$ {\bfseries missiles\+\_\+}
+\begin{DoxyCompactList}\small\item\em List of all slimeballs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlowingTower_a2cc0045487c57a55d27b7d4ef50ea275}\label{classSlowingTower_a2cc0045487c57a55d27b7d4ef50ea275}} 
+sf\+::\+Sound\+Buffer {\bfseries buffer}
+\begin{DoxyCompactList}\small\item\em Shoot sound effect buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlowingTower_a5513000c54bb1ad194f8438657fb151d}\label{classSlowingTower_a5513000c54bb1ad194f8438657fb151d}} 
+sf\+::\+Sound {\bfseries sound}
+\begin{DoxyCompactList}\small\item\em Shoot sound effect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSlowingTower_adc33ee5e8b1ac5b6d9478faac7a16df4}\label{classSlowingTower_adc33ee5e8b1ac5b6d9478faac7a16df4}} 
+int {\bfseries sound\+Effect\+Volume\+Level\+\_\+}
+\begin{DoxyCompactList}\small\item\em Volume level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Slowing tower object that shoots slimeballs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSlowingTower_a598b0410215905d5f767fe4c77426224}\label{classSlowingTower_a598b0410215905d5f767fe4c77426224}} 
+\index{SlowingTower@{SlowingTower}!SlowingTower@{SlowingTower}}
+\index{SlowingTower@{SlowingTower}!SlowingTower@{SlowingTower}}
+\doxysubsubsection{\texorpdfstring{SlowingTower()}{SlowingTower()}}
+{\footnotesize\ttfamily Slowing\+Tower\+::\+Slowing\+Tower (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{sf\+::\+Vector2f}]{pos,  }\item[{float}]{attack\+\_\+speed,  }\item[{int}]{damage,  }\item[{float}]{radius,  }\item[{int}]{sound\+Effect\+Volume\+Level }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em pos} & Coordinates for tower location \\
+\hline
+{\em attack\+\_\+speed} & Attack speed \\
+\hline
+{\em damage} & Damage in integers \\
+\hline
+{\em radius} & Radius of the attack reach \\
+\hline
+{\em sound\+Effect\+Volume\+Level} & Sound level (0-\/100) \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSlowingTower_a598b0410215905d5f767fe4c77426224_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSlowingTower_a9a59064247e1fb01dea48a391dc7153c}\label{classSlowingTower_a9a59064247e1fb01dea48a391dc7153c}} 
+\index{SlowingTower@{SlowingTower}!attack@{attack}}
+\index{attack@{attack}!SlowingTower@{SlowingTower}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily void Slowing\+Tower\+::attack (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classTower}{Tower}} attacks a target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTower_a5e1b6a5697bd2222b60375397f0d28a7}{Tower}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classSlowingTower_a9a59064247e1fb01dea48a391dc7153c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSlowingTower_a9a59064247e1fb01dea48a391dc7153c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSlowingTower_a82fd33f320190829b4c457a731ef5032}\label{classSlowingTower_a82fd33f320190829b4c457a731ef5032}} 
+\index{SlowingTower@{SlowingTower}!render@{render}}
+\index{render@{render}!SlowingTower@{SlowingTower}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Slowing\+Tower\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders the tower on target (window) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTower_a30e8202cabf3a1549857d69d03dc2af6}{Tower}}.
+
+\mbox{\Hypertarget{classTower_a7b98293018efc4a829a99ef2de277a82}\label{classTower_a7b98293018efc4a829a99ef2de277a82}} 
+\index{SlowingTower@{SlowingTower}!rotateGun@{rotateGun}}
+\index{rotateGun@{rotateGun}!SlowingTower@{SlowingTower}}
+\doxysubsubsection{\texorpdfstring{rotateGun()}{rotateGun()}}
+{\footnotesize\ttfamily void Tower\+::rotate\+Gun (\begin{DoxyParamCaption}\item[{const float \&}]{dt,  }\item[{std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$}]{enemies }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Rotates the gun part of the tower towards first enemy and targets that enemy for the next attack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+{\em enemies} & List of every enemy on the board currently \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classTower_a7b98293018efc4a829a99ef2de277a82_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTower_a7b98293018efc4a829a99ef2de277a82_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSlowingTower_a0ab366e07b0be05a66b428b0ef112ad7}\label{classSlowingTower_a0ab366e07b0be05a66b428b0ef112ad7}} 
+\index{SlowingTower@{SlowingTower}!update@{update}}
+\index{update@{update}!SlowingTower@{SlowingTower}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Slowing\+Tower\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt,  }\item[{std\+::list$<$ \mbox{\hyperlink{classNpc}{Npc}} $\ast$ $>$}]{enemies,  }\item[{const sf\+::\+Vector2f}]{mouse\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the tower. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+{\em enemies} & List of all the enemies \\
+\hline
+{\em mouse\+Pos} & Current mouse position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTower_ae573d1e14ba2ffbef39dcbd1ea564173}{Tower}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSlowingTower_a0ab366e07b0be05a66b428b0ef112ad7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSlowingTower_a83897f2e1015450eea54174134d152e0}\label{classSlowingTower_a83897f2e1015450eea54174134d152e0}} 
+\index{SlowingTower@{SlowingTower}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!SlowingTower@{SlowingTower}}
+\doxysubsubsection{\texorpdfstring{upgrade()}{upgrade()}}
+{\footnotesize\ttfamily void Slowing\+Tower\+::upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Upgrades the tower to next level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classTower_ac732f3dd9c995a84da0ada08b8346f8f}{Tower}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/slowing\+\_\+tower.\+hpp\item 
+src/slowing\+\_\+tower.\+cpp\end{DoxyCompactItemize}

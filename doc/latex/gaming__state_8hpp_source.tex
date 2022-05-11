@@ -1,0 +1,217 @@
+\hypertarget{gaming__state_8hpp_source}{}\doxysection{gaming\+\_\+state.\+hpp}
+\label{gaming__state_8hpp_source}\index{src/gaming\_state.hpp@{src/gaming\_state.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GAMESTATE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GAMESTATE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}state.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}state.cpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}gametile.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}npc.hpp"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}basic\_tower.hpp"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}basic\_tower.cpp"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}bomb\_tower.hpp"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}bomb\_tower.cpp"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}slowing\_tower.hpp"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}slowing\_tower.cpp"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}button.hpp"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}textbox.hpp"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <iomanip>} }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{classGameState}{GameState}} : \textcolor{keyword}{public} \mbox{\hyperlink{classState}{State}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{34     \mbox{\hyperlink{classGameState_a4371ce5165f7c5a3bb21cbf4340e9814}{GameState}}(sf::RenderWindow* window, std::map<std::string, int>* supportedKeys, std::string root\_filepath, std::stack<State*>* \mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf::Event* Event, std::string mapfile, sf::Font *font, \textcolor{keywordtype}{int} volumeLevel, \textcolor{keywordtype}{int} soundEffectVolumeLevel);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{37     \textcolor{keyword}{virtual} \mbox{\hyperlink{classGameState_ae623df5042cd0c17daa3394fdcb397b3}{\string~GameState}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a5dc4ac4f28b9487c9e35b8c452c7c58f}{updateInput}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{45     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a5b6ccfff3ca74df5a7e67fdeb4ed5bce}{endState}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_ac135e64a5c269ecc94d806ed5255ca4b}{update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{55     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a805aea59388b8a5f302752333a86cf22}{render}}(sf::RenderTarget* target = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a29200d9eef30aca5948f1f18ca2c1c29}{loadmap}}();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a0949dad4e3e3d2f3be5136b6d0808ab8}{initSpawnLocation}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_ae85b611778da8b1e029c552db832fff0}{initExitLocation}}();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a5e203c28b2d71b146711caef10b1dcac}{initRoad}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_acaa9482fce4fc9950364648c7bc54dd0}{initMusic}}();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{73     \mbox{\hyperlink{classTower}{Tower}}* \mbox{\hyperlink{classGameState_a03eed4f8e514c99b098542626d549f69}{towerAt}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_ae52aaaf92a4bde0a214b4cc320da620c}{buildRoad}}(std::pair<int, int> current, std::pair<int, int> previous);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{79     \mbox{\hyperlink{classGameTile}{GameTile}}* \mbox{\hyperlink{classGameState_a1f0d35700749d2852f0b36133d701081}{TileAt}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{82     std::vector<GameTile*> \mbox{\hyperlink{classGameState_aa90a89c138aef8efeeac8e84a2d959ab}{getNeighbours}}(\mbox{\hyperlink{classGameTile}{GameTile}}* current);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_aa38034e258db11e3668ee5c23278615c}{changeMoney}}(\textcolor{keywordtype}{int} money);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_aa316b54ac3a5e48e57203332439d22fc}{changeHealth}}(\textcolor{keywordtype}{int} health);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a7c9be543984fcc4fbd036af731969546}{changeScore}}(\textcolor{keywordtype}{int} score);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGameState_a7e27b918380d022e44449a2903c5b7e6}{lostGame}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{97     sf::Vector2f \mbox{\hyperlink{classGameState_a2e421810f9ed8033a21c0000434ca3be}{getSpawn}}();}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{100     sf::Vector2f \mbox{\hyperlink{classGameState_a3ed1e1b03951efd2c4e64185f9f09d6f}{getExit}}();}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{103     std::vector<GameTile*> \mbox{\hyperlink{classGameState_a0c783163784286e06574e64684610563}{getRoad}}();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_ac18e704757ab2a23d7abd585a41e682e}{messageForPlayer}}(std::string message);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_adef874e0762aa3cb4e97674eed0d301e}{updateButtons}}();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_aae510eb7f14ebb53314062dbe6ca19ef}{initVariables}}();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{115     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGameState_a249604f50f9ab53b95b792d7568f7f62}{getPressTimer}}();}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{118     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a93f680f9d641a98871701fd555bb136d}{renderSoonToBeTower}}(sf::RenderTarget* target);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_aa4e51e3ec77ef5e9b4b6b4e25b88522c}{initGhostTowers}}();}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a1dcbf4d284cdfb54215c2f05a79b6d25}{buyTower}}();}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a0cedffca4992a546da2de6b57a37c50a}{updateTargetedTowerInfo}}();}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{130     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a66d042b403a8ace0d36074928ac8c7d0}{updateGameLogic}}();}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{133     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_acb710521712a401963c98ec9c11e0a5f}{spawnEnemies}}();}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{136     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_aef49676574d3d7001b5988b42383a3ff}{SaveToFile}}();}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{keyword}{private}:}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{141     std::string \mbox{\hyperlink{classGameState_a50f30a6fe8dbf21cabf53c7c0986aac3}{root\_filepath\_}};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{144     std::string \mbox{\hyperlink{classGameState_a76c267d4b4cd6f410e3571318316277b}{mapfile\_}};}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{147     std::map<std::pair<int, int>, \mbox{\hyperlink{classGameTile}{GameTile}} *> \mbox{\hyperlink{classGameState_a4d9d80388c7261ba40de134b2438b093}{Tiles}};}
+\DoxyCodeLine{148  }
+\DoxyCodeLine{150     std::map<std::pair<int, int>, \mbox{\hyperlink{classGameTile}{GameTile}} *> \mbox{\hyperlink{classGameState_adb0e7936dee63df23a06e52808870165}{SpawnAndExit\_}};}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{153     sf::Vector2f \mbox{\hyperlink{classGameState_a0531b5a29bb0c12f952566a7a599d489}{spawnlocation\_}};}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{156     sf::Vector2f \mbox{\hyperlink{classGameState_aea7ed1cc07052b4da0db79240c3300a9}{exitlocation\_}};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{159     sf::Text \mbox{\hyperlink{classGameState_ac77ed56a3969b93fbe481ccc844df717}{money\_}};}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{162     sf::Text \mbox{\hyperlink{classGameState_a92b13e633f61b9ac18be4d12c0dddd9d}{health\_}};}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{165     sf::Text \mbox{\hyperlink{classGameState_a9cb6843d70e67fd87f3fe86a076cdf8c}{score\_}};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{168     \textcolor{keywordtype}{int} \mbox{\hyperlink{classGameState_a552c124eba9369a4b7741dbab16ceada}{int\_money\_}} = 0;}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{171     \textcolor{keywordtype}{int} \mbox{\hyperlink{classGameState_ae6cf9f8e9478e5ea4893e0c34c8d7020}{int\_health\_}} = 0;}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{174     \textcolor{keywordtype}{int} \mbox{\hyperlink{classGameState_a0b1b5f3180c3560ae4f3e15fc1f1b420}{int\_score\_}} = 0;}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{177     \mbox{\hyperlink{classGameTile}{GameTile}}* \mbox{\hyperlink{classGameState_ac9a22c51b1aff45ff06c743b6c9ea41f}{spawnTile\_}};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{180     \mbox{\hyperlink{classGameTile}{GameTile}}* \mbox{\hyperlink{classGameState_a7b394ea2580f92ec5758c14bef9b74db}{exitTile\_}};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{183     sf::Font *\mbox{\hyperlink{classGameState_af13ae9050be3701549716712aa439306}{font\_}};}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{186     std::vector<GameTile*> \mbox{\hyperlink{classGameState_a1da536d4da5f71779112c23eb4c265fd}{roadTiles\_}};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{189     sf::RectangleShape \mbox{\hyperlink{classGameState_a56c8479d2dcc4d6e23e3884246117501}{rect\_menu\_}};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{192     sf::Vector2u \mbox{\hyperlink{classGameState_ab1138e69a6886402c2b4360a3f79393a}{mousePosGrid}};}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{195     sf::Clock \mbox{\hyperlink{classGameState_adeb3254a1c8d250457e85f20d6556720}{clock}};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{198     sf::Clock \mbox{\hyperlink{classGameState_a166b79c863db5062f85d4fd064b487c7}{superTankTimer\_}};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{201     sf::Clock \mbox{\hyperlink{classGameState_a613cde8f1d58181724b99fef35ca580e}{superPlaneTimer\_}};}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{204     std::map<std::pair<int, int>, \mbox{\hyperlink{classTower}{Tower}} *> \mbox{\hyperlink{classGameState_a36a8f56351ea628b22a61cdda4db12c8}{towers\_}};}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{207     std::list<Npc*> \mbox{\hyperlink{classGameState_a8c3dccd77e3f10bc4389f5da13096c0e}{enemies\_}};}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{210     std::vector<Npc*> \mbox{\hyperlink{classGameState_aa3830ba8cde255fe9fea000d9286bfab}{tobedeleted}};}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{213     \textcolor{keywordtype}{int} \mbox{\hyperlink{classGameState_a0dd083dd7cf4eda11e6d1bdc01c1670d}{n\_super\_tank\_}} = 0;}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{216     \textcolor{keywordtype}{int} \mbox{\hyperlink{classGameState_a266e0fac72c01fcf000ce6a3b482de06}{n\_super\_plane\_}} = 0;}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{219     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameState_a89f1c8236814ca76e052b60a94c654a6}{initKeyBinds}}();}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{222     sf::Text \mbox{\hyperlink{classGameState_a9dec796f22414f985b84fd4ebf6ce14f}{message\_}};}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{225     sf::Clock \mbox{\hyperlink{classGameState_ab187d0322141f32c7fd34fed7a8fbfe8}{message\_timer\_}};}
+\DoxyCodeLine{226     }
+\DoxyCodeLine{227     std::map<std::string, Button*> towerbuttons\_;}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229     std::map<std::string, Button*> targeted\_towerbuttons\_;}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231     \textcolor{keywordtype}{bool} basic\_tower\_flag\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{232     \textcolor{keywordtype}{bool} bomb\_tower\_flag\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{233     \textcolor{keywordtype}{bool} slowing\_tower\_flag\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235     sf::Clock pressTimer\_;}
+\DoxyCodeLine{236     sf::Int32 pressTimerMax\_;}
+\DoxyCodeLine{237     sf::Clock timer\_;}
+\DoxyCodeLine{238     sf::Int32 timerMax\_;}
+\DoxyCodeLine{239     \textcolor{keywordtype}{float} windowX\_;}
+\DoxyCodeLine{240     \textcolor{keywordtype}{float} windowY\_;}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242     sf::Sprite basic\_ghost\_;}
+\DoxyCodeLine{243     sf::Sprite bomb\_ghost\_;}
+\DoxyCodeLine{244     sf::Sprite slowing\_ghost\_;}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     sf::Texture basic\_texture\_ghost\_;}
+\DoxyCodeLine{247     sf::Texture bomb\_texture\_ghost\_;}
+\DoxyCodeLine{248     sf::Texture slowing\_texture\_ghost\_;}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250     sf::Clock shoptimer\_;}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252     \mbox{\hyperlink{classTower}{Tower}}* target\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254     \textcolor{keywordtype}{int} upgradeprice\_;}
+\DoxyCodeLine{255     \textcolor{keywordtype}{int} sellprice\_;}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257     sf::Text damage\_text\_;}
+\DoxyCodeLine{258     sf::Text attack\_speed\_text\_;}
+\DoxyCodeLine{259     sf::Text tower\_level\_text;}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261     \textcolor{keywordtype}{int} currentRound\_ = 0;}
+\DoxyCodeLine{262     \textcolor{keywordtype}{int} enemiestobespawnedremaining\_ = 0;}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264     sf::Clock roundtimer\_;}
+\DoxyCodeLine{265     sf::Text roundtimer\_text\_;}
+\DoxyCodeLine{266     \textcolor{keywordtype}{int} roundtimer\_int\_;}
+\DoxyCodeLine{267     \textcolor{keywordtype}{bool} roundover\_flag\_;}
+\DoxyCodeLine{268     std::map<std::string, Button*> roundoverbuttons\_;}
+\DoxyCodeLine{269     sf::Clock spawntimer\_;}
+\DoxyCodeLine{270     sf::Text currentwave\_;}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272     sf::Text enemiesleft\_;}
+\DoxyCodeLine{273     sf::Text you\_have\_lost\_;}
+\DoxyCodeLine{274     \textcolor{keywordtype}{bool} game\_over\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{277     sf::Music \mbox{\hyperlink{classGameState_a108587fd889b77e0ff4cb77c11916966}{gamingStateMusic\_}};}
+\DoxyCodeLine{278     \textcolor{keywordtype}{int} volumeLevel\_;}
+\DoxyCodeLine{279     \textcolor{keywordtype}{int} soundEffectVolumeLevel\_;}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{281     sf::Event* Event\_;}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283     \mbox{\hyperlink{classTextbox}{Textbox}}* textbox\_;}
+\DoxyCodeLine{284 \};}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,90 @@
+\hypertarget{npc_8hpp_source}{}\doxysection{npc.\+hpp}
+\label{npc_8hpp_source}\index{src/npc.hpp@{src/npc.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef NPC\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define NPC\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}gametile.hpp"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{classNpc}{Npc}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \mbox{\hyperlink{classNpc_aa3286a3fcc2d555e3ca51cdbdc998262}{Npc}}(std::string root\_filepath,sf::Vector2f sLocation,sf::Vector2f eLocation,std::vector<GameTile*>* rTiles, \textcolor{keywordtype}{int} newTileCount = 0);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{33     \mbox{\hyperlink{classNpc_a2249c5155af3d692e51ff610064e81fe}{\string~Npc}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e}{Update}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNpc_a7a34f6a6322c56cf74683a78c75cfe15}{Render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25}{MoveTo}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& dt);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{51     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNpc_aa49117d3c5d41f7f306e08d6a28f582e}{initNpc}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56     \textcolor{keyword}{virtual} std::pair<int,int> \mbox{\hyperlink{classNpc_ae8779c3e879ab383f093b60ce445f753}{FindDirection}}(sf::Vector2f \mbox{\hyperlink{classNpc_a6ce7235a13c632e99220e4f250d1e069}{nextLocation}});}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{62     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNpc_a0801ec5847a696ecf281384bc8eb5c8d}{Rotate}}(\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65     \textcolor{keyword}{virtual} sf::Vector2f \mbox{\hyperlink{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62}{getPosition}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classNpc_aa737d1ed48edc211df6e7648f4f61069}{getHitpoints}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classNpc_a4181be8190f1b81ababc23f6492afd88}{hasReachedEnd}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{76     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNpc_a6a369b595667cb0a058630faa717ab7c}{dealDamage}}(\textcolor{keywordtype}{float} damage);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{81     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classNpc_a8ec65489be62e6c69a5e9f512fbad748}{slowMovement}}(\textcolor{keywordtype}{float} slow);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{84     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classNpc_a97879f68d40197370f11f6ecd4341091}{getTileCount}}();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{87     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}{getWorth}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{91     \textcolor{keywordtype}{float} \mbox{\hyperlink{classNpc_a3bbfc3c846cc9690700d83a7730c3f83}{movementSpeed}};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{float} \mbox{\hyperlink{classNpc_a87e660848854965c029a10ab49a58f54}{movementspeedmemory\_}};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{float} \mbox{\hyperlink{classNpc_aeb39dc20111fda7c68b0d1ca5e69eb0c}{hitpoints}} = 1;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{100     sf::Vector2f \mbox{\hyperlink{classNpc_a805a12ab98468d845a866091ddf72b68}{spawnLocation}};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{103     sf::Vector2f \mbox{\hyperlink{classNpc_aeb3819c5ec67506be70d0526912c3bd2}{exitLocation}};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{106     sf::Vector2f \mbox{\hyperlink{classNpc_a6ce7235a13c632e99220e4f250d1e069}{nextLocation}};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{109     std::vector<GameTile*>* \mbox{\hyperlink{classNpc_a862d677bddbcabfd09ac994d509e2d6b}{roadTiles}};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{int} \mbox{\hyperlink{classNpc_a3cbb76aaced3969a81e59bb84afd4c33}{tileCount}} = 0;}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{115     sf::Sprite \mbox{\hyperlink{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}{sotilastektuuri}};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{118     sf::Texture \mbox{\hyperlink{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}{stexture\_}};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{int} \mbox{\hyperlink{classNpc_a9b3331bad14442a3fe125779cce7490e}{worth\_}} = 1;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{124     sf::Clock \mbox{\hyperlink{classNpc_a01d0f3e271281227e65de42ae1363f87}{slowcooldown\_}};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classNpc_a99223c27463a9acae22386f0ac416d75}{end\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{130     std::string \mbox{\hyperlink{classNpc_acf741509a824e13c2003057c9869c102}{root\_filepath\_}};}
+\DoxyCodeLine{131 \textcolor{keyword}{private}:}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

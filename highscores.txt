@@ -1,0 +1,9 @@
+valley;Sani Letchu;23555
+testmas;Petteri;245
+testmas;Tauno;123
+testmas;camaboom;0
+testmas;uustesti;0
+testmas;Name;0
+testmas;daniel;2
+Valley;Name;66
+Happy_Xmas;Name;47

@@ -1,0 +1,369 @@
+\hypertarget{classHighscorestate}{}\doxysection{Highscorestate Class Reference}
+\label{classHighscorestate}\index{Highscorestate@{Highscorestate}}
+
+
+\mbox{\hyperlink{classState}{State}} that shows all of the highscores on the screen.  
+
+
+
+
+{\ttfamily \#include $<$highscore\+\_\+state.\+hpp$>$}
+
+
+
+Inheritance diagram for Highscorestate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classHighscorestate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Highscorestate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classHighscorestate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHighscorestate_a15ed71d7efe8c39c28ca474841eb1fc0}{Highscorestate}} (sf\+::\+Render\+Window $\ast$window, std\+::map$<$ std\+::string, int $>$ $\ast$supported\+Keys, std\+::string root\+\_\+filepath, std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$\mbox{\hyperlink{classState_a5692fac721147048fe1d2656f8a7a687}{states}}, sf\+::\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_ab4df12dc6da161c82414c8438f386dac}\label{classHighscorestate_ab4df12dc6da161c82414c8438f386dac}} 
+virtual {\bfseries $\sim$\+Highscorestate} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a15a8d694a1f750b87ed7904ef8c4fde0}\label{classHighscorestate_a15a8d694a1f750b87ed7904ef8c4fde0}} 
+void {\bfseries init\+Sound\+Effect} ()
+\begin{DoxyCompactList}\small\item\em Initialize sound effects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classHighscorestate_acd1c251a44f95fed11a66b12e011fb16}{update\+Input}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classHighscorestate_aacbc11904b77764f2f09873792a26d79}{end\+State}} ()
+\begin{DoxyCompactList}\small\item\em Called when ending this state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classHighscorestate_aff6f2dd4e3f00ea6ca2ef4a48ece16b2}{update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates objects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classHighscorestate_a05e33314efc2e6cd681aa73dd1157bd7}{render}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\begin{DoxyCompactList}\small\item\em Renders objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a0f4a0d6680cd1df5e09f3c2cd367d289}\label{classHighscorestate_a0f4a0d6680cd1df5e09f3c2cd367d289}} 
+void {\bfseries update\+Buttons} ()
+\begin{DoxyCompactList}\small\item\em Updates buttons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHighscorestate_abc96331740cf68cbf2d511f0d927911d}{render\+Buttons}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\begin{DoxyCompactList}\small\item\em Renders all of the buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a10628db21322c07007b617273608a3ee}\label{classHighscorestate_a10628db21322c07007b617273608a3ee}} 
+void {\bfseries Readhighscores} ()
+\begin{DoxyCompactList}\small\item\em Reads the file containing the highscores. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae7ffd43d9da38fcdb420db95e297bfe6}\label{classState_ae7ffd43d9da38fcdb420db95e297bfe6}} 
+virtual void {\bfseries check\+For\+Quit} ()
+\begin{DoxyCompactList}\small\item\em Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a18c3b970753bab2937141803644aaf24}\label{classState_a18c3b970753bab2937141803644aaf24}} 
+const bool \& {\bfseries get\+Quit} () const
+\item 
+\mbox{\Hypertarget{classState_a6a5bc29c3bcc7b51d2beca0e83457203}\label{classState_a6a5bc29c3bcc7b51d2beca0e83457203}} 
+virtual void {\bfseries update\+Mouse\+Position} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classHighscorestate_a38a60af6fb1d616d6f9e0a0ff8460b9d}{Addhighscore}} (const std\+::string name, int highscore)
+\begin{DoxyCompactList}\small\item\em Adds a new highscore to the textfile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_aefb9f5e6f768f587894545fa88d1d63d}\label{classState_aefb9f5e6f768f587894545fa88d1d63d}} 
+bool {\bfseries quit\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}\label{classState_ae8fcc59466e3a708f4b04cf26a82d2f4}} 
+std\+::vector$<$ sf\+::\+Texture $>$ {\bfseries textures}
+\begin{DoxyCompactList}\small\item\em Container for textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_af4f86a4bd3b369693d17b4c21a5be044}\label{classState_af4f86a4bd3b369693d17b4c21a5be044}} 
+sf\+::\+Render\+Window $\ast$ {\bfseries window\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_aba797f16cff3648fedc7aba1fefd25ab}\label{classState_aba797f16cff3648fedc7aba1fefd25ab}} 
+std\+::map$<$ std\+::string, int $>$ $\ast$ {\bfseries supported\+Keys\+\_\+}
+\begin{DoxyCompactList}\small\item\em Pointer to supported keys. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a5692fac721147048fe1d2656f8a7a687}\label{classState_a5692fac721147048fe1d2656f8a7a687}} 
+std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$ {\bfseries states}
+\begin{DoxyCompactList}\small\item\em Pointer to a stack filled with state pointers (check \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}} private) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_a21879afd59a7cd5aeede2a080fcd1d34}\label{classState_a21879afd59a7cd5aeede2a080fcd1d34}} 
+std\+::map$<$ std\+::string, int $>$ {\bfseries keybinds\+\_\+}
+\item 
+\mbox{\Hypertarget{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}\label{classState_ae55b0beb4bfe6bb44a9fc1fc05d8b90c}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Screen}
+\begin{DoxyCompactList}\small\item\em Mouse position variavles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classState_ae19be9c58de5545c8cd162f11969d6ee}\label{classState_ae19be9c58de5545c8cd162f11969d6ee}} 
+sf\+::\+Vector2i {\bfseries mouse\+Pos\+Window}
+\item 
+\mbox{\Hypertarget{classState_a9f930912be370fcd0ecae58e17e0c35e}\label{classState_a9f930912be370fcd0ecae58e17e0c35e}} 
+sf\+::\+Vector2f {\bfseries mouse\+Pos\+View}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHighscorestate_a421f3f5f596f9e674491466ae9c6c637}\label{classHighscorestate_a421f3f5f596f9e674491466ae9c6c637}} 
+void {\bfseries init\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Initializes some of the needed variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHighscorestate_a57ac12055c761f25090cde11e823dde4}{init\+Key\+Binds}} ()
+\begin{DoxyCompactList}\small\item\em Initializes keybinds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_aae6b800197b487dc356beda9b1a0a0e5}\label{classHighscorestate_aae6b800197b487dc356beda9b1a0a0e5}} 
+void {\bfseries init\+Highscores} ()
+\begin{DoxyCompactList}\small\item\em Initializes the highscores. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a23f5c7feb3e415ce8e755816dfc2c95a}\label{classHighscorestate_a23f5c7feb3e415ce8e755816dfc2c95a}} 
+void {\bfseries init\+Buttons} ()
+\begin{DoxyCompactList}\small\item\em Initializes the buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a2d0022eb8fc2cf73101714df354cbdbf}\label{classHighscorestate_a2d0022eb8fc2cf73101714df354cbdbf}} 
+const bool {\bfseries get\+Press\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Gets the presstimer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHighscorestate_ac1d2d4563dba6bfea92a402a72b6b843}\label{classHighscorestate_ac1d2d4563dba6bfea92a402a72b6b843}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_ad972ab6b77067903b697fb14ec3b29e5}\label{classHighscorestate_ad972ab6b77067903b697fb14ec3b29e5}} 
+std\+::map$<$ std\+::string, std\+::list$<$ std\+::pair$<$ int, std\+::string $>$ $>$ $>$ {\bfseries highscores\+\_\+}
+\begin{DoxyCompactList}\small\item\em List containing all of the highscores and names. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a1ba55204397fdb0a744cefd97848f5ba}\label{classHighscorestate_a1ba55204397fdb0a744cefd97848f5ba}} 
+sf\+::\+Rectangle\+Shape {\bfseries background\+\_\+}
+\begin{DoxyCompactList}\small\item\em Rectangle background. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a0f33a1991be83fa08e34f4bb51fc2d1e}\label{classHighscorestate_a0f33a1991be83fa08e34f4bb51fc2d1e}} 
+sf\+::\+Font $\ast$ {\bfseries font\+\_\+}
+\begin{DoxyCompactList}\small\item\em Font of the text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a741e78abe2cec315f3fb7e050f5c54f0}\label{classHighscorestate_a741e78abe2cec315f3fb7e050f5c54f0}} 
+std\+::vector$<$ sf\+::\+Text $>$ {\bfseries Texts\+\_\+}
+\begin{DoxyCompactList}\small\item\em Vector containing all of the texts to be drawn. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_af594afe7cee316dab7cc252867cf4651}\label{classHighscorestate_af594afe7cee316dab7cc252867cf4651}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classButton}{Button}} $\ast$ $>$ {\bfseries highscroe\+Buttons\+\_\+}
+\begin{DoxyCompactList}\small\item\em Map containing all of the buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a8f38cc29dd0ffa1854efcdbf7a6bd01c}\label{classHighscorestate_a8f38cc29dd0ffa1854efcdbf7a6bd01c}} 
+sf\+::\+Clock {\bfseries press\+Timer\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a050a66bbd326472b7a56ecf55b8a6636}\label{classHighscorestate_a050a66bbd326472b7a56ecf55b8a6636}} 
+sf\+::\+Int32 {\bfseries press\+Timer\+Max\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer max. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_af00f33a7b3d45d67592e80807fbc6371}\label{classHighscorestate_af00f33a7b3d45d67592e80807fbc6371}} 
+sf\+::\+Sound\+Buffer {\bfseries buffer}
+\begin{DoxyCompactList}\small\item\em Click sound effect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a457e47947ff7aedee3008df53faa4fc2}\label{classHighscorestate_a457e47947ff7aedee3008df53faa4fc2}} 
+sf\+::\+Sound {\bfseries click\+Sound\+\_\+}
+\item 
+\mbox{\Hypertarget{classHighscorestate_a60c09ac32d4d19a9f1a7214526693190}\label{classHighscorestate_a60c09ac32d4d19a9f1a7214526693190}} 
+float {\bfseries window\+X\+\_\+}
+\begin{DoxyCompactList}\small\item\em Window\textquotesingle{}s x length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_ac6db346138dc3d5d8c406739a68360b3}\label{classHighscorestate_ac6db346138dc3d5d8c406739a68360b3}} 
+float {\bfseries window\+Y\+\_\+}
+\begin{DoxyCompactList}\small\item\em Window\textquotesingle{}s y length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHighscorestate_a6a165326c8d8215299d469ea6fc18df1}\label{classHighscorestate_a6a165326c8d8215299d469ea6fc18df1}} 
+int {\bfseries scroll\+Upper\+Boundary\+\_\+}
+\item 
+\mbox{\Hypertarget{classHighscorestate_afc8c972aab826b86928d0abc5b9ad8d9}\label{classHighscorestate_afc8c972aab826b86928d0abc5b9ad8d9}} 
+int {\bfseries scroll\+Lower\+Boundary\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classState}{State}} that shows all of the highscores on the screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHighscorestate_a15ed71d7efe8c39c28ca474841eb1fc0}\label{classHighscorestate_a15ed71d7efe8c39c28ca474841eb1fc0}} 
+\index{Highscorestate@{Highscorestate}!Highscorestate@{Highscorestate}}
+\index{Highscorestate@{Highscorestate}!Highscorestate@{Highscorestate}}
+\doxysubsubsection{\texorpdfstring{Highscorestate()}{Highscorestate()}}
+{\footnotesize\ttfamily Highscorestate\+::\+Highscorestate (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::map$<$ std\+::string, int $>$ $\ast$}]{supported\+Keys,  }\item[{std\+::string}]{root\+\_\+filepath,  }\item[{std\+::stack$<$ \mbox{\hyperlink{classState}{State}} $\ast$ $>$ $\ast$}]{states,  }\item[{sf\+::\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window object where objects are drawn \\
+\hline
+{\em supported\+Keys} & Keys that are supported \\
+\hline
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em states} & Stack containing all of the current states \\
+\hline
+{\em font} & Font used for texts \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighscorestate_a15ed71d7efe8c39c28ca474841eb1fc0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHighscorestate_a38a60af6fb1d616d6f9e0a0ff8460b9d}\label{classHighscorestate_a38a60af6fb1d616d6f9e0a0ff8460b9d}} 
+\index{Highscorestate@{Highscorestate}!Addhighscore@{Addhighscore}}
+\index{Addhighscore@{Addhighscore}!Highscorestate@{Highscorestate}}
+\doxysubsubsection{\texorpdfstring{Addhighscore()}{Addhighscore()}}
+{\footnotesize\ttfamily void Highscorestate\+::\+Addhighscore (\begin{DoxyParamCaption}\item[{const std\+::string}]{name,  }\item[{int}]{highscore }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adds a new highscore to the textfile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the person \\
+\hline
+{\em highscore} & Score achieved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHighscorestate_aacbc11904b77764f2f09873792a26d79}\label{classHighscorestate_aacbc11904b77764f2f09873792a26d79}} 
+\index{Highscorestate@{Highscorestate}!endState@{endState}}
+\index{endState@{endState}!Highscorestate@{Highscorestate}}
+\doxysubsubsection{\texorpdfstring{endState()}{endState()}}
+{\footnotesize\ttfamily void Highscorestate\+::end\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when ending this state. 
+
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classHighscorestate_a57ac12055c761f25090cde11e823dde4}\label{classHighscorestate_a57ac12055c761f25090cde11e823dde4}} 
+\index{Highscorestate@{Highscorestate}!initKeyBinds@{initKeyBinds}}
+\index{initKeyBinds@{initKeyBinds}!Highscorestate@{Highscorestate}}
+\doxysubsubsection{\texorpdfstring{initKeyBinds()}{initKeyBinds()}}
+{\footnotesize\ttfamily void Highscorestate\+::init\+Key\+Binds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Initializes keybinds. 
+
+
+
+Implements \mbox{\hyperlink{classState_a7913fb79a9e90d93953e9844fd114186}{State}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighscorestate_a57ac12055c761f25090cde11e823dde4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classHighscorestate_a05e33314efc2e6cd681aa73dd1157bd7}\label{classHighscorestate_a05e33314efc2e6cd681aa73dd1157bd7}} 
+\index{Highscorestate@{Highscorestate}!render@{render}}
+\index{render@{render}!Highscorestate@{Highscorestate}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Highscorestate\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighscorestate_a05e33314efc2e6cd681aa73dd1157bd7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classHighscorestate_abc96331740cf68cbf2d511f0d927911d}\label{classHighscorestate_abc96331740cf68cbf2d511f0d927911d}} 
+\index{Highscorestate@{Highscorestate}!renderButtons@{renderButtons}}
+\index{renderButtons@{renderButtons}!Highscorestate@{Highscorestate}}
+\doxysubsubsection{\texorpdfstring{renderButtons()}{renderButtons()}}
+{\footnotesize\ttfamily void Highscorestate\+::render\+Buttons (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Renders all of the buttons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighscorestate_abc96331740cf68cbf2d511f0d927911d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classHighscorestate_aff6f2dd4e3f00ea6ca2ef4a48ece16b2}\label{classHighscorestate_aff6f2dd4e3f00ea6ca2ef4a48ece16b2}} 
+\index{Highscorestate@{Highscorestate}!update@{update}}
+\index{update@{update}!Highscorestate@{Highscorestate}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Highscorestate\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighscorestate_aff6f2dd4e3f00ea6ca2ef4a48ece16b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classHighscorestate_acd1c251a44f95fed11a66b12e011fb16}\label{classHighscorestate_acd1c251a44f95fed11a66b12e011fb16}} 
+\index{Highscorestate@{Highscorestate}!updateInput@{updateInput}}
+\index{updateInput@{updateInput}!Highscorestate@{Highscorestate}}
+\doxysubsubsection{\texorpdfstring{updateInput()}{updateInput()}}
+{\footnotesize\ttfamily void Highscorestate\+::update\+Input (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classState}{State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighscorestate_acd1c251a44f95fed11a66b12e011fb16_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighscorestate_acd1c251a44f95fed11a66b12e011fb16_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/highscore\+\_\+state.\+hpp\item 
+src/highscore\+\_\+state.\+cpp\end{DoxyCompactItemize}

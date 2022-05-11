@@ -1,0 +1,142 @@
+\hypertarget{classButton}{}\doxysection{Button Class Reference}
+\label{classButton}\index{Button@{Button}}
+
+
+\mbox{\hyperlink{classButton}{Button}} with visual parameters to initiate some action.  
+
+
+
+
+{\ttfamily \#include $<$button.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButton_a9df6f6c48b7930225805c1fc37931506}{Button}} (float x, float y, float width, float height, sf\+::\+Font $\ast$font, std\+::string text, sf\+::\+Color idle\+Color, sf\+::\+Color hover\+Color, sf\+::\+Color active\+Color, int text\+\_\+size, bool box)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_a2a001eb9c3cc8ae54768a850dd345002}\label{classButton_a2a001eb9c3cc8ae54768a850dd345002}} 
+{\bfseries $\sim$\+Button} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_a0b4af36b349ee2d8154624760dc1fe32}\label{classButton_a0b4af36b349ee2d8154624760dc1fe32}} 
+const bool {\bfseries is\+Pressed} () const
+\begin{DoxyCompactList}\small\item\em Accessor for determining whether a button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classButton_a4850f4214ac94c54d8cf82db40e30d8c}{update}} (const sf\+::\+Vector2f mouse\+Pos)
+\begin{DoxyCompactList}\small\item\em Update button state based on mouse action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classButton_a7d275a122f7d50dde3bdd02f97f1be00}{render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Render button on target (window) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_a753449291fc0d042f0e65f334ca2ec50}\label{classButton_a753449291fc0d042f0e65f334ca2ec50}} 
+void {\bfseries change\+Text} (std\+::string text)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classButton_ad8bb96ea5f04232996d6d94681dccc76}\label{classButton_ad8bb96ea5f04232996d6d94681dccc76}} 
+sf\+::\+Font $\ast$ {\bfseries font\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} font. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_a671d7229bda6de821c453f566d5008a9}\label{classButton_a671d7229bda6de821c453f566d5008a9}} 
+sf\+::\+Rectangle\+Shape {\bfseries shape\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} (rectangle) shape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_ac3cc9b758c504363dff42f563d9cae5d}\label{classButton_ac3cc9b758c504363dff42f563d9cae5d}} 
+sf\+::\+Text {\bfseries button\+Text\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_ae399b0ec6eb12c915f330f71814bb7da}\label{classButton_ae399b0ec6eb12c915f330f71814bb7da}} 
+int {\bfseries text\+\_\+size\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} font size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_aa5f62fcd0932adae494b067a083a6099}\label{classButton_aa5f62fcd0932adae494b067a083a6099}} 
+bool {\bfseries box\+Boolean\+\_\+}
+\begin{DoxyCompactList}\small\item\em Whether to draw box or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_af2298020eb7aeb982d3cd02ae6fd2dc2}\label{classButton_af2298020eb7aeb982d3cd02ae6fd2dc2}} 
+sf\+::\+Color {\bfseries idle\+Color\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} color when idle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_a463e08829d23677bad75f0527b83647a}\label{classButton_a463e08829d23677bad75f0527b83647a}} 
+sf\+::\+Color {\bfseries hover\+Color\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} color when hovered over. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_a4a9d794fe4acc61e4c095e5da9755e15}\label{classButton_a4a9d794fe4acc61e4c095e5da9755e15}} 
+sf\+::\+Color {\bfseries active\+Color\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} color when pressed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classButton_a7caa54f96d2ed5f6a8ddbeeea6c4b042}\label{classButton_a7caa54f96d2ed5f6a8ddbeeea6c4b042}} 
+short unsigned {\bfseries button\+State\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classButton}{Button}} state between idle (0), hover (1) and active (2) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classButton}{Button}} with visual parameters to initiate some action. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classButton_a9df6f6c48b7930225805c1fc37931506}\label{classButton_a9df6f6c48b7930225805c1fc37931506}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{sf\+::\+Font $\ast$}]{font,  }\item[{std\+::string}]{text,  }\item[{sf\+::\+Color}]{idle\+Color,  }\item[{sf\+::\+Color}]{hover\+Color,  }\item[{sf\+::\+Color}]{active\+Color,  }\item[{int}]{text\+\_\+size,  }\item[{bool}]{box }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate of the button \\
+\hline
+{\em y} & Y-\/coordinate of the button \\
+\hline
+{\em width} & Width of the button \\
+\hline
+{\em height} & Height of the button \\
+\hline
+{\em font} & Font of the button \\
+\hline
+{\em text} & Text of the button \\
+\hline
+{\em idle\+Color} & Color of the button while idle \\
+\hline
+{\em hover\+Color} & Color of the button while hovering over \\
+\hline
+{\em active\+Color} & Color of the button when pressed \\
+\hline
+{\em text\+\_\+size} & Text size of the button \\
+\hline
+{\em box} & Whether to include a box around the button\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+(X,Y)-\/coordinates begin from the top-\/left corner (0,0) 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classButton_a7d275a122f7d50dde3bdd02f97f1be00}\label{classButton_a7d275a122f7d50dde3bdd02f97f1be00}} 
+\index{Button@{Button}!render@{render}}
+\index{render@{render}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Button\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Render button on target (window) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classButton_a4850f4214ac94c54d8cf82db40e30d8c}\label{classButton_a4850f4214ac94c54d8cf82db40e30d8c}} 
+\index{Button@{Button}!update@{update}}
+\index{update@{update}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Button\+::update (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+
+
+Update button state based on mouse action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Pos} & Mouse position on screen \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/button.\+hpp\item 
+src/button.\+cpp\end{DoxyCompactItemize}

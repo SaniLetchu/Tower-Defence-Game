@@ -1,0 +1,407 @@
+\hypertarget{classSuperPlane}{}\doxysection{Super\+Plane Class Reference}
+\label{classSuperPlane}\index{SuperPlane@{SuperPlane}}
+
+
+\mbox{\hyperlink{classSuperPlane}{Super\+Plane}} class that has more hitpoints, and speed than \mbox{\hyperlink{classPlane}{Plane}}. Spawns multiple Planes at death.  
+
+
+
+
+{\ttfamily \#include $<$super\+\_\+plane.\+hpp$>$}
+
+
+
+Inheritance diagram for Super\+Plane\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classSuperPlane__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Super\+Plane\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classSuperPlane__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSuperPlane_a527e5d8913b7dccd5c91a36b9656ce5f}{Super\+Plane}} (std\+::string root\+\_\+filepath, sf\+::\+Vector2f s\+Location, sf\+::\+Vector2f e\+Location, std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$r\+Tiles, int round)
+\begin{DoxyCompactList}\small\item\em Constructor for NPC sub-\/class \mbox{\hyperlink{classSuperPlane}{Super\+Plane}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_a6cd3d1063c70fced2c1925bc2c98db48}\label{classSuperPlane_a6cd3d1063c70fced2c1925bc2c98db48}} 
+{\bfseries $\sim$\+Super\+Plane} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSuperPlane_a63d996f542620f1960b3ddd78d08d825}{Update}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Updates inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSuperPlane_aba66c8629cdaec16b21e43cae52e52ce}{Render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSuperPlane_a6e2ddfb0d1ac776d5bc2837b1f2567e7}{Move\+To}} (const float \&dt)
+\begin{DoxyCompactList}\small\item\em Handles the logic for \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} to move along road tiles. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSuperPlane_a6c29c079dada987875d69193712debfa}{init\+Npc}} ()
+\begin{DoxyCompactList}\small\item\em Initializes \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} setting movespeed, textures, spawnpoint and hitpoints. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classSuperPlane_a19204628b184e0abf415a22dac949d2c}{Find\+Direction}} (sf\+::\+Vector2f \mbox{\hyperlink{classSuperPlane_a3b616ebb8ec76379d2ed6c897878ae9d}{next\+Location}})
+\begin{DoxyCompactList}\small\item\em Finds the direction \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} has to go. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSuperPlane_a9da728cd062d992b93d44c5b5033028e}{Rotate}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Rotates \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} object while it changes direction. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classSuperPlane_aada8639ff725245cf59b3ba669e69a7c}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets current position coordinates of \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSuperPlane_a24db731034c719f16bc25873fe31c567}{get\+Hitpoints}} ()
+\begin{DoxyCompactList}\small\item\em Gets \mbox{\hyperlink{classSuperPlane}{Super\+Plane}}\textquotesingle{}s current hitpoints. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSuperPlane_a3063dc83c71f3ba4c7bb018e1772b501}{has\+Reached\+End}} ()
+\begin{DoxyCompactList}\small\item\em Checks if \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} has reached to exit tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSuperPlane_a600f39d1f738564f7213436d7db3eaad}{deal\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em Calculates the difference of current \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} hitpoints and damage of tower. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSuperPlane_a5da977c21453bf5713b2ef3ce9d6e25d}{slow\+Movement}} (float slow)
+\begin{DoxyCompactList}\small\item\em Slows \mbox{\hyperlink{classSuperPlane}{Super\+Plane}}\textquotesingle{}s movement speed with the product of movement speed and slowing parameter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSuperPlane_a50eb05090f915f712e6c899764273e9b}{get\+Tile\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets \mbox{\hyperlink{classSuperPlane}{Super\+Plane}}\textquotesingle{}s tile count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}\label{classNpc_a742d4cf17e44f25bd0b7db9e3143fca1}} 
+virtual int {\bfseries get\+Worth} ()
+\begin{DoxyCompactList}\small\item\em Gets NPCs worth to give player money. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSuperPlane_acbb8cd29aba4b2f5677d7eb1e3ace74a}\label{classSuperPlane_acbb8cd29aba4b2f5677d7eb1e3ace74a}} 
+float {\bfseries movement\+Speed}
+\begin{DoxyCompactList}\small\item\em Movement speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_a64cd39f99b4ebf5eb804c1251a8066b5}\label{classSuperPlane_a64cd39f99b4ebf5eb804c1251a8066b5}} 
+float {\bfseries movementspeedmemory\+\_\+}
+\begin{DoxyCompactList}\small\item\em Temporary movement speed to use in slowing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_a00bf4ecbade5c9f46f601408076d5eec}\label{classSuperPlane_a00bf4ecbade5c9f46f601408076d5eec}} 
+float {\bfseries hitpoints} = 1
+\begin{DoxyCompactList}\small\item\em Hitpoints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_a9647359a4efa1e0cafec71758d8c30c5}\label{classSuperPlane_a9647359a4efa1e0cafec71758d8c30c5}} 
+sf\+::\+Vector2f {\bfseries spawn\+Location}
+\begin{DoxyCompactList}\small\item\em Spawn location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_a3c9d4834a322d5470741f40cbc4ed392}\label{classSuperPlane_a3c9d4834a322d5470741f40cbc4ed392}} 
+sf\+::\+Vector2f {\bfseries exit\+Location}
+\begin{DoxyCompactList}\small\item\em Exit location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_a3b616ebb8ec76379d2ed6c897878ae9d}\label{classSuperPlane_a3b616ebb8ec76379d2ed6c897878ae9d}} 
+sf\+::\+Vector2f {\bfseries next\+Location}
+\begin{DoxyCompactList}\small\item\em Next location coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_afeb7873a6a67b7b9389e793d31724e96}\label{classSuperPlane_afeb7873a6a67b7b9389e793d31724e96}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$ {\bfseries road\+Tiles}
+\begin{DoxyCompactList}\small\item\em Vector to save road tile coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_af47f09f584c76af5dfc42e329f400857}\label{classSuperPlane_af47f09f584c76af5dfc42e329f400857}} 
+int {\bfseries tile\+Count} = 0
+\begin{DoxyCompactList}\small\item\em Counter to keep count on what tile \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} is on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_ac700c6bacb22a277294526799e5c3fac}\label{classSuperPlane_ac700c6bacb22a277294526799e5c3fac}} 
+sf\+::\+Sprite {\bfseries super\+Plane\+Texture}
+\begin{DoxyCompactList}\small\item\em Sprite for \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_ac699e9b7d776c35d8e0fc67304ffec5e}\label{classSuperPlane_ac699e9b7d776c35d8e0fc67304ffec5e}} 
+sf\+::\+Texture {\bfseries texture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_af01e7c0882c4822634d64f00e5cb844a}\label{classSuperPlane_af01e7c0882c4822634d64f00e5cb844a}} 
+sf\+::\+Clock {\bfseries slowcooldown\+\_\+}
+\begin{DoxyCompactList}\small\item\em Clock to slow the \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} for certain amount of time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_a75535be2e95490eb8ca4e49049a68f3e}\label{classSuperPlane_a75535be2e95490eb8ca4e49049a68f3e}} 
+bool {\bfseries end\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Boolean for \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} to be on exit tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSuperPlane_a0bf7f0db8285dfb449e0d3a08730899a}\label{classSuperPlane_a0bf7f0db8285dfb449e0d3a08730899a}} 
+std\+::string {\bfseries root\+\_\+filepath\+\_\+}
+\begin{DoxyCompactList}\small\item\em Root filepath. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}\label{classNpc_a6a4e8e695d9ae798ee0641eb4b5f6a4a}} 
+sf\+::\+Sprite {\bfseries sotilastektuuri}
+\begin{DoxyCompactList}\small\item\em Sprite for NPC class (debugging class) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}\label{classNpc_a145d4bda4e5dd6cc11ca990309e1828a}} 
+sf\+::\+Texture {\bfseries stexture\+\_\+}
+\begin{DoxyCompactList}\small\item\em Texture parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNpc_a9b3331bad14442a3fe125779cce7490e}\label{classNpc_a9b3331bad14442a3fe125779cce7490e}} 
+int {\bfseries worth\+\_\+} = 1
+\begin{DoxyCompactList}\small\item\em Amount of money NPC is worth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classSuperPlane}{Super\+Plane}} class that has more hitpoints, and speed than \mbox{\hyperlink{classPlane}{Plane}}. Spawns multiple Planes at death. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSuperPlane_a527e5d8913b7dccd5c91a36b9656ce5f}\label{classSuperPlane_a527e5d8913b7dccd5c91a36b9656ce5f}} 
+\index{SuperPlane@{SuperPlane}!SuperPlane@{SuperPlane}}
+\index{SuperPlane@{SuperPlane}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{SuperPlane()}{SuperPlane()}}
+{\footnotesize\ttfamily Super\+Plane\+::\+Super\+Plane (\begin{DoxyParamCaption}\item[{std\+::string}]{root\+\_\+filepath,  }\item[{sf\+::\+Vector2f}]{s\+Location,  }\item[{sf\+::\+Vector2f}]{e\+Location,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classGameTile}{Game\+Tile}} $\ast$ $>$ $\ast$}]{r\+Tiles,  }\item[{int}]{round }\end{DoxyParamCaption})}
+
+
+
+Constructor for NPC sub-\/class \mbox{\hyperlink{classSuperPlane}{Super\+Plane}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+filepath} & Root filepath \\
+\hline
+{\em s\+Location} & Spawning location for \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} \\
+\hline
+{\em e\+Location} & Exit location to delete \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} \\
+\hline
+{\em r\+Tiles} & Vector of tile coordinates for \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} to follow \\
+\hline
+{\em round} & Counter for round amount \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSuperPlane_a527e5d8913b7dccd5c91a36b9656ce5f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSuperPlane_a600f39d1f738564f7213436d7db3eaad}\label{classSuperPlane_a600f39d1f738564f7213436d7db3eaad}} 
+\index{SuperPlane@{SuperPlane}!dealDamage@{dealDamage}}
+\index{dealDamage@{dealDamage}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{dealDamage()}{dealDamage()}}
+{\footnotesize\ttfamily void Super\+Plane\+::deal\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the difference of current \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} hitpoints and damage of tower. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Damage parameter of projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a6a369b595667cb0a058630faa717ab7c}{Npc}}.
+
+\mbox{\Hypertarget{classSuperPlane_a19204628b184e0abf415a22dac949d2c}\label{classSuperPlane_a19204628b184e0abf415a22dac949d2c}} 
+\index{SuperPlane@{SuperPlane}!FindDirection@{FindDirection}}
+\index{FindDirection@{FindDirection}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{FindDirection()}{FindDirection()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Super\+Plane\+::\+Find\+Direction (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{next\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finds the direction \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} has to go. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Location} & Next tile coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_ae8779c3e879ab383f093b60ce445f753}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSuperPlane_a19204628b184e0abf415a22dac949d2c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSuperPlane_a24db731034c719f16bc25873fe31c567}\label{classSuperPlane_a24db731034c719f16bc25873fe31c567}} 
+\index{SuperPlane@{SuperPlane}!getHitpoints@{getHitpoints}}
+\index{getHitpoints@{getHitpoints}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{getHitpoints()}{getHitpoints()}}
+{\footnotesize\ttfamily int Super\+Plane\+::get\+Hitpoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets \mbox{\hyperlink{classSuperPlane}{Super\+Plane}}\textquotesingle{}s current hitpoints. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_aa737d1ed48edc211df6e7648f4f61069}{Npc}}.
+
+\mbox{\Hypertarget{classSuperPlane_aada8639ff725245cf59b3ba669e69a7c}\label{classSuperPlane_aada8639ff725245cf59b3ba669e69a7c}} 
+\index{SuperPlane@{SuperPlane}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Super\+Plane\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets current position coordinates of \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_afec4aec3f8ba2bea0d1ef334b9aeda62}{Npc}}.
+
+\mbox{\Hypertarget{classSuperPlane_a50eb05090f915f712e6c899764273e9b}\label{classSuperPlane_a50eb05090f915f712e6c899764273e9b}} 
+\index{SuperPlane@{SuperPlane}!getTileCount@{getTileCount}}
+\index{getTileCount@{getTileCount}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{getTileCount()}{getTileCount()}}
+{\footnotesize\ttfamily int Super\+Plane\+::get\+Tile\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets \mbox{\hyperlink{classSuperPlane}{Super\+Plane}}\textquotesingle{}s tile count. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a97879f68d40197370f11f6ecd4341091}{Npc}}.
+
+\mbox{\Hypertarget{classSuperPlane_a3063dc83c71f3ba4c7bb018e1772b501}\label{classSuperPlane_a3063dc83c71f3ba4c7bb018e1772b501}} 
+\index{SuperPlane@{SuperPlane}!hasReachedEnd@{hasReachedEnd}}
+\index{hasReachedEnd@{hasReachedEnd}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{hasReachedEnd()}{hasReachedEnd()}}
+{\footnotesize\ttfamily bool Super\+Plane\+::has\+Reached\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} has reached to exit tile. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a4181be8190f1b81ababc23f6492afd88}{Npc}}.
+
+\mbox{\Hypertarget{classSuperPlane_a6c29c079dada987875d69193712debfa}\label{classSuperPlane_a6c29c079dada987875d69193712debfa}} 
+\index{SuperPlane@{SuperPlane}!initNpc@{initNpc}}
+\index{initNpc@{initNpc}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{initNpc()}{initNpc()}}
+{\footnotesize\ttfamily void Super\+Plane\+::init\+Npc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} setting movespeed, textures, spawnpoint and hitpoints. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_aa49117d3c5d41f7f306e08d6a28f582e}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSuperPlane_a6c29c079dada987875d69193712debfa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSuperPlane_a6e2ddfb0d1ac776d5bc2837b1f2567e7}\label{classSuperPlane_a6e2ddfb0d1ac776d5bc2837b1f2567e7}} 
+\index{SuperPlane@{SuperPlane}!MoveTo@{MoveTo}}
+\index{MoveTo@{MoveTo}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{MoveTo()}{MoveTo()}}
+{\footnotesize\ttfamily void Super\+Plane\+::\+Move\+To (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the logic for \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} to move along road tiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a57f73d3f9d09dd92eb50e81e0a613b25}{Npc}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSuperPlane_a6e2ddfb0d1ac776d5bc2837b1f2567e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classSuperPlane_a6e2ddfb0d1ac776d5bc2837b1f2567e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSuperPlane_aba66c8629cdaec16b21e43cae52e52ce}\label{classSuperPlane_aba66c8629cdaec16b21e43cae52e52ce}} 
+\index{SuperPlane@{SuperPlane}!Render@{Render}}
+\index{Render@{Render}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Super\+Plane\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Reference to target parameter for Gaming state to handle \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a7a34f6a6322c56cf74683a78c75cfe15}{Npc}}.
+
+\mbox{\Hypertarget{classSuperPlane_a9da728cd062d992b93d44c5b5033028e}\label{classSuperPlane_a9da728cd062d992b93d44c5b5033028e}} 
+\index{SuperPlane@{SuperPlane}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Super\+Plane\+::\+Rotate (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates \mbox{\hyperlink{classSuperPlane}{Super\+Plane}} object while it changes direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Gives x direction movement \\
+\hline
+{\em y} & Gives y direction movement \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a0801ec5847a696ecf281384bc8eb5c8d}{Npc}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSuperPlane_a9da728cd062d992b93d44c5b5033028e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSuperPlane_a5da977c21453bf5713b2ef3ce9d6e25d}\label{classSuperPlane_a5da977c21453bf5713b2ef3ce9d6e25d}} 
+\index{SuperPlane@{SuperPlane}!slowMovement@{slowMovement}}
+\index{slowMovement@{slowMovement}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{slowMovement()}{slowMovement()}}
+{\footnotesize\ttfamily void Super\+Plane\+::slow\+Movement (\begin{DoxyParamCaption}\item[{float}]{slow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Slows \mbox{\hyperlink{classSuperPlane}{Super\+Plane}}\textquotesingle{}s movement speed with the product of movement speed and slowing parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slow} & Slowing parameter from slimeball projectile \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_a8ec65489be62e6c69a5e9f512fbad748}{Npc}}.
+
+\mbox{\Hypertarget{classSuperPlane_a63d996f542620f1960b3ddd78d08d825}\label{classSuperPlane_a63d996f542620f1960b3ddd78d08d825}} 
+\index{SuperPlane@{SuperPlane}!Update@{Update}}
+\index{Update@{Update}!SuperPlane@{SuperPlane}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Super\+Plane\+::\+Update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classNpc_ab7be6fa48ecf0a0cb9f94cb0859d2e5e}{Npc}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSuperPlane_a63d996f542620f1960b3ddd78d08d825_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/super\+\_\+plane.\+hpp\item 
+src/super\+\_\+plane.\+cpp\end{DoxyCompactItemize}

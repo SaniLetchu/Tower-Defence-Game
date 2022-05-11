@@ -1,0 +1,171 @@
+\hypertarget{classTextbox}{}\doxysection{Textbox Class Reference}
+\label{classTextbox}\index{Textbox@{Textbox}}
+
+
+Header for the button class.  
+
+
+
+
+{\ttfamily \#include $<$textbox.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTextbox_af825688f386e540988f3c7ee4e982d51}{Textbox}} (float x, float y, float width, float height, sf\+::\+Font $\ast$font, std\+::string text, sf\+::\+Color idle\+Color, sf\+::\+Color hover\+Color, sf\+::\+Color active\+Color, int text\+\_\+size, bool box, sf\+::\+Event $\ast$Event)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_a3691c8a226ec90cada4c36466a940ba2}\label{classTextbox_a3691c8a226ec90cada4c36466a940ba2}} 
+{\bfseries $\sim$\+Textbox} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_aa925fcc63cc1a6662344c06c8e228a28}\label{classTextbox_aa925fcc63cc1a6662344c06c8e228a28}} 
+const bool {\bfseries is\+Pressed} () const
+\begin{DoxyCompactList}\small\item\em Accessor for determining whether a button is pressed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_a797edbd62df8801a1f8f290ea179b83b}\label{classTextbox_a797edbd62df8801a1f8f290ea179b83b}} 
+std\+::string {\bfseries Get\+Text} ()
+\item 
+void \mbox{\hyperlink{classTextbox_ae973b51c5a5c0f80effddf2b74dc9294}{update}} (const sf\+::\+Vector2f mouse\+Pos)
+\begin{DoxyCompactList}\small\item\em Update button state based on mouse action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextbox_a09517c08468c500648ebfc3d1790a450}{render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Render button on target (window) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTextbox_ac9f6d4814680a768158cff68cae309d2}\label{classTextbox_ac9f6d4814680a768158cff68cae309d2}} 
+sf\+::\+Font $\ast$ {\bfseries font\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box font. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_a7f788c2070bdead2b1f7a519781967c9}\label{classTextbox_a7f788c2070bdead2b1f7a519781967c9}} 
+sf\+::\+Rectangle\+Shape {\bfseries shape\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box (rectangle) shape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_a7bca6b19e8dbada0bb239417282a22c3}\label{classTextbox_a7bca6b19e8dbada0bb239417282a22c3}} 
+sf\+::\+Text {\bfseries button\+Text\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_a8e3fa6cf060b47b7d7437ccf1e4993e2}\label{classTextbox_a8e3fa6cf060b47b7d7437ccf1e4993e2}} 
+int {\bfseries text\+\_\+size\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box font size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_a010d9fb7671d552c580174657dc75d60}\label{classTextbox_a010d9fb7671d552c580174657dc75d60}} 
+bool {\bfseries box\+Boolean\+\_\+}
+\begin{DoxyCompactList}\small\item\em Whether to draw box or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_a1d7bcfa83b52d2db1457e34a7502c6df}\label{classTextbox_a1d7bcfa83b52d2db1457e34a7502c6df}} 
+sf\+::\+Color {\bfseries idle\+Color\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box color when idle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_a8bc06540f79550a7d5fa4fb0f4b52e60}\label{classTextbox_a8bc06540f79550a7d5fa4fb0f4b52e60}} 
+sf\+::\+Color {\bfseries hover\+Color\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box color when hovered over. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_ad6cd2adaf6279de435458a66444c982b}\label{classTextbox_ad6cd2adaf6279de435458a66444c982b}} 
+sf\+::\+Color {\bfseries active\+Color\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box color when pressed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_ac91ba0ce80c0b8edc2746cc00e8fe863}\label{classTextbox_ac91ba0ce80c0b8edc2746cc00e8fe863}} 
+std\+::string {\bfseries text\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_ac169a523171838408c1703ec8e393b82}\label{classTextbox_ac169a523171838408c1703ec8e393b82}} 
+sf\+::\+Clock {\bfseries clock\+\_\+}
+\begin{DoxyCompactList}\small\item\em Timer for writing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_aa777c7b42d7743862e6029391ffc4cb5}\label{classTextbox_aa777c7b42d7743862e6029391ffc4cb5}} 
+sf\+::\+Event $\ast$ {\bfseries Event\+\_\+}
+\begin{DoxyCompactList}\small\item\em Event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextbox_aa9fb9711f8cf47c8d4d6d6d09a674a1b}\label{classTextbox_aa9fb9711f8cf47c8d4d6d6d09a674a1b}} 
+short unsigned {\bfseries button\+State\+\_\+}
+\begin{DoxyCompactList}\small\item\em Box state between idle (0), hover (1) and active (2) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for the button class. 
+
+Add independent includers \mbox{\hyperlink{classTextbox}{Textbox}} that allows text input 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTextbox_af825688f386e540988f3c7ee4e982d51}\label{classTextbox_af825688f386e540988f3c7ee4e982d51}} 
+\index{Textbox@{Textbox}!Textbox@{Textbox}}
+\index{Textbox@{Textbox}!Textbox@{Textbox}}
+\doxysubsubsection{\texorpdfstring{Textbox()}{Textbox()}}
+{\footnotesize\ttfamily Textbox\+::\+Textbox (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{sf\+::\+Font $\ast$}]{font,  }\item[{std\+::string}]{text,  }\item[{sf\+::\+Color}]{idle\+Color,  }\item[{sf\+::\+Color}]{hover\+Color,  }\item[{sf\+::\+Color}]{active\+Color,  }\item[{int}]{text\+\_\+size,  }\item[{bool}]{box,  }\item[{sf\+::\+Event $\ast$}]{Event }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate of the button \\
+\hline
+{\em y} & Y-\/coordinate of the button \\
+\hline
+{\em width} & Width of the button \\
+\hline
+{\em height} & Height of the button \\
+\hline
+{\em font} & Font of the button \\
+\hline
+{\em text} & Text of the button \\
+\hline
+{\em idle\+Color} & Color of the button while idle \\
+\hline
+{\em hover\+Color} & Color of the button while hovering over \\
+\hline
+{\em active\+Color} & Color of the button when pressed \\
+\hline
+{\em text\+\_\+size} & Text size of the button \\
+\hline
+{\em box} & Whether to include a box around the button \\
+\hline
+{\em Event} & Event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+(X,Y)-\/coordinates begin from the top-\/left corner (0,0) 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTextbox_a09517c08468c500648ebfc3d1790a450}\label{classTextbox_a09517c08468c500648ebfc3d1790a450}} 
+\index{Textbox@{Textbox}!render@{render}}
+\index{render@{render}!Textbox@{Textbox}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Textbox\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Render button on target (window) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Rendering target, i.\+e. game window \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classTextbox_a09517c08468c500648ebfc3d1790a450_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTextbox_ae973b51c5a5c0f80effddf2b74dc9294}\label{classTextbox_ae973b51c5a5c0f80effddf2b74dc9294}} 
+\index{Textbox@{Textbox}!update@{update}}
+\index{update@{update}!Textbox@{Textbox}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Textbox\+::update (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+
+
+Update button state based on mouse action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Pos} & Mouse position on screen \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTextbox_ae973b51c5a5c0f80effddf2b74dc9294_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/textbox.\+hpp\item 
+src/textbox.\+cpp\end{DoxyCompactItemize}
