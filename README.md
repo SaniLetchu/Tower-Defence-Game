@@ -1,3 +1,7 @@
+![menu](https://user-images.githubusercontent.com/92727936/173217525-ae935a90-5b82-4942-937e-09b4a0e89d81.png)
+
+![game](https://user-images.githubusercontent.com/92727936/173217529-bf775ef9-ca13-4313-9c01-b8246e45f1c8.png)
+
 # Project Name (replace here!)
 
 This is the template for the projects. Please copy the project description here. 
