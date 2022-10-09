@@ -2,6 +2,8 @@
 
 ![game](https://user-images.githubusercontent.com/92727936/173217529-bf775ef9-ca13-4313-9c01-b8246e45f1c8.png)
 
+![Animation](https://user-images.githubusercontent.com/92727936/194776151-fa752d17-fc9c-49f9-b82c-35e624fa97f6.gif)
+
 # Project Name (replace here!)
 
 This is the template for the projects. Please copy the project description here. 
